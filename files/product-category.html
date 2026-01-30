@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - PVC Global</title>
+    <link rel="shortcut icon" href="assets/img/logo/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header_styles.css">
+    <link rel="stylesheet" href="assets/css/products_styles.css">
+
+    <style>
+        .products-hero {
+            margin-top: 70px !important;
+        }
+    </style>
+    <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
+</head>
+
+<body>
+    <!--===== GLOBAL HEADER COMPONENT =======-->
+    <script src="assets/js/global_header.js"></script>
+    <!--===== END GLOBAL HEADER =======-->
+    <!--=====HEADER END =======-->
+
+    <section class="products-hero"
+        style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/img/hero-cctv-full.jpg'); background-size: cover; background-position: center; height: 100vh; display: flex; align-items: center;">
+        <div class="container text-center">
+            <h1 id="cat-title" style="color: #fff; font-size: 60px; font-weight: 700;">Our Products</h1>
+            <p id="cat-desc" style="color: rgba(255,255,255,0.9); font-size: 24px;">Exploring advanced AIoT security
+                solutions.</p>
+        </div>
+    </section>
+
+    <section class="product-page-content sp1">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-12">
+                    <div class="alert alert-info py-4"
+                        style="background: rgba(212, 175, 55, 0.1); border: 1px solid var(--pvc-gold-mid); color: #fff;">
+                        <p class="mb-3">This is a dynamic category page. Products are filtered based on the category
+                            selection.</p>
+                        <a href="products.html" class="hik-btn-main">Back to All Products</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/plugins/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!--===== GLOBAL FOOTER COMPONENT =======-->
+    <script src="assets/js/global_footer.js"></script>
+    <!--===== END GLOBAL FOOTER =======-->
+
+    <script>
+        // Simple script to update title based on URL param
+        const urlParams = new URLSearchParams(window.location.search);
+        const cat = urlParams.get('cat');
+        if (cat) {
+            document.getElementById('cat-title').innerText = cat.toUpperCase() + " Solutions";
+        }
+    </script>
+</body>
+
+</html>
