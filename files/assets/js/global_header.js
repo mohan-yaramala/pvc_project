@@ -428,13 +428,25 @@ function initPvcHeader() {
 
     // Cart Count Sync (Mock or real from localStorage)
     function updateCartCount() {
-        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const count = cart.length;
-        document.getElementById('pvc-cart-count').textContent = count;
-        document.getElementById('pvc-cart-count').style.display = count > 0 ? 'flex' : 'none';
+        // Read the site's cart key `pvcCart` and sum quantities
+        try {
+            const cart = JSON.parse(localStorage.getItem('pvcCart')) || [];
+            const count = cart.reduce((total, item) => total + (item.quantity || 0), 0);
+            const el = document.getElementById('pvc-cart-count');
+            if (el) {
+                el.textContent = count;
+                el.style.display = count > 0 ? 'flex' : 'none';
+            }
+        } catch (e) {
+            // If parsing fails, hide the badge
+            const el = document.getElementById('pvc-cart-count');
+            if (el) el.style.display = 'none';
+        }
     }
     updateCartCount();
+    // Update on storage events (other tabs) and on a custom event
     window.addEventListener('storage', updateCartCount);
+    window.addEventListener('pvc-cart-updated', updateCartCount);
 }
 
 // Ensure FontAwesome and Global CSS are loaded
