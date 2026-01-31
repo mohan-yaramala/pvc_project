@@ -29,6 +29,25 @@ function getCart() {
 function saveCart(cart) {
     localStorage.setItem('pvcCart', JSON.stringify(cart));
     updateFloatingCartButton();
+
+    // Immediately update header badge if present (same-tab update)
+    try {
+        const count = cart.reduce((total, item) => total + (item.quantity || 0), 0);
+        const el = document.getElementById('pvc-cart-count');
+        if (el) {
+            el.textContent = count;
+            el.style.display = count > 0 ? 'flex' : 'none';
+        }
+    } catch (e) {
+        // ignore
+    }
+
+    // Dispatch a custom event so other scripts/tabs can respond
+    try {
+        window.dispatchEvent(new Event('pvc-cart-updated'));
+    } catch (e) {
+        // ignore
+    }
 }
 
 /**

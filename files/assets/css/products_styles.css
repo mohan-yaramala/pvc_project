@@ -133,7 +133,8 @@ body,
     }
 
     .shop-cat-img {
-        height: 100px;
+        /* Increased height for better visibility on mobile */
+        height: 150px;
         border-radius: 6px;
         margin-bottom: 8px;
     }
@@ -155,7 +156,8 @@ body,
     }
 
     .shop-cat-img {
-        height: 80px;
+        /* Small mobile: still larger than before but fits narrow screens */
+        height: 120px;
         margin-bottom: 6px;
     }
 

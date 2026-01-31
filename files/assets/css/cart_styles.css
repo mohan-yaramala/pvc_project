@@ -535,6 +535,11 @@ button.hik-btn-outline {
 }
 
 @media (max-width: 767px) {
+    /* Ensure page content sits below the fixed header on mobile */
+    .cart-page-section {
+        padding-top: 110px;
+    }
+
     .cart-page-title {
         font-size: 32px;
     }
@@ -575,8 +580,9 @@ button.hik-btn-outline {
 }
 
 @media (max-width: 575px) {
+    /* Small phones need a slightly smaller but safe top offset */
     .cart-page-section {
-        padding: 50px 0 40px;
+        padding: 100px 0 40px;
     }
 
     .cart-page-title {
