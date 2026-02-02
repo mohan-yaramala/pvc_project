@@ -103,13 +103,14 @@ function initPvcFooter() {
             </div>
         </div>
 
+        <!-- Global Floating Call Button (Mobile Only) -->
+        <a href="tel:${PVC_FOOTER_DATA.phone1Clean}" class="pvc-floating-call" aria-label="Call Us">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+
         <!-- Global Floating WhatsApp Button -->
         <a href="https://wa.me/${PVC_FOOTER_DATA.whatsapp}" target="_blank" class="pvc-floating-whatsapp" aria-label="WhatsApp Us">
             <i class="fa-brands fa-whatsapp"></i>
-        </a>
-
-        </a>
-        
         </a>
     </footer>
     `;

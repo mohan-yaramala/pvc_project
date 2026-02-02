@@ -9885,7 +9885,8 @@ html {
 .loading {
   border: 1px solid transparent;
   border-color: transparent var(--ztc-text-text-2) transparent var(--ztc-text-text-2);
-  animation: rotate-loading 1.5s linear 0s infinite normal;
+  /* Disable the rotating ring animation for the preloader */
+  animation: none !important;
   transform-origin: 50% 50%;
 }
 
@@ -9916,9 +9917,10 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 150px;
-  width: 150px;
-  animation: move 2s linear 0s infinite normal;
+  /* Increased default size and use popup animation */
+  height: 220px;
+  width: 220px;
+  animation: popup 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both, bounce 1.5s ease-in-out 0.6s infinite;
 }
 
 @media (max-width: 991px) {
@@ -9931,12 +9933,12 @@ html {
   #loading-icon {
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 100px;
-    width: 100px;
+    height: 170px;
+    width: 170px;
   }
-  
+
   #loading-icon img {
-    width: 100px !important;
+    width: 100% !important;
     height: auto !important;
   }
 }
@@ -9949,12 +9951,13 @@ html {
   }
   
   #loading-icon {
-    height: 80px;
-    width: 80px;
+    height: 135px;
+    width: 135px;
   }
-  
+
   #loading-icon img {
-    width: 80px !important;
+    width: 100% !important;
+    height: auto !important;
   }
 }
 
@@ -9981,6 +9984,40 @@ html {
   100% {
     transform: translateX(-20px) rotate(-15deg);
   }
+}
+
+/* Popup animation for preloader logo */
+@keyframes popup {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Smooth bouncing animation for preloader logo */
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+}
+
+/* Ensure the preloader image scales nicely */
+#loading-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .ctn-preloader {

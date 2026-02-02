@@ -351,6 +351,43 @@
     color: var(--pvc-white);
 }
 
+/* Global Floating Call Icon (Mobile Only) */
+.pvc-floating-call {
+    position: fixed;
+    bottom: 180px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--pvc-white);
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    animation: pulse-call 2s ease-in-out infinite;
+}
+
+.pvc-floating-call:hover {
+    transform: scale(1.15);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+    color: var(--pvc-white);
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+@keyframes pulse-call {
+    0%, 100% {
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        box-shadow: 0 10px 35px rgba(102, 126, 234, 0.7), 0 0 0 15px rgba(102, 126, 234, 0.15), 0 0 0 30px rgba(102, 126, 234, 0.05);
+    }
+}
+
 /* Global Mobile Sticky CTA */
 .pvc-mobile-sticky-cta {
     display: none;
@@ -396,6 +433,10 @@
 }
 
 @media (max-width: 768px) {
+    .pvc-floating-call {
+        display: flex;
+    }
+
     .pvc-global-footer {
         padding: 80px 0 0;
     }
