@@ -168,13 +168,21 @@ function updateFloatingCartButton() {
         floatingBtn.id = 'floatingCartBtn';
         floatingBtn.href = 'cart.html';
         floatingBtn.className = 'floating-cart-btn';
+        // Always show without parentheses (desktop and mobile)
         floatingBtn.innerHTML = `
             <i class="fa-solid fa-shopping-cart"></i>
-            <span>View Cart (<span class="cart-count-badge">${itemCount}</span>)</span>
+            <span>View Cart <span class="cart-count-badge">${itemCount}</span></span>
         `;
         document.body.appendChild(floatingBtn);
     }
 }
+
+// Refresh floating button layout on viewport resize (if present)
+window.addEventListener('resize', function () {
+    if (document.getElementById('floatingCartBtn')) {
+        updateFloatingCartButton();
+    }
+});
 
 /**
  * Show notification when item is added to cart
@@ -404,12 +412,21 @@ function placeRFQOnWhatsApp() {
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
 
-    // Fixed WhatsApp business number - DO NOT CHANGE
-    const WHATSAPP_NUMBER = "919144555566";
+    // WhatsApp business numbers - Send RFQ to both numbers
+    const WHATSAPP_NUMBER_1 = "919144555566"; // Primary
+    const WHATSAPP_NUMBER_2 = "918112456789"; // Secondary
 
-    // Create WhatsApp URL and open
-    const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-    window.open(whatsappURL, '_blank');
+    // Create WhatsApp URLs for both numbers
+    const whatsappURL1 = `https://wa.me/${WHATSAPP_NUMBER_1}?text=${encodedMessage}`;
+    const whatsappURL2 = `https://wa.me/${WHATSAPP_NUMBER_2}?text=${encodedMessage}`;
+    
+    // Open first WhatsApp number
+    window.open(whatsappURL1, '_blank');
+    
+    // Open second WhatsApp number after 1 second delay
+    setTimeout(() => {
+        window.open(whatsappURL2, '_blank');
+    }, 1000);
 
     // Optional: Clear cart after placing RFQ (uncomment if needed)
     // localStorage.removeItem('pvcCart');
