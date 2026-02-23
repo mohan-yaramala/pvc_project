@@ -98,9 +98,13 @@ function initPvcFooter() {
                 </div>
             </div>
 
-            <div class="pvc-footer-bottom">
-                <p class="pvc-copyright">© ${new Date().getFullYear()} PVC Security - Leading the Future of AIoT. All Rights Reserved.</p>
-            </div>
+        </div>
+
+        <div class="pvc-footer-bottom-bar" style="background-color: #000000; text-align: center; padding: 20px 0; width: 100%; position: relative; z-index: 10;">
+            <p style="background: var(--pvc-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; font-size: 15px; letter-spacing: 1.5px; margin-bottom: 5px; text-transform: uppercase; font-family: 'Outfit', sans-serif;">WEB DEVELOPMENT TEAM</p>
+            <p style="color: #ffffff; font-size: 14px; margin: 0; font-family: 'Inter', sans-serif;">
+                © ${new Date().getFullYear()} | All Rights Reserved | <a href="https://bhimavaramdigitals.com/" target="_blank" style="color: #2196F3; text-decoration: none; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#64B5F6'" onmouseout="this.style.color='#2196F3'">Bhimavaram Digitals.</a>
+            </p>
         </div>
 
         <!-- Global Floating Call Button (Mobile Only) -->
