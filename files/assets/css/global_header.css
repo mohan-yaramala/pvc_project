@@ -63,6 +63,7 @@
     .pvc-global-header {
         width: 100%;
         top: 0;
+        height: 56px !important;
     }
 }
 
@@ -406,11 +407,15 @@
 /* Responsive */
 @media (max-width: 1100px) {
     .pvc-global-header {
-        height: 70px !important;
+        height: 56px !important;
     }
 
     .pvc-header-container {
-        padding: 0 20px;
+        padding: 0 12px;
+    }
+
+    .pvc-header-logo img {
+        height: 36px;
     }
 
     .pvc-main-nav {
@@ -419,10 +424,29 @@
 
     .pvc-mobile-toggle {
         display: flex;
+        gap: 5px;
+    }
+
+    .pvc-mobile-toggle span {
+        width: 24px;
     }
 
     .pvc-header-utils {
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .pvc-util-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .pvc-cart-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+        top: -6px;
+        right: -8px;
     }
 
     .pvc-util-btn.pvc-phone-btn {
@@ -435,13 +459,13 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 85%;
-    max-width: 380px;
+    width: 50%;
+    max-width: 250px;
     height: 100vh;
     background: #000000;
     z-index: var(--z-mobile-menu);
     transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    padding: 80px 30px 40px;
+    padding: 60px 20px 20px;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;

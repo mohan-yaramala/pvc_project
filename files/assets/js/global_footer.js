@@ -92,7 +92,7 @@ function initPvcFooter() {
                             <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
                         </a>
                     </div>
-                    <div class="pvc-trust-icons" style="margin-bottom: 20px;">
+                    <div class="pvc-trust-icons" style="margin-bottom: 0px;">
                         <span style="font-size: 13px; color: rgba(255,255,255,0.5);"><i class="fa-regular fa-clock"></i> ${PVC_FOOTER_DATA.workingHours}</span>
                     </div>
                 </div>

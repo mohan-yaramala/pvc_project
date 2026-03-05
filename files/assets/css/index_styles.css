@@ -95,14 +95,15 @@
 }
 
 .about-header-area h2 {
-    font-size: 38px !important;
+    font-size: 43px !important;
     font-weight: 700 !important;
-    color: var(--text-dark) !important;
+    color: var(--pvc-gold-dark) !important;
     line-height: 1.25;
     margin-bottom: 18px !important;
     margin-top: 0 !important;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -0.5px;
+    text-transform: uppercase !important;
 }
 
 .about-header-area>p {
@@ -198,7 +199,7 @@
 
 @media (max-width: 991px) {
     .about-header-area h2 {
-        font-size: 32px !important;
+        font-size: 36px !important;
     }
 
     .about3-section-area {
@@ -220,7 +221,7 @@
 
 @media (max-width: 767px) {
     .about-header-area h2 {
-        font-size: 24px !important;
+        font-size: 28px !important;
     }
 
     .about-header-area h5 {
@@ -333,12 +334,13 @@
 }
 
 .service-header h2 {
-    font-size: 42px !important;
+    font-size: 43px !important;
     font-weight: 700 !important;
-    color: var(--text-dark) !important;
+    color: var(--pvc-gold-dark) !important;
     margin: 20px 0 !important;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -0.5px;
+    text-transform: uppercase !important;
 }
 
 .service-header p {
@@ -608,7 +610,7 @@
     }
 
     .service-header h2 {
-        font-size: 32px !important;
+        font-size: 36px !important;
     }
 
     .service-boxarea {
@@ -639,7 +641,7 @@
     }
 
     .service-header h2 {
-        font-size: 26px !important;
+        font-size: 28px !important;
     }
 
     .service-header p {
@@ -1357,7 +1359,7 @@ body.homepage3-body {
 }
 
 .hero3-section-area {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }

@@ -28,6 +28,7 @@
             --pvc-off-white: #F8F8F8;
             --pvc-text-dark: #1a1a1a;
             --pvc-text-gray: #444444;
+            --pvc-gold-dark: #b8860b;
             --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -119,12 +120,13 @@
         }
 
         .text-content h2 {
-            font-size: 42px;
+            font-size: 43px;
             font-weight: 700;
-            color: var(--pvc-text-dark);
+            color: var(--pvc-gold-dark);
             margin-bottom: 30px;
             letter-spacing: -0.5px;
             line-height: 1.25;
+            text-transform: uppercase;
         }
 
         .text-content p {
@@ -153,11 +155,12 @@
         }
 
         .section-header h2 {
-            font-size: 42px;
+            font-size: 43px;
             font-weight: 700;
-            color: var(--pvc-black);
+            color: var(--pvc-gold-dark);
             margin-bottom: 15px;
             letter-spacing: -0.5px;
+            text-transform: uppercase;
         }
 
         .section-header p {
@@ -275,6 +278,8 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 20px;
+            color: var(--pvc-gold-dark);
+            text-transform: uppercase;
         }
 
         /* =========================================
@@ -349,10 +354,11 @@
         }
 
         .final-cta h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #fff;
+            font-size: 43px;
+            font-weight: 700;
+            color: var(--pvc-gold-dark);
             margin-bottom: 40px;
+            text-transform: uppercase;
         }
 
         .gold-grad-text {
@@ -412,97 +418,22 @@
         /* =========================================
        RESPONSIVE
        ========================================= */
+        /* Responsive Headings */
         @media (max-width: 991px) {
-            .shop-images-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
 
-            .shop-img-card:last-child {
-                grid-column: span 2;
-                /* Center 3rd image on tablet */
-            }
-
-            .why-us-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .mv-grid {
-                grid-template-columns: 1fr 1fr;
-                /* Force 2 columns */
-                gap: 20px;
+            .text-content h2,
+            .section-header h2,
+            .final-cta h2 {
+                font-size: 36px;
             }
         }
 
         @media (max-width: 767px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
 
-            .shop-images-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .shop-img-card:last-child {
-                grid-column: span 1;
-            }
-
-            .why-us-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
+            .text-content h2,
+            .section-header h2,
             .final-cta h2 {
-                font-size: 2rem;
-            }
-
-            .btn-group-custom {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-gold,
-            .btn-outline-gold {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .service-area-strip span {
-                font-size: 1.5rem;
-            }
-
-            /* Optimizing Mission/Vision for 2-col mobile */
-            .mv-card {
-                padding: 15px;
-            }
-
-            .mv-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 22px;
-                margin-bottom: 15px;
-            }
-
-            .mv-card h3 {
-                font-size: 1.1rem;
-                margin-bottom: 10px;
-            }
-
-            .mv-card p {
-                font-size: 0.8rem;
-                line-height: 1.4;
-            }
-
-            /* Optimizing Why Choose Us for 2-col mobile */
-            .reason-card {
-                padding: 15px;
-            }
-
-            .reason-card h4 {
-                font-size: 0.8rem;
-            }
-
-            .reason-icon {
-                font-size: 24px;
-                margin-bottom: 10px;
+                font-size: 28px;
             }
         }
     </style>
@@ -516,7 +447,7 @@
     <script src="assets/js/global_header.js"></script>
     <!--===== END GLOBAL HEADER =======-->
 
-  
+
 
     <!-- WORKSPACE SECTION -->
     <section class="workspace-section">
@@ -548,7 +479,7 @@
             </div>
         </div>
     </section>
- <!-- WHO WE ARE -->
+    <!-- WHO WE ARE -->
     <section class="who-we-are">
         <div class="container">
             <div class="row justify-content-center">

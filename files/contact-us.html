@@ -12,6 +12,11 @@
   <link rel="stylesheet" href="assets/css/plugins/fontawesome.css">
   <link rel="stylesheet" href="assets/css/plugins/aos.css">
   <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    :root {
+      --pvc-gold-dark: #b8860b;
+    }
+  </style>
   <link rel="stylesheet" href="assets/css/header_styles.css">
   <script src="assets/js/plugins/jquery-3-6-0.min.js"></script>
   <style>
@@ -224,6 +229,32 @@
     .contact-form-section {
       background: #fcfcfc;
       padding: 80px 0;
+    }
+
+    /* Headings Standardisation */
+    .shop-cat-title,
+    .section-heading-gold {
+      font-size: 43px !important;
+      font-weight: 700 !important;
+      color: var(--pvc-gold-dark) !important;
+      text-transform: uppercase !important;
+      letter-spacing: -0.5px;
+    }
+
+    @media (max-width: 991px) {
+
+      .shop-cat-title,
+      .section-heading-gold {
+        font-size: 36px !important;
+      }
+    }
+
+    @media (max-width: 767px) {
+
+      .shop-cat-title,
+      .section-heading-gold {
+        font-size: 28px !important;
+      }
     }
 
     .form-container {
@@ -498,7 +529,9 @@
     <div class="container">
       <div class="shop-cat-header" data-aos="fade-up">
         <h2 class="shop-cat-title">Get In Touch</h2>
-        <div class="eco-header-divider"></div>
+        <div class="premium-divider"
+          style="width: 100px; height: 3px; background: linear-gradient(to right, transparent, var(--pvc-gold-mid), transparent); margin: 15px auto; border-radius: 2px;">
+        </div>
         <p class="shop-cat-tagline">We are here to secure your future with world-class AIoT solutions.</p>
       </div>
     </div>
@@ -510,8 +543,7 @@
     <div class="container">
       <div class="row text-center mb-5">
         <div class="col-12" data-aos="fade-up">
-          <h2 style="font-weight: 800; color: #000; margin-bottom: 15px; font-size: 36px;">Connect with PVC Security
-            Instantly</h2>
+          <h2 class="section-heading-gold">Connect with PVC Security Instantly</h2>
           <p
             style="font-size: 14px; color: #555; text-transform: uppercase; font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">
             CCTV • SURVEILLANCE • INSTALLATION • SUPPORT
@@ -582,8 +614,7 @@
       <div class="row align-items-center">
         <!-- Left Side: Text & Features -->
         <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
-          <h2 class="gold-gradient-text"
-            style="font-size: 42px; font-weight: 800; line-height: 1.2; margin-bottom: 20px;">
+          <h2 class="section-heading-gold" style="line-height: 1.2; margin-bottom: 20px;">
             Talk With PVC Security Experts</h2>
           <p style="font-size: 16px; color: #555; line-height: 1.6; margin-bottom: 40px;">
             Our team specializes in CCTV surveillance, security systems, and complete safety solutions. Share your
@@ -597,7 +628,9 @@
                 <i class="fa-solid fa-screwdriver-wrench"></i>
               </div>
               <div class="ms-3">
-                <h5 style="margin: 0; font-weight: 700; color: #000; font-size: 18px;">Professional Installation</h5>
+                <h5
+                  style="margin: 0; font-weight: 700; color: var(--pvc-black); font-size: 18px; text-transform: uppercase;">
+                  Professional Installation</h5>
                 <p style="margin: 0; font-size: 14px; color: #666;">Expert setup and configuration</p>
               </div>
             </div>
@@ -608,7 +641,9 @@
                 <i class="fa-solid fa-certificate"></i>
               </div>
               <div class="ms-3">
-                <h5 style="margin: 0; font-weight: 700; color: #000; font-size: 18px;">100% Genuine Products</h5>
+                <h5
+                  style="margin: 0; font-weight: 700; color: var(--pvc-black); font-size: 18px; text-transform: uppercase;">
+                  100% Genuine Products</h5>
                 <p style="margin: 0; font-size: 14px; color: #666;">Authorized dealer of top brands</p>
               </div>
             </div>
@@ -619,7 +654,9 @@
                 <i class="fa-solid fa-headset"></i>
               </div>
               <div class="ms-3">
-                <h5 style="margin: 0; font-weight: 700; color: #000; font-size: 18px;">Fast Support Response</h5>
+                <h5
+                  style="margin: 0; font-weight: 700; color: var(--pvc-black); font-size: 18px; text-transform: uppercase;">
+                  Fast Support Response</h5>
                 <p style="margin: 0; font-size: 14px; color: #666;">Usually within 30 minutes</p>
               </div>
             </div>
@@ -631,7 +668,9 @@
           <div class="form-container"
             style="box-shadow: 0 20px 80px rgba(0,0,0,0.08); padding: 50px; border-radius: 30px; border: 1px solid #f0f0f0;">
             <div class="text-center mb-4">
-              <h2 style="font-weight: 800; margin-bottom: 10px;">Let's Get in Touch</h2>
+              <h2
+                style="font-weight: 700; color: var(--pvc-gold-dark); text-transform: uppercase; margin-bottom: 10px;">
+                Let's Get in Touch</h2>
               <p style="font-size: 14px;">Share your requirement and our security experts will contact you shortly.</p>
               <div
                 style="background: #FFF9E6; border: 1px solid #FFEBA8; border-radius: 50px; padding: 8px 20px; display: inline-block; font-size: 12px; font-weight: 600; color: #856404;">

@@ -28,6 +28,7 @@
       --pvc-off-white: #F8F8F8;
       --pvc-text-dark: #1a1a1a;
       --pvc-text-gray: #444444;
+      --pvc-gold-dark: #b8860b;
       --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -171,6 +172,7 @@
       font-weight: 700;
       color: var(--pvc-black);
       margin-bottom: 15px;
+      text-transform: uppercase;
     }
 
     .service-card p {
@@ -208,6 +210,14 @@
       width: 100%;
     }
 
+    .shop-cat-title {
+      font-size: 43px;
+      font-weight: 700;
+      color: var(--pvc-gold-dark);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
     /* =========================================
        WHY CHOOSE US
        ========================================= */
@@ -222,13 +232,14 @@
     }
 
     .section-header h2 {
-      font-size: 42px;
+      font-size: 43px;
       font-weight: 700;
-      color: var(--pvc-text-dark);
+      color: var(--pvc-gold-dark);
       margin-bottom: 20px;
       font-family: 'Poppins', sans-serif;
       letter-spacing: -0.5px;
       line-height: 1.25;
+      text-transform: uppercase;
     }
 
     .trust-grid {
@@ -348,8 +359,8 @@
     }
 
     .final-cta-content h2 {
-      font-size: 3rem;
-      font-weight: 800;
+      font-size: 43px;
+      font-weight: 700;
       background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
       -webkit-background-clip: text;
       background-clip: text;
@@ -403,6 +414,13 @@
        RESPONSIVE
        ========================================= */
     @media (max-width: 991px) {
+
+      .section-header h2,
+      .final-cta-content h2,
+      .shop-cat-title {
+        font-size: 36px;
+      }
+
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -413,6 +431,13 @@
     }
 
     @media (max-width: 767px) {
+
+      .section-header h2,
+      .final-cta-content h2,
+      .shop-cat-title {
+        font-size: 28px;
+      }
+
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;

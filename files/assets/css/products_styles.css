@@ -24,11 +24,14 @@ body,
 }
 
 .shop-cat-title {
-    color: #b8860b;
-    font-size: 42px;
-    font-weight: 700;
-    margin: 0 0 10px;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--pvc-gold-dark);
+    text-transform: uppercase;
     letter-spacing: -0.5px;
+    margin-bottom: 20px;
+    line-height: 1.1;
+    font-family: 'Outfit', sans-serif;
 }
 
 .shop-cat-tagline {
