@@ -140,6 +140,22 @@ body,
         height: 150px;
         border-radius: 6px;
         margin-bottom: 8px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .shop-categories-section .row {
+        justify-content: center !important;
+    }
+
+    .shop-cat-img img {
+        object-fit: cover;
+    }
+
+    .shop-categories-section .row {
+        justify-content: center !important;
     }
 
     .shop-cat-name {
@@ -296,7 +312,7 @@ body,
     background: #fff !important;
     border: 1px solid var(--pvc-gold-mid) !important;
     border-radius: 12px !important;
-    padding: 30px !important;
+    padding: 15px !important;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
     height: 100%;
@@ -320,13 +336,13 @@ body,
 
 .cat-card img,
 .hik-product-img img {
-    max-width: 85%;
-    max-height: 180px;
+    max-width: 100%;
+    width: 100%;
+    max-height: 220px;
     object-fit: contain;
     margin-bottom: 20px;
     transition: transform 0.5s ease;
     z-index: 2;
-    mix-blend-mode: multiply;
     filter: brightness(1.05) contrast(1.05);
 }
 

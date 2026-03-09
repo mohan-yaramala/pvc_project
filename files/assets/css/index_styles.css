@@ -1337,10 +1337,6 @@ body.homepage3-body {
     /* prevents extra white space */
 }
 
-#home {
-    margin-top: 70px !important;
-}
-
 #home .hero3-section-area {
     height: 65vh;
     /* MAIN HEIGHT CONTROL */
