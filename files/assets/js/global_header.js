@@ -5,7 +5,7 @@
 
 const PVC_HEADER_CONFIG = {
     logoPath: 'assets/img/logo/logo1.png',
-    phone: '+919144555566',
+    phone: '+919114456666',
     searchUrl: 'all-products.html', // Point to all-products which has the list
     brands: [
         { name: 'Anwiz', url: 'all-products.html?category=ANWIZ' },
@@ -146,12 +146,12 @@ function initPvcHeader() {
         <div class="pvc-mobile-contact">
             <h4 class="pvc-mobile-contact-title">Quick Connect</h4>
             <div class="pvc-mobile-btns">
-                <a href="tel:+919144555566" class="pvc-mobile-btn btn-call"><i class="fa-solid fa-phone"></i> Call Now</a>
-                <a href="https://wa.me/919144555566" class="pvc-mobile-btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+919114456666" class="pvc-mobile-btn btn-call"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/919114456666" class="pvc-mobile-btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
             </div>
             <div class="pvc-mobile-numbers">
-                <a href="tel:+919144555566" class="pvc-mobile-num">+91 91445 55566</a>
-                <a href="tel:+918112456789" class="pvc-mobile-num">+91 81124 56789</a>
+                <a href="tel:+919114456666" class="pvc-mobile-num">+91 91144 56666</a>
+                <a href="tel:+919114467777" class="pvc-mobile-num">+91 91144 67777</a>
             </div>
         </div>
     </div>

@@ -523,13 +523,12 @@
     display: block;
 }
 
-/* Mobile Close Button */
 .pvc-mobile-close {
     position: absolute;
     top: 25px;
     right: 25px;
-    color: var(--pvc-white);
     font-size: 24px;
+    color: var(--pvc-white);
     cursor: pointer;
     width: 40px;
     height: 40px;

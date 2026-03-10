@@ -9857,7 +9857,14 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 0;
+  /* Removing large gap from parent */
+}
+
+.preloader.preloader-hidden {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 /* Remove all size/shape constraints from loading-container */
@@ -9867,7 +9874,7 @@ html {
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  gap: 20px !important;
+  gap: 3px !important;
 }
 
 .loading {
@@ -9903,11 +9910,19 @@ html {
 #loading-icon {
   /* Perfectly centered, no position tricks needed */
   display: block;
-  width: 280px;
-  height: 280px;
+  width: 800px;
+  /* Massively increased for high impact */
+  height: auto;
   flex-shrink: 0;
   transform-origin: center center;
-  animation: logoZoom 2.2s ease-in-out infinite;
+  animation: logoZoom 2.5s ease-in-out infinite;
+}
+
+#loading-icon img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
 }
 
 /* Zoom in / Zoom out — stays perfectly centered */
@@ -9934,26 +9949,44 @@ html {
 }
 
 
-
-#loading-icon img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
 #loading-text {
   display: block;
-  color: #d4af37;
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-  letter-spacing: 5px;
+  /* High-Vibrancy Gold Gradient (Pure Gold to Deep Amber) */
+  background: linear-gradient(to right, #FFD700, #FFFACD, #FFC107, #FFD700, #D4AF37) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  /* Massive impact size */
+  font-weight: 900;
+  /* Maximum bold */
+  letter-spacing: 12px;
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
-  margin-top: -40px;
-  animation: logoZoom 2.2s ease-in-out 0.3s infinite;
+  margin-top: 10px !important;
+  line-height: 1.2 !important;
+  animation: loadingPulseBrilliant 2.5s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  /* Stronger neon gold glow */
+}
+
+@keyframes loadingPulseBrilliant {
+
+  0%,
+  100% {
+    opacity: 0.9;
+    filter: brightness(1);
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.4);
+    /* Brilliant flash effect */
+    transform: translateY(-2px);
+  }
 }
 
 
@@ -9961,11 +9994,14 @@ html {
 
   0%,
   100% {
-    opacity: 0.3;
+    opacity: 0.6;
+    /* Increased floor to keep it visible */
+    transform: scale(0.98);
   }
 
   50% {
-    opacity: 1.0;
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -9973,18 +10009,18 @@ html {
 
   .loading-container,
   .loading {
-    height: 120px;
-    width: 120px;
+    width: auto;
+    height: auto;
   }
 
   #loading-icon {
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: auto;
   }
 
   #loading-text {
-    font-size: 13px;
-    letter-spacing: 3px;
+    font-size: 14px;
+    letter-spacing: 4px;
   }
 
   #loading-icon img {
@@ -9997,18 +10033,18 @@ html {
 
   .loading-container,
   .loading {
-    height: 100px;
-    width: 100px;
+    width: auto;
+    height: auto;
   }
 
   #loading-icon {
-    height: 180px;
     width: 180px;
+    height: auto;
   }
 
   #loading-text {
-    font-size: 11px;
-    letter-spacing: 2px;
+    font-size: 12px;
+    letter-spacing: 3px;
   }
 }
 

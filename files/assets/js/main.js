@@ -487,13 +487,17 @@
 //========== PRELOADER (SAFE REGISTRATION WITH FALLBACK) ============= //
 $(window).on("load", function () {
   setTimeout(function () {
-    $(".preloader").fadeOut(400);
+    $(".preloader").fadeOut(400, function () {
+      $(this).addClass("preloader-hidden");
+    });
   }, 200);
 });
 
 // FORCE fade out after 3.5 seconds if 'load' event hangs
 setTimeout(function () {
   if ($(".preloader").is(":visible")) {
-    $(".preloader").fadeOut(400);
+    $(".preloader").fadeOut(400, function () {
+      $(this).addClass("preloader-hidden");
+    });
   }
 }, 3500);

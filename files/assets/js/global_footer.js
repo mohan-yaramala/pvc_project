@@ -6,13 +6,13 @@
 const PVC_FOOTER_DATA = {
     logoPath: 'assets/img/logo/logo1.png',
     description: 'PVC Security provides professional CCTV and surveillance solutions for homes, shops, offices, and industries.',
-    phone1: '+91 91445 55566',
-    phone1Clean: '+919144555566',
-    phone2: '+91 81124 56789',
-    phone2Clean: '+918112456789',
+    phone1: '+91 91144 56666',
+    phone1Clean: '+919114456666',
+    phone2: '+91 91144 67777',
+    phone2Clean: '+919114467777',
     email: 'pvcsecurity@gmail.com',
     serviceArea: 'Andhra Pradesh & Telangana',
-    whatsapp: '+919144555566',
+    whatsapp: '+919114456666',
     workingHours: 'Mon - Sat: 10:00 AM - 8:00 PM'
 };
 
@@ -42,8 +42,9 @@ function initPvcFooter() {
                     <ul class="pvc-footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="all-products.html">New Products</a></li>
+                        <li><a href="all-products.html">Shop by Brand</a></li>
                         <li><a href="all-products.html?category=ACCESSORIES">Shop by Categories</a></li>
+                        <li><a href="all-products.html">New Products</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
