@@ -10112,6 +10112,44 @@ html {
   object-fit: contain;
 }
 
+/* Loading text below the icon */
+.loading-text {
+  position: absolute;
+  top: calc(50% + 110px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--ztc-text-text-2);
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  animation: loadingTextFade 1.5s ease-in-out infinite;
+  white-space: nowrap;
+}
+
+@keyframes loadingTextFade {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 991px) {
+  .loading-text {
+    top: calc(50% + 85px);
+  }
+}
+
+@media (max-width: 480px) {
+  .loading-text {
+    font-size: 16px;
+    top: calc(50% + 67px);
+    letter-spacing: 1.5px;
+  }
+}
+
 .ctn-preloader {
   align-items: center;
   cursor: default;

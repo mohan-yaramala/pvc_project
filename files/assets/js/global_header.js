@@ -89,6 +89,7 @@ function initPvcHeader() {
                         <input type="text" class="pvc-search-input-inline" placeholder="Search..." autocomplete="off">
                         <button type="submit" class="pvc-search-submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
+                    <div class="pvc-search-results" id="pvc-search-results" role="listbox" aria-label="Search suggestions"></div>
                     <button class="pvc-util-btn pvc-search-btn-toggle" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
@@ -196,6 +197,11 @@ function initPvcHeader() {
     mobileClose.addEventListener('click', toggleMobileMenu); // Close event
     overlay.addEventListener('click', toggleMobileMenu);
 
+    // Prevent desktop nav top-level '#' links from jumping the page
+    document.querySelectorAll('.pvc-nav-item.has-mega-brand > a[href="#"], .pvc-nav-item.has-mega-category > a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+    });
+
     // Mobile Mega Menu Toggle
     document.querySelectorAll('.pvc-mobile-link-wrapper').forEach(wrapper => {
         wrapper.addEventListener('click', (e) => {
@@ -252,7 +258,7 @@ function initPvcHeader() {
             { keys: ["access", "biometric", "fingerprint", "attendance"], url: "access-control.html" },
             { keys: ["intercom", "door", "bell", "videophone"], url: "video-intercom.html" },
             { keys: ["alarm", "instrusion", "sensor", "theft"], url: "alarm-systems.html" },
-            { keys: ["display", "monitor", "screen", "wall"], url: "display-control.html" },
+            { keys: ["display", "screen", "wall"], url: "all-products.html?category=MONITOR" },
             { keys: ["thermal", "heat"], url: "thermal-products.html" },
             { keys: ["traffic", "anpr", "plate", "speed"], url: "intelligent-traffic.html" },
             { keys: ["audio", "speaker", "sound"], url: "audio-products.html" },
@@ -283,76 +289,474 @@ function initPvcHeader() {
     };
 
     function handleGlobalSearch(query) {
-        if (!query) return;
+        const cleanQuery = (query || '').toLowerCase().trim();
+        if (!cleanQuery) return;
 
-        const cleanQuery = query.toLowerCase().trim();
-
-        // 0. For single-character searches, go straight to products list to show everything
-        if (cleanQuery.length === 1) {
-            window.location.href = `all-products.html?search=${encodeURIComponent(cleanQuery)}`;
-            return;
-        }
-
-        // 1. Check Static Pages
+        // 1) Exact/static pages
         for (const [key, url] of Object.entries(PVC_SEARCH_MAPPING.pages)) {
-            if (cleanQuery === key || (cleanQuery.length > 3 && cleanQuery.includes(key))) {
+            if (cleanQuery === key || cleanQuery.includes(key)) {
                 window.location.href = url;
                 return;
             }
         }
 
-        // 2. Check Brands
+        // 2) Brand/category direct route
         for (const brand of PVC_SEARCH_MAPPING.brands) {
-            if (brand.keys.some(k => cleanQuery === k || (cleanQuery.length > 3 && cleanQuery.includes(k)) || (k.length > 3 && k.includes(cleanQuery)))) {
+            if (brand.keys.some(k => cleanQuery.includes(k) || k.includes(cleanQuery))) {
                 window.location.href = brand.url;
                 return;
             }
         }
-
-        // 3. Check Categories
         for (const cat of PVC_SEARCH_MAPPING.categories) {
-            if (cat.keys.some(k => cleanQuery === k || (cleanQuery.length > 3 && cleanQuery.includes(k)) || (k.length > 3 && k.includes(cleanQuery)))) {
+            if (cat.keys.some(k => cleanQuery.includes(k) || k.includes(cleanQuery))) {
                 window.location.href = cat.url;
                 return;
             }
         }
 
-        // 4. Fallback: Go to All Products with search query
+        // 3) Product search fallback
         window.location.href = `all-products.html?search=${encodeURIComponent(cleanQuery)}`;
     }
 
-    // Attach Search Listener to ALL search inputs (Header, Mobile, etc)
-    const searchForms = document.querySelectorAll('.pvc-search-form');
-    searchForms.forEach(form => {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const input = form.querySelector('input');
-            handleGlobalSearch(input.value);
-        });
-    });
+    const normalizeSearch = (v) => (v || '').toString().toLowerCase().replace(/\s+/g, ' ').trim();
+    const escapeHtml = (s) => (s || '').replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    const debounce = (fn, ms = 120) => {
+        let t;
+        return (...args) => {
+            clearTimeout(t);
+            t = setTimeout(() => fn(...args), ms);
+        };
+    };
 
-    // Also handle Enter key on inputs directly just in case form submit is blocked
-    document.querySelectorAll('.pvc-search-input').forEach(input => {
-        input.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                handleGlobalSearch(input.value);
+    class PvcSmartSearch {
+        constructor({ input, form, panel }) {
+            this.input = input;
+            this.form = form;
+            this.panel = panel;
+            this.activeIndex = -1;
+            this.results = [];
+            this.index = [];
+            this.maxResults = 8;
+            this.ready = false;
+            this.categoryThumbMap = {
+                'ACCESSORIES': 'assets/img/CATEGORY%20BANNERS/ACCESSORIES.svg',
+                'ANWIZ': 'assets/img/CATEGORY%20BANNERS/ANVIZ.svg',
+                'CABLES': 'assets/img/CATEGORY%20BANNERS/ACCESSORIES.svg',
+                'CP PLUS': 'assets/img/CATEGORY%20BANNERS/ACCESSORIES.svg',
+                'D-LINK': 'assets/img/CATEGORY%20BANNERS/D-LINK.svg',
+                'DAHUA': 'assets/img/CATEGORY%20BANNERS/DAHUA.svg',
+                'ERD': 'assets/img/CATEGORY%20BANNERS/EDR.svg',
+                'EZVIZ': 'assets/img/CATEGORY%20BANNERS/EZVIZ.svg',
+                'FINOLEX': 'assets/img/CATEGORY%20BANNERS/FINOLEX.svg',
+                'HI FOCUS': 'assets/img/CATEGORY%20BANNERS/HI%20FOCUS.svg',
+                'HIKVISION': 'assets/img/CATEGORY%20BANNERS/HIKVISON.svg',
+                'IMOU': 'assets/img/CATEGORY%20BANNERS/IMOU.svg',
+                'MASTEL': 'assets/img/CATEGORY%20BANNERS/MASTEL.svg',
+                'MAXXION': 'assets/img/CATEGORY%20BANNERS/MAXXION.svg',
+                'MONITOR': 'assets/img/CATEGORY%20BANNERS/MONITOR.svg',
+                'HDD': 'assets/img/CATEGORY%20BANNERS/HDD.svg',
+                'RACK': 'assets/img/CATEGORY%20BANNERS/RACK.svg',
+                'SD CARDS': 'assets/img/CATEGORY%20BANNERS/SD%20CARDS.svg',
+                'SECUREYE': 'assets/img/CATEGORY%20BANNERS/SECUREYE.svg',
+                'SECURUS': 'assets/img/CATEGORY%20BANNERS/SECRUS.svg',
+                'TP LINK': 'assets/img/CATEGORY%20BANNERS/TP%20LINK.svg',
+                'TRUE VIEW': 'assets/img/CATEGORY%20BANNERS/TRUEVIEW.svg',
+                'YADON': 'assets/img/CATEGORY%20BANNERS/YADON.svg',
+                'ZEBRONICS': 'assets/img/CATEGORY%20BANNERS/ZEBRONICS.svg'
+            };
+            this.init();
+        }
+
+        async init() {
+            this.index = this.buildBaseIndex();
+            this.renderPopular();
+            this.bindEvents();
+            await this.loadProductIndex();
+            this.ready = true;
+        }
+
+        buildBaseIndex() {
+            const items = [];
+
+            Object.entries(PVC_SEARCH_MAPPING.pages).forEach(([key, url]) => {
+                items.push({ type: 'page', title: key.charAt(0).toUpperCase() + key.slice(1), subtitle: 'Page', category: 'Page', keywords: [key], url });
+            });
+
+            PVC_HEADER_CONFIG.brands.forEach((b) => {
+                items.push({ type: 'brand', title: b.name, subtitle: 'Brand', category: 'Brand', keywords: [b.name, 'brand'], url: b.url });
+            });
+
+            PVC_HEADER_CONFIG.categories.forEach((c) => {
+                items.push({ type: 'category', title: c.name, subtitle: 'Category', category: 'Category', keywords: [c.name, 'category', 'products'], url: c.url });
+            });
+
+            return items.map(this.prepareItem);
+        }
+
+        prepareItem(item) {
+            const keyPool = [item.title, item.subtitle, item.category, ...(item.keywords || [])].join(' ');
+            return {
+                ...item,
+                normTitle: normalizeSearch(item.title),
+                normKeyPool: normalizeSearch(keyPool)
+            };
+        }
+
+        categoryFromArrayName(nameVar) {
+            const key = (nameVar || '').replace(/Names$/, '');
+            const map = {
+                accessory: 'ACCESSORIES', cable: 'CABLES', cpPlus: 'CP PLUS', dlink: 'D-LINK', dahua: 'DAHUA', erd: 'ERD', ezviz: 'EZVIZ',
+                finolex: 'FINOLEX', hiFocus: 'HI FOCUS', hikvision: 'HIKVISION', imou: 'IMOU', mastel: 'MASTEL', maxxion: 'MAXXION',
+                monitor: 'MONITOR', hdd: 'HDD', sdCard: 'SD CARDS', secureye: 'SECUREYE', securus: 'SECURUS', tplink: 'TP LINK',
+                trueview: 'TRUE VIEW', yadon: 'YADON', zebronics: 'ZEBRONICS', prama: 'PRAMA', smartPro: 'SMART PRO', rack: 'RACK',
+                vguard: 'VGUARD', voltaic: 'VOLTAIC', coef: 'COEF', anwiz: 'ANWIZ'
+            };
+            return map[key] || key.replace(/([A-Z])/g, ' $1').trim().toUpperCase();
+        }
+
+        async loadProductIndex() {
+            try {
+                const cacheKey = 'pvc-search-index-v3';
+                const cached = sessionStorage.getItem(cacheKey);
+                if (cached) {
+                    const parsed = JSON.parse(cached);
+                    this.index = this.index.concat(parsed.map(this.prepareItem));
+                    return;
+                }
+
+                const res = await fetch('assets/js/all-products.js', { cache: 'force-cache' });
+                if (!res.ok) return;
+                const source = await res.text();
+
+                const forcedImageMap = this.parseForcedImageMap(source);
+                const imageMeta = this.parseImageMeta(source);
+
+                const listRegex = /const\s+(\w+Names)\s*=\s*\[([\s\S]*?)\];/g;
+                const strRegex = /"([^"\\]*(?:\\.[^"\\]*)*)"/g;
+                const products = [];
+
+                let listMatch;
+                while ((listMatch = listRegex.exec(source)) !== null) {
+                    const varName = listMatch[1];
+                    const block = listMatch[2] || '';
+                    const category = this.categoryFromArrayName(varName);
+
+                    let m;
+                    while ((m = strRegex.exec(block)) !== null) {
+                        const title = (m[1] || '').trim();
+                        if (!title || title.length < 2) continue;
+                        products.push({
+                            type: 'product',
+                            title,
+                            subtitle: category,
+                            category,
+                            keywords: [category, ...title.split(/\s+/).slice(0, 4)],
+                            image: this.resolveProductImage(title, category, imageMeta, forcedImageMap),
+                            url: `all-products.html?search=${encodeURIComponent(title)}`
+                        });
+                    }
+                }
+
+                const dedup = new Map();
+                for (const p of products) {
+                    const key = `${normalizeSearch(p.title)}|${normalizeSearch(p.category)}`;
+                    if (!dedup.has(key)) dedup.set(key, p);
+                }
+                const finalProducts = Array.from(dedup.values());
+                sessionStorage.setItem(cacheKey, JSON.stringify(finalProducts));
+                this.index = this.index.concat(finalProducts.map(this.prepareItem));
+            } catch (e) {
+                // silent fail: base index still works
             }
-        });
-    });
+        }
+
+        parseForcedImageMap(source) {
+            const out = new Map();
+            const re = /\[_normalize\("([^"]+)"\)\]\s*:\s*"([^"]+)"/g;
+            let m;
+            while ((m = re.exec(source)) !== null) {
+                out.set(normalizeSearch(m[1] || ''), m[2] || '');
+            }
+            return out;
+        }
+
+        parseImageMeta(source) {
+            const imageArrays = new Map();
+            const arrayRegex = /const\s+(\w+ImageFiles)\s*=\s*\[([\s\S]*?)\];/g;
+            const fileRegex = /"([^"\\]*(?:\\.[^"\\]*)*)"/g;
+
+            let m;
+            while ((m = arrayRegex.exec(source)) !== null) {
+                const varName = m[1];
+                const block = m[2] || '';
+                const files = [];
+                let fm;
+                while ((fm = fileRegex.exec(block)) !== null) {
+                    files.push((fm[1] || '').trim());
+                }
+                imageArrays.set(varName, files);
+            }
+
+            const byCategory = new Map();
+            const catRegex = /"([^"]+)"\s*:\s*\{\s*list:\s*(\w+)\s*,\s*path:\s*"([^"]+)"\s*\}/g;
+            let cm;
+            while ((cm = catRegex.exec(source)) !== null) {
+                const category = (cm[1] || '').toUpperCase();
+                const listVar = cm[2] || '';
+                const path = cm[3] || '';
+                byCategory.set(category, {
+                    files: imageArrays.get(listVar) || [],
+                    path
+                });
+            }
+
+            return { byCategory };
+        }
+
+        encodePathKeepSlashes(p) {
+            return (p || '')
+                .split('/')
+                .map(seg => (seg === '' || seg === '.' || seg === '..') ? seg : encodeURIComponent(seg))
+                .join('/');
+        }
+
+        buildImageUrl(pathPrefix, file) {
+            return this.encodePathKeepSlashes(`${pathPrefix || ''}${file || ''}`);
+        }
+
+        tokenOverlapScore(a, b) {
+            const t1 = normalizeSearch(a).split(' ').filter(t => t.length > 1);
+            const t2 = new Set(normalizeSearch(b).split(' ').filter(t => t.length > 1));
+            if (!t1.length || !t2.size) return 0;
+            let hit = 0;
+            for (const t of t1) if (t2.has(t)) hit += 1;
+            return hit / Math.max(t1.length, 1);
+        }
+
+        resolveProductImage(title, category, imageMeta, forcedImageMap) {
+            const pn = normalizeSearch(title);
+            if (!pn) return null;
+
+            const forced = forcedImageMap.get(pn);
+            if (forced) return forced;
+
+            const cfg = imageMeta?.byCategory?.get((category || '').toUpperCase());
+            if (!cfg || !cfg.files || !cfg.files.length) return null;
+
+            // 1) Exact-ish filename match
+            for (const f of cfg.files) {
+                const base = (f || '').split('/').pop().replace(/\.[^.]+$/, '');
+                const fn = normalizeSearch(base);
+                if (!fn) continue;
+                if (fn.includes(pn) || pn.includes(fn)) {
+                    return this.buildImageUrl(cfg.path, f);
+                }
+            }
+
+            // 2) Token-overlap best match
+            let bestFile = null;
+            let best = 0;
+            for (const f of cfg.files) {
+                const base = (f || '').split('/').pop().replace(/\.[^.]+$/, '');
+                const sc = this.tokenOverlapScore(title, base);
+                if (sc > best) {
+                    best = sc;
+                    bestFile = f;
+                }
+            }
+            if (bestFile && best >= 0.4) {
+                return this.buildImageUrl(cfg.path, bestFile);
+            }
+
+            return null;
+        }
+
+        score(item, query, tokens) {
+            let s = 0;
+            if (item.normTitle === query) s += 120;
+            if (item.normTitle.startsWith(query)) s += 90;
+            if (item.normTitle.includes(query)) s += 60;
+            if (item.normKeyPool.includes(query)) s += 40;
+            if (tokens.every(t => item.normKeyPool.includes(t))) s += 35;
+            if (item.type === 'product') s += 20;
+            if (item.type === 'category') s += 10;
+            return s;
+        }
+
+        search(rawQuery) {
+            const query = normalizeSearch(rawQuery);
+            if (!query) return [];
+            const tokens = query.split(' ').filter(Boolean);
+
+            const found = [];
+            for (const item of this.index) {
+                if (!item.normKeyPool.includes(query) && !tokens.some(t => item.normKeyPool.includes(t))) continue;
+                const sc = this.score(item, query, tokens);
+                if (sc > 0) found.push({ item, score: sc });
+            }
+
+            found.sort((a, b) => b.score - a.score || a.item.title.localeCompare(b.item.title));
+            return found.slice(0, this.maxResults).map(x => x.item);
+        }
+
+        highlight(text, query) {
+            const cleanText = escapeHtml(text || '');
+            const q = normalizeSearch(query);
+            if (!q) return cleanText;
+            const tokens = q.split(' ').filter(t => t.length >= 2).slice(0, 3);
+            if (!tokens.length) return cleanText;
+            const pattern = new RegExp(`(${tokens.map(t => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'ig');
+            return cleanText.replace(pattern, '<mark>$1</mark>');
+        }
+
+        render(results, query) {
+            this.results = results;
+            this.activeIndex = -1;
+
+            if (!results.length) {
+                this.panel.innerHTML = `
+                    <div class="pvc-search-empty">
+                        <div class="pvc-search-empty-title">No results found</div>
+                        <div class="pvc-search-empty-sub">Try searching by product name, category, or brand.</div>
+                        <div class="pvc-search-empty-suggest">
+                            <a href="all-products.html?category=ACCESSORIES">Accessories</a>
+                            <a href="all-products.html?category=HIKVISION">Hikvision</a>
+                            <a href="all-products.html">All Products</a>
+                        </div>
+                    </div>
+                `;
+                this.panel.classList.add('active');
+                return;
+            }
+
+            this.panel.innerHTML = results.map((r, i) => `
+                <button type="button" class="pvc-search-item" data-index="${i}" data-url="${escapeHtml(r.url)}" role="option">
+                    <span class="pvc-search-thumb-wrap">
+                        <img class="pvc-search-thumb" src="${this.getThumbForItem(r)}" alt="${escapeHtml(r.title)}" loading="lazy" />
+                    </span>
+                    <span class="pvc-search-type">${escapeHtml(r.type)}</span>
+                    <span class="pvc-search-main">${this.highlight(r.title, query)}</span>
+                    <span class="pvc-search-sub">${this.highlight(r.subtitle || r.category || '', query)}</span>
+                </button>
+            `).join('');
+            this.panel.classList.add('active');
+        }
+
+        renderPopular() {
+            const quick = [
+                { title: 'Hikvision', subtitle: 'Brand', url: 'all-products.html?category=HIKVISION' },
+                { title: 'Accessories', subtitle: 'Category', url: 'all-products.html?category=ACCESSORIES' },
+                { title: 'Cables', subtitle: 'Category', url: 'all-products.html?category=CABLES' },
+                { title: 'All Products', subtitle: 'Browse', url: 'all-products.html' }
+            ];
+            this.panel.innerHTML = quick.map((r) => `
+                <a class="pvc-search-item pvc-search-quick" href="${r.url}">
+                    <span class="pvc-search-thumb-wrap">
+                        <img class="pvc-search-thumb" src="assets/img/CATEGORY%20BANNERS/ACCESSORIES.svg" alt="${escapeHtml(r.title)}" loading="lazy" />
+                    </span>
+                    <span class="pvc-search-type">quick</span>
+                    <span class="pvc-search-main">${escapeHtml(r.title)}</span>
+                    <span class="pvc-search-sub">${escapeHtml(r.subtitle)}</span>
+                </a>
+            `).join('');
+        }
+
+        getThumbForItem(item) {
+            if (!item) return 'assets/img/CATEGORY%20BANNERS/ACCESSORIES.svg';
+            if (item.image) return item.image;
+            const cat = (item.category || item.subtitle || item.title || '').toUpperCase();
+            for (const [key, img] of Object.entries(this.categoryThumbMap)) {
+                if (cat.includes(key) || (item.title || '').toUpperCase().includes(key)) return img;
+            }
+            return 'assets/img/CATEGORY%20BANNERS/ACCESSORIES.svg';
+        }
+
+        open() { this.panel.classList.add('active'); }
+        close() { this.panel.classList.remove('active'); this.activeIndex = -1; }
+
+        move(step) {
+            const items = Array.from(this.panel.querySelectorAll('.pvc-search-item'));
+            if (!items.length) return;
+            this.activeIndex = (this.activeIndex + step + items.length) % items.length;
+            items.forEach((el, i) => el.classList.toggle('active', i === this.activeIndex));
+            items[this.activeIndex].scrollIntoView({ block: 'nearest' });
+        }
+
+        goToActiveOrDefault() {
+            const items = Array.from(this.panel.querySelectorAll('.pvc-search-item'));
+            if (this.activeIndex >= 0 && items[this.activeIndex]) {
+                const active = items[this.activeIndex];
+                const url = active.getAttribute('data-url') || active.getAttribute('href');
+                if (url) window.location.href = url;
+                return true;
+            }
+            return false;
+        }
+
+        bindEvents() {
+            const onInput = debounce(() => {
+                const q = this.input.value || '';
+                if (!q.trim()) {
+                    this.renderPopular();
+                    this.open();
+                    return;
+                }
+                this.render(this.search(q), q);
+            }, 120);
+
+            this.input.addEventListener('focus', () => {
+                if (!(this.input.value || '').trim()) this.renderPopular();
+                this.open();
+            });
+            this.input.addEventListener('input', onInput);
+            this.input.addEventListener('keydown', (e) => {
+                if (!this.panel.classList.contains('active')) return;
+                if (e.key === 'ArrowDown') { e.preventDefault(); this.move(1); }
+                else if (e.key === 'ArrowUp') { e.preventDefault(); this.move(-1); }
+                else if (e.key === 'Escape') { this.close(); }
+                else if (e.key === 'Enter') {
+                    if (this.goToActiveOrDefault()) {
+                        e.preventDefault();
+                    }
+                }
+            });
+
+            this.panel.addEventListener('click', (e) => {
+                const item = e.target.closest('.pvc-search-item');
+                if (!item) return;
+                const url = item.getAttribute('data-url') || item.getAttribute('href');
+                if (url) window.location.href = url;
+            });
+
+            this.form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (this.goToActiveOrDefault()) return;
+                handleGlobalSearch(this.input.value);
+            });
+        }
+    }
 
     // --- SEARCH TOGGLE LOGIC ---
     const searchContainer = document.querySelector('.pvc-search-container');
     const searchBtnToggle = document.querySelector('.pvc-search-btn-toggle');
     const searchFormInline = document.querySelector('.pvc-search-form-inline');
     const searchInputInline = document.querySelector('.pvc-search-input-inline');
+    const searchResultsPanel = document.getElementById('pvc-search-results');
+    const pvcSmartSearch = new PvcSmartSearch({
+        input: searchInputInline,
+        form: searchFormInline,
+        panel: searchResultsPanel
+    });
 
     // Toggle Search Bar
     searchBtnToggle.addEventListener('click', (e) => {
         // e.stopPropagation(); // Prevent closing immediately if we add document click listener later
         searchContainer.classList.toggle('active');
         if (searchContainer.classList.contains('active')) {
-            setTimeout(() => searchInputInline.focus(), 100);
+            setTimeout(() => {
+                searchInputInline.focus();
+                pvcSmartSearch.open();
+            }, 100);
         }
     });
 
@@ -360,13 +764,8 @@ function initPvcHeader() {
     document.addEventListener('click', (e) => {
         if (!searchContainer.contains(e.target) && searchContainer.classList.contains('active')) {
             searchContainer.classList.remove('active');
+            pvcSmartSearch.close();
         }
-    });
-
-    // Handle Search Submit
-    searchFormInline.addEventListener('submit', (e) => {
-        e.preventDefault();
-        handleGlobalSearch(searchInputInline.value);
     });
 
     // Handle Active State (Desktop & Mobile)
