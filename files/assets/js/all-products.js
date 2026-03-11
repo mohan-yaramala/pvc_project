@@ -1,3 +1,180 @@
+// Accessory Subcategories for category card display
+const accessorySubcategories = [
+    { name: "RACKS", image: "assets/img/ACCESORIESbanners/RACKS.svg" },
+    { name: "STANDS", image: "assets/img/ACCESORIESbanners/STANDS.svg" },
+    { name: "POE EXTENDERS", image: "assets/img/ACCESORIESbanners/POE%20EXTENDERS.svg" },
+    { name: "UPS/BATTERIES", image: "assets/img/ACCESORIESbanners/UPS_BATTERIES.svg" },
+    { name: "MEMORY/SD CARDS", image: "assets/img/ACCESORIESbanners/MEMORY_SD%20CARDS.svg" },
+    { name: "ADAPTERS", image: "assets/img/ACCESORIESbanners/ADAPTERS.svg" },
+    { name: "CONVERTERS", image: "assets/img/ACCESORIESbanners/CONVERTERS.svg" },
+    { name: "EXTENDERS", image: "assets/img/ACCESORIESbanners/EXTENDERS.svg" },
+    { name: "TOOLS", image: "assets/img/ACCESORIESbanners/TOOLS.svg" },
+    { name: "PVC BOX", image: "assets/img/ACCESORIESbanners/PVC%20BOX.svg" },
+    { name: "HDMI CABLES", image: "assets/img/ACCESORIESbanners/HDMI%20CABLES.svg" },
+    { name: "LAN PATCH CARDS", image: "assets/img/ACCESORIESbanners/LAN%20PATCH%20CARDS.svg" },
+    { name: "CABLE TIES", image: "assets/img/ACCESORIESbanners/CABLE%20TIES.svg" },
+    { name: "SPIKES", image: "assets/img/ACCESORIESbanners/SPIKES.svg" },
+    { name: "SPLITTER SWITCH", image: "assets/img/ACCESORIESbanners/SWITCH.svg" },
+    { name: "BNC", image: "assets/img/ACCESORIESbanners/BNC.svg" },
+    { name: "DC", image: "assets/img/ACCESORIESbanners/DC.svg" },
+    { name: "CLIPS & C CLAMPS", image: "assets/img/ACCESORIESbanners/CLIPS%20%26%20%20CLAMPS.svg" },
+    { name: "COUPLERS", image: "assets/img/ACCESORIESbanners/ACCESSORIES.svg" },
+    { name: "CAPTURE CARD", image: "assets/img/ACCESORIESbanners/CAPTURE%20CARD.svg" },
+    { name: "TAGS", image: "assets/img/ACCESORIESbanners/TAGS.svg" },
+    { name: "TAPES & PLASTER", image: "assets/img/ACCESORIESbanners/TAPES%20%26%20PLASTER.svg" },
+    { name: "MONITOR", image: "assets/img/ACCESORIESbanners/MONITOR.svg" },
+    { name: "CCTV ACCESSORIES", image: "assets/img/ACCESORIESbanners/CCTV%20ACCESSORIES.svg" },
+    { name: "RING STAND", image: "assets/img/ACCESORIESbanners/RING%20STAND.svg" }
+];
+
+// ANWIZ Subcategories for category card display
+const anwizSubcategories = [
+    { name: "CAMERAS", image: "assets/img/sub-cat images/ANWIZ.svg" },
+    { name: "NVR", image: "assets/img/sub-cat images/ANWIZ.svg" },
+    { name: "POE", image: "assets/img/sub-cat images/ANWIZ.svg" },
+    { name: "CABLES", image: "assets/img/sub-cat images/ANWIZ.svg" },
+    { name: "RACKS", image: "assets/img/sub-cat images/ANWIZ.svg" },
+    { name: "SMPS", image: "assets/img/sub-cat images/ANWIZ.svg" },
+    { name: "ADAPTERS", image: "assets/img/sub-cat images/ANWIZ.svg" }
+];
+
+// CP PLUS Subcategories for category card display
+const cpPlusSubcategories = [
+    { name: "DVR", image: "assets/img/sub-cat images/CP PLUS.svg" },
+    { name: "NVR", image: "assets/img/sub-cat images/CP PLUS.svg" },
+    { name: "HD CAMERAS", image: "assets/img/sub-cat images/CP PLUS.svg" },
+    { name: "IP CAMERAS", image: "assets/img/sub-cat images/CP PLUS.svg" },
+    { name: "4G &  WIFI", image: "assets/img/sub-cat images/CP PLUS.svg" },
+    { name: "POE", image: "assets/img/sub-cat images/CP PLUS.svg" },
+    { name: "CABLES", image: "assets/img/sub-cat images/CP PLUS.svg" }
+];
+
+// COEF Subcategories for category card display
+const coefSubcategories = [
+    { name: "SOLAR CAMERAS", image: "assets/img/sub-cat images/COFE.svg" },
+    { name: "4G - WIFI CAMERAS", image: "assets/img/sub-cat images/COFE.svg" }
+];
+
+// VGUARD Subcategories for category card display
+const vguardSubcategories = [
+    { name: "STABILIZER", image: "assets/img/VGUARD/VGUARD%20STABILIZER%20(VG50%20SB).jpeg" },
+    { name: "UPS", image: "assets/img/VGUARD/VGUARD%20UPS.jpeg" }
+];
+
+// VOLTAIC Subcategories for category card display
+const voltaicSubcategories = [
+    { name: "CABLES", image: "assets/img/CATEGORY BANNERS/ACCESSORIES.svg" },
+    { name: "RACK", image: "assets/img/CATEGORY BANNERS/RACK.svg" },
+    { name: "BNC", image: "assets/img/CATEGORY BANNERS/ACCESSORIES.svg" }
+];
+
+// DAHUA Subcategories for category card display
+const dahuaSubcategories = [
+    { name: "DVR", image: "assets/img/sub-cat images/DAHUA.svg" },
+    { name: "NVR", image: "assets/img/sub-cat images/DAHUA.svg" },
+    { name: "HD CAMERAS", image: "assets/img/sub-cat images/DAHUA.svg" }
+];
+
+// TP LINK Subcategories for category card display
+const tpLinkSubcategories = [
+    { name: "NVR", image: "assets/img/sub-cat images/TP LINK.svg" },
+    { name: "POE", image: "assets/img/sub-cat images/TP LINK.svg" },
+    { name: "SWITCHES", image: "assets/img/sub-cat images/TP LINK.svg" },
+    { name: "ACCESS POINTS", image: "assets/img/sub-cat images/TP LINK.svg" },
+    { name: "ROUTERS", image: "assets/img/sub-cat images/TP LINK.svg" }
+];
+
+// HIKVISION Subcategories for category card display
+const hikvisionSubcategories = [
+    { name: "DVR", image: "assets/img/sub-cat images/HIKVISION.svg" },
+    { name: "NVR", image: "assets/img/sub-cat images/HIKVISION.svg" },
+    { name: "HD CAMERAS", image: "assets/img/sub-cat images/HIKVISION.svg" },
+    { name: "CABLES", image: "assets/img/sub-cat images/HIKVISION.svg" }
+];
+
+// ZEBRONICS Subcategories for category card display
+const zebronicsSubcategories = [
+    { name: "MONITORS", image: "assets/img/sub-cat images/ZEBRONICS.svg" },
+    { name: "SMPS", image: "assets/img/sub-cat images/ZEBRONICS.svg" },
+    { name: "CABLES", image: "assets/img/sub-cat images/ZEBRONICS.svg" },
+    { name: "UPS", image: "assets/img/sub-cat images/ZEBRONICS.svg" }
+];
+
+// TRUE VIEW Subcategories for category card display
+const trueViewSubcategories = [
+    { name: "4G & WIFI", image: "assets/img/sub-cat images/TRUE VIEW.svg" },
+    { name: "MEMORY CARDS", image: "assets/img/sub-cat images/TRUE VIEW.svg" },
+    { name: "ROUTER", image: "assets/img/sub-cat images/TRUE VIEW.svg" }
+];
+
+// SECUREYE Subcategories for category card display
+const secureyeSubcategories = [
+    { name: "4G & WIFI", image: "assets/img/sub-cat images/SECUREYE.svg" },
+    { name: "POE", image: "assets/img/sub-cat images/SECUREYE.svg" },
+    { name: "MEDIA CONVERTERS", image: "assets/img/sub-cat images/SECUREYE.svg" },
+    { name: "MEMORY CARDS", image: "assets/img/sub-cat images/SECUREYE.svg" },
+    { name: "CONVERTER", image: "assets/img/sub-cat images/SECUREYE.svg" }
+];
+
+// SECURUS Subcategories for category card display
+const securusSubcategories = [
+    { name: "NVR", image: "assets/img/sub-cat images/SECURUS.svg" },
+    { name: "DVR", image: "assets/img/sub-cat images/SECURUS.svg" },
+    { name: "IP CAMERAS", image: "assets/img/sub-cat images/SECURUS.svg" },
+    { name: "HD CAMERA", image: "assets/img/sub-cat images/SECURUS.svg" },
+    { name: "PTZ", image: "assets/img/sub-cat images/SECURUS.svg" }
+];
+
+// YADON Subcategories for category card display
+const yadonSubcategories = [
+    { name: "POE", image: "assets/img/sub-cat images/YADON.svg" },
+    { name: "UPS", image: "assets/img/sub-cat images/YADON.svg" }
+];
+
+// D-LINK Subcategories for category card display
+const dLinkSubcategories = [
+    { name: "RACKS", image: "assets/img/sub-cat images/DLINK.svg" },
+    { name: "CABLES", image: "assets/img/sub-cat images/DLINK.svg" },
+    { name: "ACCESSORIES", image: "assets/img/sub-cat images/DLINK.svg" },
+    { name: "POE", image: "assets/img/sub-cat images/DLINK.svg" },
+    { name: "ROUTER", image: "assets/img/sub-cat images/DLINK.svg" },
+    { name: "SWITCHES", image: "assets/img/sub-cat images/DLINK.svg" },
+    { name: "SMPS/POWER SUPPLY", image: "assets/img/sub-cat images/DLINK.svg" }
+];
+
+// IMOU Subcategories for category card display
+const imouSubcategories = [
+    { name: "4G - WIFI", image: "assets/img/sub-cat images/IMOU.svg" }
+];
+
+// MAXXION Subcategories for category card display
+const maxxionSubcategories = [
+    { name: "POE EXTENDERS OUTDOOR", image: "assets/img/sub-cat images/MAXXION.svg" },
+    { name: "STANDS", image: "assets/img/sub-cat images/MAXXION.svg" },
+    { name: "HDMI CABLES", image: "assets/img/sub-cat images/MAXXION.svg" },
+    { name: "SPIKE/POWER SOCKETS", image: "assets/img/sub-cat images/MAXXION.svg" },
+    { name: "ACCESSORIES", image: "assets/img/sub-cat images/MAXXION.svg" }
+];
+
+// ERD Subcategories for category card display
+const erdSubcategories = [
+    { name: "ADAPTERS", image: "assets/img/sub-cat images/ERD.svg" }
+];
+
+// SMART PRO Subcategories for category card display
+const smartProSubcategories = [
+    { name: "HDMI CABLE", image: "assets/img/sub-cat images/SMART PRO.svg" },
+    { name: "HDMI EXTENDERS", image: "assets/img/sub-cat images/SMART PRO.svg" },
+    { name: "CONVERTERS", image: "assets/img/sub-cat images/SMART PRO.svg" },
+    { name: "LAN TESTER", image: "assets/img/sub-cat images/SMART PRO.svg" }
+];
+
+// HDD Subcategories for category card display
+const hddSubcategories = [
+    { name: "NORMAL", image: "assets/img/sub-cat images/HDD.svg" },
+    { name: "3 YEAR COMPANY WARRANTY", image: "assets/img/sub-cat images/HDD.svg" }
+];
+
 const monitorNames = [
     "BLUE FEATHER 15 INCH MONITOR",
     "BLUE FEATHER 17 INCH MONITOR",
@@ -73,39 +250,33 @@ const cableNames = [
     "HIK 3+1 90MTRS CABLE"
 ];
 const maxxionNames = [
-    "BNC MAXXION TYPE-2",
-    "EZVIZ ROBO STAND",
-    "FYBER 30MTR EXTENDER",
-    "MAXXION 10/100 POE EXTENDER WATER PROOF 30W",
-    "MAXXION 10/1000 POE EXTENDER 30W",
-    "MAXXION 3PIN POWER SOCKET",
-    "MAXXION 40CM POLE RING",
-    "MAXXION 4CH SMPS",
-    "MAXXION 6SOCKET POWER",
-    "MAXXION 8CH SMPS",
-    "MAXXION BNC SCREW TYPE",
-    "MAXXION CABEL MANAGER",
-    "MAXXION CABINET LOCK",
-    "MAXXION CRIMPING TOOL HEAVY",
-    "MAXXION DC SCREW TYPE",
-    "MAXXION DUAL SIDE POLE STAND",
-    "MAXXION GIGA POE EXTENDER WATER PROOF 30W",
-    "MAXXION GIGA POE EXTENDER WATER PROOF 90W",
-    "MAXXION HDMI 4K 15MTR",
+    "MAXXION GIGA POE EXTENDER WATER PROOF 30W (MX-PE13G-OD3W)",
+    "MAXXION GIGA POE EXTENDER WATER PROOF 90W (MX-PE13G-OD9W)",
+    "EZVIZ ROBO STAND (MX-ERS)",
+    "MAXXION DUAL SIDE POLE STAND (MX-PTS)",
+    "MAXXION METAL DOME STAND (MX-MDS401)",
+    "MAXXION ALUMINIUM SMALL STAND 12CM (MX-AS05A)",
+    "MAXXION HDMI 4K 1.5MTR",
     "MAXXION HDMI 4K 3MTR",
     "MAXXION HDMI 4K 5MTR",
-    "MAXXION HDMI CABEL 4K 10MTRS",
-    "MAXXION HDMI CABEL 4K 20MTRS",
-    "MAXXION HDMI CABEL 4K 30MTRS",
-    "MAXXION JUNCTION BOX",
-    "MAXXION METAL DOME STAND",
-    "MAXXION PUNCH DOWN TOOL",
-    "MAXXION ROUND BOX HEAVY",
-    "MAXXION ROUND BOX HEAVY 5X5",
+    "MAXXION HDMI 4K 10MTR",
+    "MAXXION HDMI 4K 15MTR",
+    "MAXXION HDMI 4K 20MTR",
+    "MAXXION HDMI 4K 30MTR",
+    "MAXXION 3PIN POWER SOCKET",
+    "MAXXION 6SOCKET POWER",
+    "MAXXION CABINET LOCK (MX-CDL)",
+    "MAXXION CABEL MANAGER",
+    "MAXXION DC SCREW TYPE",
+    "MAXXION BNC SCREW TYPE",
+    "MAXXION CRIMPING TOOL HEAVY",
+    "MAXXION ROUND BOX HEAVY (MX-HBRS)",
+    "MAXXION ROUND BOX HEAVY 5XS (MX-HBR)",
     "MAXXION SQUARE BOX HEAVY 5X5",
+    "MAXXION JUNCTION BOX",
+    "MAXXION PUNCH DOWN TOOL",
     "MAXXION WIRE BNC ELIGHT",
-    "PRINTING AND SATAONARY",
-    "PRINTING AND STATIONARY"
+    "RACK FAN"
 ];
 const mastelNames = [
     "MASTEL 2MP COLOUR+AUDIO BULLET",
@@ -121,6 +292,9 @@ const mastelNames = [
     "MASTEL SMPS 8CH"
 ];
 const imouNames = [
+    "IMOU BULLET 2E (IPC-K3D3H0WF)",
+    "IMOU 5+5 MP DUAL LENS (IPC-S7XE10M0WED)",
+    "IMOU 3+3 MP DUAL LENS (IPC-S7XEP76M0WED)",
     "IMOU 128GB SD CARD",
     "IMOU 2MP  IPC-A22EP-D",
     "IMOU 3+3MP WIFI LINKAGE",
@@ -134,6 +308,44 @@ const imouNames = [
     "IMOU RANGER S2 4MP ROBO"
 ];
 const hikvisionNames = [
+    "HIKVISION 4 CH DVR 2MP (DS-7104HGHI-M1/T)",
+    "HIKVISION 8 CH DVR 2MP (DS-7108HGHI-M1/T)",
+    "HIKVISION 16 CH DVR 2MP (DS-7116HGHI-K1)",
+    "HIKVISION 4 CH DVR 5MP (IDS-7104HQHI-M1/S)",
+    "HIKVISION 8 CH DVR 5MP (IDS-7108HQHI-M1/T)",
+    "HIKVISION 16 CH DVR 5MP (IDS-7116HQHI-M1/S)",
+    "HIKVISION 32 CH DVR 5MP",
+    "HIKVISION 4 CH NVR Q1/M (DS-7104NI-Q1/M)",
+    "HIKVISION 8 CH NVR Q1/M (DS-7108NI-Q1/M)",
+    "HIKVISION 16 CH NVR Q1/M (DS-7116NI-Q1/M)",
+    "HIKVISION 4 CH NVR Q1 (DS-7604NI-Q1)",
+    "HIKVISION 8 CH NVR Q1 (DS-7608NI-Q1)",
+    "HIKVISION 16 CH NVR Q1 (DS-7616NI-Q1)",
+    "HIKVISION 4 CH NVR K1 (DS-7604NXI-K1)",
+    "HIKVISION 8 CH NVR K1 (DS-7608NXI-K1)",
+    "HIKVISION 16 CH NVR K1 (DS-7616NXI-K1)",
+    "HIKVISION 16 CH NVR K2 (DS-7616NXI-K2)",
+    "HIKVISION 32 CH NVR K2 (DS-7632NXI-K2)",
+    "HIKVISION 32 CH NVR K4",
+    "HIKVISION 64 CH NVR K4",
+    "HIKVISION 64 CH NVR K8",
+    "HIKVISION 2MP BULLET B/W + AUDIO (DS-2CE16D0T-ITPFS)",
+    "HIKVISION 2MP DOME B/W + AUDIO (DS-2CE76D0T-ITPFS)",
+    "HIKVISION 2MP BULLET HYBRID + AUDIO (DS-2CE16D0T-LPFS)",
+    "HIKVISION 2MP DOME HYBRID + AUDIO (DS-2CE76D0T-LPFS)",
+    "HIKVISION 2MP BULLET COLOR + AUDIO (DS-2CE10DF0T-PFS)",
+    "HIKVISION 2MP DOME COLOR + AUDIO (DS-2CE70DF0T-PFS)",
+    "HIKVISION 2MP BULLET COLOR + 2 WAY AUDIO (DS-2CE16D0T-LPTS)",
+    "HIKVISION 2MP DOME COLOR + 2 WAY AUDIO (DS-2CE70D0T-PTLTS)",
+    "HIKVISION 5MP BULLET B/W + AUDIO (DS-2CE16H0T-ITPFS)",
+    "HIKVISION 5MP DOME B/W + AUDIO (DS-2CE76H0T-ITPFS)",
+    "HIKVISION 5MP BULLET HYBRID + AUDIO (DS-2CE16K0T-LPFS)",
+    "HIKVISION 5MP DOME HYBRID + AUDIO (DS-2CE76K0T-LPFS)",
+    "HIKVISION 5MP BULLET COLOR + AUDIO (DS-2CE10KF0T-PFS)",
+    "HIKVISION 5MP DOME COLOR + AUDIO (DS-2CE70KF0T-PFS)",
+    "HIKVISION 5MP BULLET COLOR + 2 WAY AUDIO",
+    "HIKVISION 5MP DOME COLOR + 2 WAY AUDIO",
+    "180MTR 3+1 OUTDOOR CABLE",
     "D LINK RJ 45 NEW",
     "DAH-4MP-IP-IR30MTR BULLET [DH-IPC-HFW1431S1P-S4]",
     "DS-2CE70DOT-PTLTS HIK 2MP DOME 2WAY (A)",
@@ -324,6 +536,24 @@ const erdNames = [
     "ERD SPIKE 3MTR",
     "ERD SPIKE 5MTR"
 ];
+const lapcareNames = [
+    "LAPCARE 19'' MONITOR (HDMI&VGA) (LM195WDH)",
+    "LAPCARE WIRELESS MOUSE"
+];
+const pramaNames = [
+    "4MP PTZ 30X ZOOM 250MTRS"
+];
+const smartProNames = [
+    "HDMI SP 3MTR",
+    "HDMI SP 5MTR",
+    "60MTR EXTENDER",
+    "120MTR EXTENDER",
+    "60MTR KVM EXTENDER",
+    "120MTR KVM EXTENDER",
+    "VGA TO HDMI CONVERTER",
+    "HDMI TO VGA CONVERTER",
+    "LAN TESTER"
+];
 const rackNames = [
     "1U VOLTAIC RACK",
     "2U ECO RACK (N)",
@@ -342,18 +572,53 @@ const rackNames = [
     "SGS DVR PLASTIC RACK BOX"
 ];
 const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+const _tokenize = (s) =>
+    (s || "")
+        .toUpperCase()
+        .replace(/[^A-Z0-9]+/g, " ")
+        .trim()
+        .split(/\s+/)
+        .filter(Boolean);
+const _tokenSimilarity = (a, b) => {
+    const aSet = new Set(_tokenize(a));
+    const bSet = new Set(_tokenize(b));
+    if (!aSet.size || !bSet.size) return 0;
+
+    let inter = 0;
+    aSet.forEach((t) => {
+        if (bSet.has(t)) inter += 1;
+    });
+
+    const union = new Set([...aSet, ...bSet]).size;
+    return union ? inter / union : 0;
+};
+const _numericTokenOverlap = (a, b) => {
+    const aNums = new Set(_tokenize(a).filter((t) => /\d/.test(t)));
+    const bNums = new Set(_tokenize(b).filter((t) => /\d/.test(t)));
+    if (!aNums.size || !bNums.size) return true;
+    for (const t of aNums) {
+        if (bNums.has(t)) return true;
+    }
+    return false;
+};
 
 (() => {
     const accessoryNames = [
 
         "10MM CLIPS",
+        "12MM CLIPS",
         "128GB HP SD CARD",
+        "1X1 LAN COPULER",
         "2MP VIDEO BALUN  BLUE",
         "2PIN CONNECTOR  BNC",
+        "2U MINI RACK",
         "2X1 LAN COPULER",
         "3 PIN POWER CABLE",
         "3PIN POWER CABLE",
         "4CH VIDEO BALOON",
+        "4U MINI RACK",
+        "4U RACK XT",
+        "4U VOLTAIC RACK",
         "4PIN 12V 5AMP ADAPT0R",
         "4X4 ELCO  BRASS BOX",
         "4X4 ELCO PVC BOX",
@@ -367,10 +632,12 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "5X5  JASCOM PVC BOX",
         "6MM CLIPS",
         "8CH VIDEO BALOON",
+        "8MP VIDEO BALUN (SRB-VB8)",
         "8MM CLIPS",
         "8MP VIDEO BULEN -YELLOW",
         "A2 SQUARE 4G SIM ROUTER",
         "BATTERY",
+        "BATTERY (CR1220)",
         "BLUE RJ45 CRIMPING TOOL",
         "BNC JASCOM WIRE",
         "BNC MAXXION",
@@ -378,6 +645,12 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "BNC PIN BLUE",
         "BNC SECUREYE S-B10",
         "BNC WIRELESS JASCOM",
+        "BLACK COLOUR BNC",
+        "HEAVY QUALITY BNC",
+        "JASCOM WIRE BNC",
+        "MAXXION BNC",
+        "VOLTAIC WIRELESS BNC",
+        "WHITE COLOUR BNC",
         "BOSI RJ45 CRIMPING TOOL",
         "BULLET CAMERA STAND",
         "CABLE CUTTERS (M)",
@@ -404,21 +677,39 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "CONTINUTY TESTER",
         "CRIMPING TOOL BLUE",
         "D LINK LAN TESTER",
+        "D LINK 2U MINI RACK (NWR-3535)",
+        "D LINK 2U RACK",
+        "D LINK 4U RACK UNLOADED",
+        "D LINK 4U BIG RACK ONLY SPIKE",
+        "D LINK 6U RACK (SPIKE&FAN)",
+        "D LINK 9U RACK",
+        "D LINK 12U RACK",
+        "D LINK RACK TRAY",
         "D-LINK WIFI RECEIVER 300MBPS",
         "DC 2PIN CONNECTOR",
+        "DC PIN  (SRB-DC100)",
+        "FEMALE DC PIN  (SRB-FDC100)",
+        "FEMALE DC PIN",
+        "MAXXION DC",
+        "WHITE COLOUR DC",
+        "BLACK COLOUR DC",
         "DC PIN ORANGE",
         "DC PIN RED WIRE (MAXXION)",
         "DC PIN YELLOW",
         "DC RED PIN",
+        "SCREW DC (SRB-SBNC)",
+        "SCREW BNC",
         "DOME STAND",
         "DP TO HDMI 1.8 MTR",
         "DP TO HDMI CONVERTOR",
         "DP TO VGA CARBONIX",
+        "DVI TO VGA (GP-10306)",
         "DVI TO VGA",
         "ELECTRONICS CRONE CUTTER",
         "EVM 64GB",
         "FINGERS USB SPEAKER FUNBEATS",
         "FRONTECH WIFI ADAPTER",
+        "HD PASSIVE VIDEO BALUN (LAN TO BNC)",
         "HD PASSIVE VIDEO BALUN (LAN TO BNC) AMP",
         "HDD CARRY CASE PLASTIC",
         "HDMI  M TO F L SHAPE",
@@ -428,9 +719,18 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "HDMI 1X3  SWITCH REMOTE AMP",
         "HDMI 1X4 SPLITTER",
         "HDMI 1X8 SPLITTER",
+        "HDMI CABLE 4K 1.5M",
+        "HDMI CABLE 4K 3 M",
+        "HDMI CABLE 4K 5 M",
+        "HDMI CABLE 4K 10 M",
+        "HDMI CABLE 4K 15 M",
+        "HDMI CABLE 4K 20 M",
+        "HDMI CABLE 4K 30 M",
+        "HDMI 30 MTR LAN EXTENDER",
         "HDMI 30 MTR LAN EXTENDER (AMP)",
         "HDMI 4K 5MTRS CABLE (MX-HC105)",
         "HDMI 4X1 QUAD CONVERTOR",
+        "HDMI 60 MTRS LAN EXTENDER",
         "HDMI 60 MTRS EXTENDER",
         "HDMI BI DIRECTION SWITCH 1X2",
         "HDMI EXTENDAR UPTO 120MTR",
@@ -451,60 +751,126 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "HDMI VIDEO CAPTURE CARD",
         "HDMI VIDEO CAPTURE CARD TYPE C",
         "HDMI Y CABLE",
+        "HIKVISION 64GB SD CARD",
+        "HIKVISION 128GB SD CARD",
+        "HIKVISION 256GB SD CARD",
         "HIKSEMI 64GB SD CARD",
         "HP 128GB SD CARD",
+        "SECUREYE 64GB SD CARD",
+        "SECUREYE 128GB SD CARD",
         "HSS STEEI WIRE CUTTER",
         "HW BATTERY",
         "JIO 12V 2.5 AMS ADAPTOR",
         "JIO 12V 2AMP ADAPTOR",
         "LAN 1MTR PATCH CARD",
+        "LAN 2MTR PATCH CARD",
+        "LAN 3MTR PATCH CARD",
         "LAN 5MTR CABLE",
+        "LAN 5MTR PATCH CARD",
+        "LAN 10MTR PATCH CARD",
+        "LAN 15MTR PATCH CARD",
+        "LAN 25MTR PATCH CARD",
         "LAN COUPLER",
+        "LAN TESTER",
         "LAN TESTER GLINK",
         "LAN TESTER MULTIBYTE",
         "LAN TESTER SMART PRO",
         "LAN TO USB",
         "LAN WATER PROOF JOINTER",
+        "RJ45 JOINTER",
+        "RJ45 SPLITTER 1/2",
         "LAPCARE WIRELESS MOUSE",
         "LOGITECH WEBCAM BRIO100",
         "MAXXION 10CM POLE RING",
         "MAXXION 17CM (J TYPE) STAND",
+        "MAXXION 17CM (L TYPE) STAND (MX-J608)",
         "MAXXION 20CM POLE RING",
+        "METAL RING 10CM (SRB-PR10C)",
+        "METAL RING 20CM (SRB-PR20C)",
+        "METAL RING 30CM (SRB-PR30C)",
+        "METAL RING 40CM (SRB-PR40C)",
         "MAXXION 25CM (J TYPE) STAND",
+        "MAXXION 25CM (L TYPE) STAND (MX-J609)",
         "MAXXION 30-60 CM ALUMINIUM EXPANDABLE STAND",
+        "MAXXION 30-60 CM ALUMINIUM EXPANDABLE STAND (MX-AS3060)",
         "MAXXION 30-60CM (I TYPE) WALL STAND",
+        "MAXXION 30-60CM (I TYPE) WALL STAND (MX-BS3060)",
         "MAXXION 30-60CM (L TYPE) WALL STAND",
+        "MAXXION 30-60CM (L TYPE) WALL STAND (MX-WS3061)",
         "MAXXION 30-60CM CELING DOME STAND",
+        "MAXXION 30-60CM CELING DOME STAND (MX-DS3060)",
         "MAXXION 60-120 CM ALUMINIUM EXPANDABLE STAND",
+        "MAXXION 60-120 CM ALUMINIUM EXPANDABLE STAND (MX-AS6012)",
+        "MAXXION 60-120CM (I TYPE) WALL STAND (MX-BS6012)",
+        "MAXXION 60-120CM (L TYPE) WALL STAND (MX-WS6012)",
         "MAXXION METAL 2 SIDE ROAD STAND",
+        "MAXXION METAL 2 SIDE ROAD STAND (MX-RS60)",
         "MAXXION METAL 2 SIDE ROAD STAND RS100",
+        "MAXXION METAL 2 SIDE ROAD STAND (RS100)",
         "MAXXION METAL CAMERA STAND HEAYY",
+        "MAXXION METAL CAMERA STAND HEAYY (MX-BS701)",
         "MAXXION METAL CAMERA STAND HEAYY 1",
+        "MAXXION METAL CAMERA STAND HEAYY 1 (MX-BS703)",
         "MAXXION OUTDOOR METAL BOX (MX-D400MB)",
+        "MAXXION PUNCH DOWN TOOL",
         "MAXXION POE SPLITER CONNECTOR TYPE",
+        "MAXXION ROUND BOX HEAVY (MX-HBRS)",
+        "MAXXION ROUND BOX HEAVY 5X5 (MX-HBR)",
+        "MAXXION SQUARE BOX HEAVY 5X5",
+        "MAXXION JUNCTION BOX",
+        "HEAVY JUNCTION BOX 150*110*70MM (SRB-HJB)",
         "MAXXION POLE BRACKET STAND 1FT WITH RING",
+        "MAXXION POLE BRACKET STAND 1FT WITH RING (MX-PS704)",
         "MAXXION POLE BRACKET STAND WITH RING",
+        "MAXXION POLE BRACKET STAND WITH RING (MX-PSRTS)",
         "MAXXION PTZ STAND",
+        "MAXXION PTZ STAND (MX-PT1602)",
         "MAXXION WALL ROBO STAND (MX-AP180)",
         "MAXXION WIRE MARKER",
         "METAL DOME STAND BIG - MX-MDS402",
+        "METAL DOME STAND BIG (MX-MDS402)",
         "METAL DOME STAND SMALL - MX-MDS401",
+        "METAL DOME STAND SMALL (MX-MDS401)",
         "MIC BALL G VISION",
         "MINI DP TO HDMI 1.8 MTR",
         "MINI DP TO VGA 1.8 MTR",
+        "7 INCH HD TFT COLOR MONITOR",
         "MONITER STANDS 12 - 32 INCH",
         "MONITER STANDS 12 - 42 INCH FIX",
         "MONITER WALL MOUNT STAND  14-25",
+        "POLE MOUNT DUAL CAMERA 60CM STAND (MX-RS60)",
+        "POLE  MOUNT DUAL CAMERA 100CM STAND             (MX-RS100)",
+        "WALL MOUNT (LTYPE) 32 CM (MX-J610)",
+        "WALL MOUNT (LTYPE) 60 CM (MX-J614)",
+        "WALL MOUNT (I TYPE) 30-60CM STAND (MX-IS3060)",
+        "WALL MOUNT (I TYPE) 60-120CM STAND (MX-IS6012)",
+        "WALL MOUNT (I TYPE) 75-150CM STAND (MX-IS7510)",
+        "WALL MOUNT (I TYPE) 100-200CM STAND (MX-IS1020)",
+        "MAXXION OUTDOOR PVC POE RACK (MX-800D)",
+        "MAXXION OUTDOOR PVC POE RACK (MX-800E)",
+        "MAXXION OUTDOOR PVC POE RACK (MX-800F)",
         "MULTI METER",
         "MULTITEC STRIPPING TOOL",
         "MX CRIMPING TOOL",
         "OTG TYPE C",
         "POE  INJECTOR",
+        "POE INJECTOR 30MTRS",
+        "POE 2 WAY SPLITTER",
+        "48V POE SPLITTER",
+        "POE 1 IN 2 OUT SPLITTER",
+        "POE 1 IN 4 OUT SPLITTER",
+        "POLICE LIGHT",
         "POE BOX WHITE",
         "POE MULTI PLUXER",
         "POE SPILTER (DC PIN)",
+        "3 Port POE Extender (10/100 Mbps, 30W, Outdoor)",
+        "3 Port Gigabit POE Extender (100/1000 Mbps, 30W, Outdoor)",
+        "4 Port POE Extender (10/100 Mbps, 90W, Outdoor)",
+        "4 Port Gigabit POE Extender (10/1000 Mbps, 90W, Outdoor)",
         "POLE STAND BULLET (V)",
         "POWER CABLE",
+        "MAXXIXOM POWER SPIKE 4+1 2MTR",
+        "MAXXIXOM POWER SPIKE 4+1 5MTR",
         "POWER SPIKE 4+1 2MTR MAXXIXOM",
         "POWER SPIKE 4+1 5MTR MAXXIXOM",
         "POWER STRIP 4+1 2MTR",
@@ -524,15 +890,23 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "SATA M TO 6PIN",
         "SATA M TO 8 PIN Y CABLE",
         "SATA POWER CABLE",
+        "SGS DVR (POE) PLASTIC RACK BOX",
         "SGS 4X4 PVCBOX",
         "SMART PRO HDMI TO VGA",
         "SMART PRO LAN TESTER",
         "SMART PRO VGA TO HDMI",
+        "RJ45 VIDEO BALUN (SRB-VBB/RJ45)",
+        "4CH UTP BALUN  (SRB-4CHUTP)",
+        "8CH UTP BALUN   (SRB-8CHUTP)",
+        "ANALOG CABLE TO IP CONVERTER (IP BALUN)",
         "SMB CRIMPING TOOL 1",
         "SOLDERING PAD",
         "SP TYPE C OTG CABLE",
+        "USB TO C ADAPTOR",
+        "USB TO LAN ADAPTOR",
         "SP USB TO C ADAPTOR",
         "SP USB TO LAN ADAPTOR",
+        "SECUREYE WIFI DONGLE/ADAPTER",
         "SP WIRE TRACKER",
         "SPIKE BRIGHT 5MTR",
         "SPIKE MAXCOM 2MTR",
@@ -557,7 +931,13 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "USB 3MTR EXTENSION",
         "USB ETHERNET ADAPTER RANZ",
         "USB EXTENDER",
+        "USB EXTENDER 150FT",
+        "USB EXTENDER 200M",
         "USB EXTENSION  1.5 MTR CABLE ANZ",
+        "USB  EXTENSION 3MTR CABLE ANZ",
+        "USB  EXTENSION 5MTR CABLE ANZ",
+        "USB  EXTENSION 10MTR CABLE ANZ",
+        "USB  EXTENSION 20MTR CABLE ANZ",
         "USB EXTENSION 200 MTRS",
         "USB HUB 3.0 4 PORT",
         "USB TO HDMI CONVERTOR",
@@ -565,15 +945,16 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "VGA 1X2 SWITCH",
         "VGA 1X4 SWITCH",
         "VGA TO HDMI ADAPTER",
+        "VGA TO HDMI CONVERTOR",
         "VGA TO HDMI CONVERTOR  (AMP)",
         "VOLTAIC 1.5 MTR SPIKE",
         "VOLTAIC 3+1 180mtr",
         "VOLTAIC WIRLESS BNC",
         "VOLTIC SPIKE 3MTRS",
         "WALL MOUNT STEND",
-        "WATER BOTTLE",
         "WIRE TRACKER",
         "YAD ON UPS",
+        "YAD ON UPS (YAD15-6K24)",
         "YADON BATERY"
     ];
 
@@ -582,7 +963,7 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "10MM CLIPS.jpg",
         "128GB HP SD CARD.jpg",
         "2MP VIDEO BALUN  BLUE.jpg",
-        "2PIN CONNECTOR  BNC.jpg",
+        "DC 2PIN CONNECTOR.jpg",
         "2U MINI RACK - 450 (N).jpg",
         "2X1 LAN COPULER.jpg",
         "3 PIN POWER CABLE.jpg",
@@ -611,6 +992,12 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "BNC PIN BLUE.jpg",
         "BNC SECUREYE S-B10.jpg",
         "BNC WIRELESS JASCOM.jpg",
+        "BLACK COLOUR BNC.jpg",
+        "HEAVY QUALITY BNC.jpg",
+        "JASCOM WIRE BNC.jpg",
+        "MAXXION BNC.jpg",
+        "VOLTAIC WIRELESS BNC.jpg",
+        "WHITE COLOUR BNC.jpg",
         "BOSI RJ45 CRIMPING TOOL.jpg",
         "BULLET CAMERA STAND.jpg",
         "CABLE CUTTERS (M).jpg",
@@ -639,6 +1026,9 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "D LINK LAN TESTER.jpg",
         "D-LINK WIFI RECEIVER 300MBPS.jpg",
         "DC 2PIN CONNECTOR.jpg",
+        "MAXXION DC.jpg",
+        "WHITE COLOUR DC.jpg",
+        "BLACK COLOUR DC.jpg",
         "DC PIN ORANGE.jpg",
         "DC PIN RED WIRE (MAXXION).jpg",
         "DC PIN YELLOW.jpg",
@@ -804,7 +1194,6 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "VOLTAIC WIRLESS BNC.jpg",
         "VOLTIC SPIKE 3MTRS.jpg",
         "WALL MOUNT STEND.jpg",
-        "WATER BOTTLE.jpg",
         "WIRE TRACKER.jpg",
         "YAD ON UPS.jpg",
         "YADON BATERY.jpg"
@@ -909,6 +1298,48 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "SAMPLE CAMERAS.jpg",
         "SECURUS 4CH DVR.jpg",
         "VOLTAIC POE BOX.jpg"
+    ];
+
+    // Image files under assets/img/ACCESORIES/NEW ANVIZ/ (dedicated camera & NVR product images)
+    const newAnwizCameraImageFiles = [
+        "12W 1 AMPS.jpeg",
+        "12W 2 AMPS.jpeg",
+        "12W 3 AMPS.jpg",
+        "12W 5 AMPS.jpg",
+        "ANWIZ 10 CHANNEL NVR.webp",
+        "ANWIZ 16 CHANNEL NVR.webp",
+        "ANWIZ 4+2 NORMAL.jpeg",
+        "ANWIZ 8+2 NORMAL.jpeg",
+        "ANWIZ 8+2 UPLINK GIGA.jpeg",
+        "ANWIZ 4+1 FULL GIGA.jpeg",
+        "ANWIZ 8+1FULL GIGA.jpeg",
+        "ANWIZ 8+2 FULL GIGA.png",
+        "ANWIZ 4+2+2 SFP GIGA.jpeg",
+        "ANWIZ 8+2+2 SFP GIGA.webp",
+        "ANWIZ 16+2 UPLINK GIGA.jpeg",
+        "ANWIZ 16+2 FULL GIGA.png",
+        "ANWIZ  2U RACK HEAVY.jpeg",
+        "ANWIZ 2U RACK.jpeg",
+        "ANWIZ 4U RACK HEAVY.jpeg",
+        "ANWIZ 4U RACK XT.jpeg",
+        "ANWIZ 2 WAY AUDIO DOME (D10).webp",
+        "ANWIZ 5 MP DARK HUNTER BULLET (B5).jpeg",
+        "ANWIZ 5 MP DARK HUNTER DOME (D5).jpeg",
+        "ANWIZ 5 MP ELITE BULLET (B1).webp",
+        "ANWIZ 5 MP ELITE DOME   (D1).webp",
+        "ANWIZ 5 MP METAL ELITE BULLET  (B2).jpg",
+        "ANWIZ 5 MP METAL ELITE DOME  (D2).jpg",
+        "ANWIZ 5 MP METAL PRO BULLET (B4).jpeg",
+        "ANWIZ 5 MP METAL PRO DOME (D4).jpeg",
+        "ANWIZ 5 MP ULTRA WIDE DOME (D7).jpeg",
+        "ANWIZ 5 MP VARIFOCAL BULLET (B6).jpeg",
+        "ANWIZ 5 MP VARIFOCAL DOME (D6).jpeg",
+        "ANWIZ 5 MP VARIFOCAL DOME (D6).webp",
+        "ANWIZ 6 MP METAL PRO BULLET (B4).jpeg",
+        "ANWIZ 6 MP METAL PRO DOME (D4).jpeg",
+        "ANWIZ 8 MP METAL PRO BULLET (B8).webp",
+        "ANWIZ 8 MP METAL PRO DOME (D8).webp",
+        "ANWIZ VANDAL DOME (FACE)  (D9).webp"
     ];
 
     const cableImageFiles = [
@@ -1048,6 +1479,54 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "CP PT OUTDOOR CAMERA.jpg"
     ];
 
+    // Image files under assets/img/new CP PLUS/ (dedicated high-res product images)
+    const newCpPlusImageFiles = [
+        "CP PLUS 4 CH DVR     2MP (CP-UVR-0401E1-IC2).jpeg",
+        "CP PLUS 4 CH DVR     5MP (CP-UVR-0401F1-IC).avif",
+        "CP PLUS 8 CH DVR     2MP(CP-UVR-0801E1-IC2).webp",
+        "CP PLUS 16 CH DVR  2MP (CP-UVR-1601E1-IC2).webp",
+        "CP PLUS 2.4MP BULLET BW AUDIO CPURCTC24PL3C.jpeg",
+        "CP PLUS 2.4MP BULLET COLOR AUDIO CPGPCTA24PL2CSEV2.jpeg",
+        "CP PLUS 2.4MP BULLET ILLUMAX AUDIO CPURCTC24PL3CLV2.webp",
+        "CP PLUS 2.4MP DOME BWAUDIO CPURCDC24PL3C.jpeg",
+        "CP PLUS 2.4MP DOME ILLUMAX AUDIO CPURCDC24PL3CLV2.jpeg",
+        "CP PLUS 2MP BULLET COLOR 2 WAY AUDIO CPHDUMCTA24L3L.webp",
+        "CP PLUS 2MP DOME COLOR AUDIO CPGPCDA24PL2CSEV2.jpeg",
+        "CP PLUS 5MP BULLET BW AUDIO CPUSCTC51PL3C0360.jpeg",
+        "CP PLUS 5MP BULLET ILLUMAX AUDIO CPURCTC51PL3CL0360.jpeg",
+        "CP PLUS 5MP DOME BW AUDIO CPUSCDC51PL3C0360.jpeg",
+        "CP PLUS 5MP DOME ILLUMAX AUDIO CPURCDC51PL3CL0360.jpeg",
+        "CP PLUS 2MP IP BW BULLET.jpeg",
+        "CP PLUS 2MP IP BW DOME CPUNCDA21L3CQ02800360.jpeg",
+        "CP PLUS 2MP IP ILLUMAX BULLET.jpeg",
+        "CP PLUS 2MP IP ILLUMAX BULLET CA CPUNCTA21L3CLQ.jpeg",
+        "CP PLUS 2MP IP ILLUMAX DOME CPUNCDA21L3CLQ.jpeg",
+        "CP PLUS 2MP IP 2WAY AUDIO BULLET CPUNCTA21L3BLQ.jpeg",
+        "CP PLUS 2MP IP 2WAY AUDIO DOME CPUNCDA21L3BLQ.jpeg",
+        "CP PLUS 2MP IP BW 6MM LENS BULLET CPUNCTA21L6CQ0600.jpeg",
+        "CP PLUS 4MP IP IR DOME.jpeg",
+        "CP PLUS 4MP IP BW DOME CPUNCDA41L3CDQ.jpeg",
+        "CP PLUS 4MP IP BW BULLET CPUNCTA41L3CDQ.jpeg",
+        "CP PLUS 4MP IP ILLUMAX DOME CPUNCDA41L3CDLQ.jpeg",
+        "CP PLUS 4MP IP ILLUMAX BULLET CPUNCTA41L3CDLQ.webp",
+        "CP PLUS 4MP IP 2WAY AUDIO DOME CPUNCDA41L3BDLQ.jpeg",
+        "CP PLUS 4MP IP 2WAY AUDIO BULLET CPUNCTA41L3BDLQ.jpeg",
+        "CP PLUS 4MP IP BW 6MM LENS BULLET CPUNCTA41L6CDQ0600.jpeg",
+        "CP PLUS 6MP IP ILLUMAX DOME CPUNCDA61L3CLQ.webp",
+        "CP PLUS 6MP IP ILLUMAX BULLET CPUNCTA61L3CLQ.jpeg",
+        "CP PLUS 8MP IP ILLUMAX DOME CPUNCDA81L3CLQ.jpeg",
+        "CP PLUS 8MP IP ILLUMAX BULLET CPUNCTA81L3CLQ.jpeg",
+        "CP PLUS WIFI 4G (CP-745O).jpeg",
+        "CP PLUS WIFI 4G (CP-745O).webp",
+            "CP PLUS 2MP WIFI PT CAMERA (CP-E28Q).jpg",
+            "90MTR INDOOR CABLE.jpeg",
+            "180MTR INDOOR CABLE.jpeg",
+            "90MTR OUTDOOR CABLE.jpeg",
+            "180MTR OUTDOOR CABLE.webp",
+            "305 CAT6 CABLE CCA.jpeg",
+            "305 CAT6 CABLE COPPER.jpeg"
+    ];
+
     const dlinkImageFiles = [
         "D LINK 16 PORT POE SWITCH.jpg",
         "D LINK 2U MINI RACK.jpg",
@@ -1173,7 +1652,29 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "DAHUA 4MP IP COLOUR+MIC DOME.jpg",
         "DAHUA 8 PORT POE.jpg",
         "DHA 2MP IP SD BULLET1249- AIL.jpg",
-        "IMOU RANGER S2 3MP CAMERA.jpg"
+        "IMOU RANGER S2 3MP CAMERA.jpg",
+        "DAHUA 16 CH 4K NVR (DHI-NVR2116HS-4KS3).webp",
+        "DAHUA 16 CH DVR   5MP (DH-XVR4B16H-I).webp",
+        "DAHUA 16 CH DVR  2MP (DH-XVR4B16-I).webp",
+        "DAHUA 2MP BULLET B&W + AUDIO (DH-HAC-B1A21P-A).webp",
+        "DAHUA 2MP BULLET COLOR + AUDIO (DH-HAC-HFW1209CLP-A-LED).webp",
+        "DAHUA 2MP BULLET SMART DUAL LIGHT + AUDIO (DH-HAC-B1A21P-U-IL-A).webp",
+        "DAHUA 2MP DOME B&W + AUDIO (DH-HAC-T1A21P).jpg",
+        "DAHUA 2MP DOME SMART DUAL LIGHT + AUDIO (DH-HAC-T1A21P-U-IL-A).webp",
+        "DAHUA 2MP DOMECOLORAUDIO DHHACHDW1209CLQPALED.jpg",
+        "DAHUA 32 CH 4K NVR (DHI-NVR4232-4KS3).webp",
+        "DAHUA 4 CH 4K DVR (DH-XVR5104HS-4KL-I3).webp",
+        "DAHUA 4 CH DVR     2MP (DH-XVR4B04-I).jpg",
+        "DAHUA 4 CH DVR     5MP (DH-XVR4B04H-I).webp",
+        "DAHUA 4 CH NVR (DHI-NVR1104HS-S3 H).webp",
+        "DAHUA 5MP BULLET B&W + AUDIO (DH-HAC-B1A51P).webp",
+        "DAHUA 5MP BULLET COLOR + AUDIO (DH-HAC-HFW1509CLP-A-LED).webp",
+        "DAHUA 5MP DOME B&W + AUDIO (DH-HAC-HFW1501CMP).jpg",
+        "DAHUA 5MP DOME COLOR + AUDIO (DH-HAC-HDW1509CLQP-A-LED).jpg",
+        "DAHUA 8 CH 4K DVR (DH-XVR5116H-4KL-I3).webp",
+        "DAHUA 8 CH DVR     2MP (DH-XVR4B08-I).jpg",
+        "DAHUA 8 CH DVR     5MP (DH-XVR4B08H-I).jpg",
+        "DAHUA 8 CH NVR (DHI-NVR1108HS-S3 H).webp"
     ];
 
     const erdImageFiles = [
@@ -1430,7 +1931,45 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "HIK VIDEO DOOR KIT HD (KIS402-P).jpg",
         "HIK WIRELESS EXTERNAL SOUNDER (DS-PS1-E-WB).jpg",
         "HIK WIRLESS INTRUSION ALARM AX PRO KIT.jpg",
-        "HIKVISION 19'' MONITOR.jpg"
+        "HIKVISION 19'' MONITOR.jpg",
+        "180MTR 3+1 OUTDOOR CABLE.webp",
+        "HIKVISION 16 CH DVR   5MP(iDS-7116HQHI-M1&S).webp",
+        "HIKVISION 16 CH DVR  2MP (DS-7116HGHI-K1).jpg",
+        "HIKVISION 16 CH NVR K1 (DS-7616NXI-K1).webp",
+        "HIKVISION 16 CH NVR K2 (DS-7616NXI-K2).webp",
+        "HIKVISION 16 CH NVR Q1 (DS-7616NI-Q1).jpg",
+        "HIKVISION 16 CH NVR Q1&M (DS-7116NI-Q1&M).webp",
+        "HIKVISION 2MP BULLET B&W + AUDIO (DS-2CE16D0T-ITPFS).webp",
+        "HIKVISION 2MP BULLET COLOR + 2 WAY AUDIO (DS-2CE16D0T-LPTS).webp",
+        "HIKVISION 2MP BULLET COLOR + AUDIO (DS-2CE10DF0T-PFS).webp",
+        "HIKVISION 2MP BULLET HYBRID + AUDIO (DS-2CE16D0T-LPFS).webp",
+        "HIKVISION 2MP DOME B&W + AUDIO (DS-2CE76D0T-ITPFS).jpg",
+        "HIKVISION 2MP DOME COLOR + 2 WAY AUDIO (DS-2CE70D0T-PTLTS).webp",
+        "HIKVISION 2MP DOME COLOR + AUDIO (DS-2CE70DF0T-PFS).webp",
+        "HIKVISION 2MP DOME HYBRID + AUDIO (DS-2CE76D0T-LPFS).jpg",
+        "HIKVISION 32 CH DVR   5MP.webp",
+        "HIKVISION 32 CH NVR K2 (DS-7632NXI-K2).webp",
+        "HIKVISION 32 CH NVR K4.webp",
+        "HIKVISION 4 CH DVR     5MP (iDS-7104HQHI-M1&S).webp",
+        "HIKVISION 4 CH DVR 2MP (DS-7104HGHI-M1&T).jpg",
+        "HIKVISION 4 CH NVR K1 (DS-7604NXI-K1).webp",
+        "HIKVISION 4 CH NVR Q1 (DS-7604NI-Q1).webp",
+        "HIKVISION 4 CH NVR Q1&M (DS-7104NI-Q1&M).webp",
+        "HIKVISION 5MP BULLET B&W + AUDIO (DS-2CE16H0T-ITPFS).webp",
+        "HIKVISION 5MP BULLET COLOR + 2 WAY AUDIO.webp",
+        "HIKVISION 5MP BULLET COLOR + AUDIO (DS2CE10KF0T-PFS).webp",
+        "HIKVISION 5MP BULLET HYBRID + AUDIO (DS2CE16K0T-LPFS).webp",
+        "HIKVISION 5MP DOME B&W + AUDIO (DS-2CE76H0T-ITPFS).webp",
+        "HIKVISION 5MP DOME COLOR + 2 WAY AUDIO.webp",
+        "HIKVISION 5MP DOME COLOR + AUDIO (DS-2CE70KF0T-PFS).webp",
+        "HIKVISION 5MP DOME HYBRID + AUDIO (DS-2CE76K0T-LPFS).webp",
+        "HIKVISION 64 CH NVR K4.webp",
+        "HIKVISION 64 CH NVR K8.webp",
+        "HIKVISION 8 CH DVR     2MP (DS-7108HGHI-M1&T).webp",
+        "HIKVISION 8 CH DVR     5MP (iDS-7108HQHI-M1&T).webp",
+        "HIKVISION 8 CH NVR K1 (DS-7608NXI-K1).webp",
+        "HIKVISION 8 CH NVR Q1 (DS-7608NI-Q1).png",
+        "HIKVISION 8 CH NVR Q1&M (DS-7108NI-Q1&M).webp"
     ];
 
     const imouImageFiles = [
@@ -1444,7 +1983,10 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "IMOU CRUISER 5MP OUT DOOR.jpg",
         "IMOU CRUISER SE 4MP 2K+.jpg",
         "IMOU CUE 2MP C22EP.jpg",
-        "IMOU RANGER S2 4MP ROBO.jpg"
+        "IMOU RANGER S2 4MP ROBO.jpg",
+        "IMOU 3+3 MP DUAL LENS (IPC-S7XEP76M0WED).webp",
+        "IMOU 5+5 MP DUAL LENS (IPC-S7XE10M0WED).webp",
+        "IMOU BULLET 2E (IPC-K3D3H0WF).webp"
     ];
 
     const mastelImageFiles = [
@@ -1693,6 +2235,38 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "ZEBSTER 17 ES17-VS17.jpg"
     ];
 
+    const coefImageFiles = [
+        "COFE 3MP 4G BULLET.jpeg",
+        "COFE 3MP 4G DOME CF4GDP06.jpeg",
+        "COFE 3MP WIFI BULLET CFWBP07DL.jpeg",
+        "COFE 3MP WIFI DOME CFWDP06DL.jpeg",
+        "COFE DUAL LENS 3+3 SOLAR PTZ (CF-4G-PTSL24-A-DL).jpeg"
+    ];
+
+    const vguardImageFiles = [
+        "VGUARD STABILIZER (VG50 SB).jpeg",
+        "VGUARD UPS.jpeg"
+    ];
+
+    const voltaicImageFiles = [
+        "2U RACK.jpeg",
+        "4U RACK.jpeg",
+        "WIRELESS BNC.jpeg"
+    ];
+
+    const pramaImageFiles = [];
+
+    const smartProImageFiles = [
+        "120MTR EXTENDER.webp",
+        "120MTR KVM EXTENDER.webp",
+        "60MTR EXTENDER.webp",
+        "60MTR KVM EXTENDER.webp",
+        "HDMI SP 3MTR.jpg",
+        "HDMI SP 5MTR.webp",
+        "HDMI TO VGA CONVERTER.jpg",
+        "LAN TESTER.webp",
+        "VGA TO HDMI CONVERTER.webp"
+    ];
 
 
 
@@ -1700,17 +2274,20 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "ACCESSORIES": { list: accessoryImageFiles, path: "assets/img/ACCESORIES/" },
 
         "ANWIZ": { list: anwizImageFiles, path: "assets/img/ANWIZ/" },
-        "CABLES": { list: cableImageFiles, path: "assets/img/cables/" },
+        "ANWIZ CAMERAS": { list: newAnwizCameraImageFiles, path: "assets/img/ACCESORIES/NEW ANVIZ/" },
+        "CABLES": { list: cableImageFiles, path: "assets/img/CABLES/" },
         "CP PLUS": { list: cpPlusImageFiles, path: "assets/img/CP PLUS/" },
+        "CP PLUS NEW": { list: newCpPlusImageFiles, path: "assets/img/new CP PLUS/" },
+        "COEF": { list: coefImageFiles, path: "assets/img/coef/" },
         "D-LINK": { list: dlinkImageFiles, path: "assets/img/D-LNK/" },
-        "DAHUA": { list: dahuaImageFiles, path: "assets/img/DAHUA/" },
+        "DAHUA": { list: dahuaImageFiles, path: "assets/img/DAHUAnew/" },
         "ERD": { list: erdImageFiles, path: "assets/img/ERD/" },
         "EZVIZ": { list: ezvizImageFiles, path: "assets/img/EZVIZ/" },
         "FINOLEX": { list: finolexImageFiles, path: "assets/img/FINOLEX/" },
         "HDD": { list: hddImageFiles, path: "assets/img/HDD/" },
         "HI FOCUS": { list: hiFocusImageFiles, path: "assets/img/HI FOCUS/" },
-        "HIKVISION": { list: hikvisionImageFiles, path: "assets/img/HIKVISON/" },
-        "IMOU": { list: imouImageFiles, path: "assets/img/IMOU/" },
+        "HIKVISION": { list: hikvisionImageFiles, path: "assets/img/HIKVISIONnew/" },
+        "IMOU": { list: imouImageFiles, path: "assets/img/IMOU new/" },
         "MASTEL": { list: mastelImageFiles, path: "assets/img/MASTEL/" },
         "MAXXION": { list: maxxionImageFiles, path: "assets/img/MAXXION/" },
         "MONITOR": { list: monitorImageFiles, path: "assets/img/MONITOR/" },
@@ -1720,9 +2297,17 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "SECURUS": { list: securusImageFiles, path: "assets/img/SECURUS/" },
         "TP LINK": { list: tplinkImageFiles, path: "assets/img/TP LINK/" },
         "TRUE VIEW": { list: trueviewImageFiles, path: "assets/img/TRUE VIEW/" },
+        "VGUARD": { list: vguardImageFiles, path: "assets/img/VGUARD/" },
+        "VOLTAIC": { list: voltaicImageFiles, path: "assets/img/VOLTAIC/" },
         "YADON": { list: yadonImageFiles, path: "assets/img/YADON/" },
         "ZEBRONICS": { list: zebronicsImageFiles, path: "assets/img/ZEBRONICES/" },
+        "PRAMA": { list: pramaImageFiles, path: "assets/img/ACCESORIES/" },
+        "SMART PRO": { list: smartProImageFiles, path: "assets/img/SMART PRO/" },
     };
+
+    const allImagePool = Object.values(catMap).flatMap(({ list, path }) =>
+        (list || []).map((file) => ({ file, path }))
+    );
 
     const findProductImage = (productName, category) => {
         const pn = _normalize(productName);
@@ -1759,6 +2344,64 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
             }
         } catch (e) { }
 
+        // 70% token-similarity remap in same category
+        let bestLocal = null;
+        let bestLocalScore = 0;
+        for (const f of list) {
+            const parts = f.split('/');
+            const base = parts[parts.length - 1].replace(/\.[^.]+$/, "");
+            const score = _tokenSimilarity(productName, base);
+            if (score >= 0.7 && _numericTokenOverlap(productName, base) && score > bestLocalScore) {
+                bestLocalScore = score;
+                bestLocal = f;
+            }
+        }
+        if (bestLocal) {
+            const encodedPath = bestLocal.split('/').map(p => encodeURIComponent(p)).join('/');
+            return `${pathPrefix}${encodedPath}`;
+        }
+
+        // Global fallback remap with same 70% condition
+        let bestGlobal = null;
+        let bestGlobalScore = 0;
+        for (const entry of allImagePool) {
+            const parts = entry.file.split('/');
+            const base = parts[parts.length - 1].replace(/\.[^.]+$/, "");
+            const score = _tokenSimilarity(productName, base);
+            if (score >= 0.7 && _numericTokenOverlap(productName, base) && score > bestGlobalScore) {
+                bestGlobalScore = score;
+                bestGlobal = entry;
+            }
+        }
+        if (bestGlobal) {
+            const encodedPath = bestGlobal.file.split('/').map(p => encodeURIComponent(p)).join('/');
+            return `${bestGlobal.path}${encodedPath}`;
+        }
+
+        // Lower threshold global search (50% match) for better coverage
+        bestGlobal = null;
+        bestGlobalScore = 0;
+        for (const entry of allImagePool) {
+            const parts = entry.file.split('/');
+            const base = parts[parts.length - 1].replace(/\.[^.]+$/, "");
+            const score = _tokenSimilarity(productName, base);
+            if (score >= 0.5 && score > bestGlobalScore) {
+                bestGlobalScore = score;
+                bestGlobal = entry;
+            }
+        }
+        if (bestGlobal) {
+            const encodedPath = bestGlobal.file.split('/').map(p => encodeURIComponent(p)).join('/');
+            return `${bestGlobal.path}${encodedPath}`;
+        }
+
+        // Final fallback: use first image from same category
+        if (list && list.length > 0) {
+            const firstImage = list[0];
+            const encodedPath = firstImage.split('/').map(p => encodeURIComponent(p)).join('/');
+            return `${pathPrefix}${encodedPath}`;
+        }
+
         return null;
     };
 
@@ -1766,6 +2409,51 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
 
     const anwizNames = [
+        "ANWIZ 5 MP ELITE BULLET (B1)",
+        "ANWIZ 5 MP ELITE DOME (D1)",
+        "ANWIZ 5 MP METAL ELITE BULLET (B2)",
+        "ANWIZ 5 MP METAL ELITE DOME (D2)",
+        "ANWIZ 5 MP METAL PRO BULLET (B4)",
+        "ANWIZ 5 MP METAL PRO DOME (D4)",
+        "ANWIZ 6 MP METAL PRO BULLET (B4)",
+        "ANWIZ 6 MP METAL PRO DOME (D4)",
+        "ANWIZ 5 MP DARK HUNTER BULLET (B5)",
+        "ANWIZ 5 MP DARK HUNTER DOME (D5)",
+        "ANWIZ 5 MP VARIFOCAL BULLET (B6)",
+        "ANWIZ 5 MP VARIFOCAL DOME (D6)",
+        "ANWIZ 5 MP ULTRA WIDE BULLET (B7)",
+        "ANWIZ 5 MP ULTRA WIDE DOME (D7)",
+        "ANWIZ 8 MP METAL PRO BULLET (B8)",
+        "ANWIZ 8 MP METAL PRO DOME (D8)",
+        "ANWIZ VANDAL DOME (FACE) (D9)",
+        "ANWIZ 2 WAY AUDIO DOME (D10)",
+        "ANWIZ 10 CHANNEL NVR",
+        "ANWIZ 16 CHANNEL NVR",
+        "ANWIZ 4+2 NORMAL",
+        "ANWIZ 8+2 NORMAL",
+        "ANWIZ 8+2 UPLINK GIGA",
+        "ANWIZ 4+1 FULL GIGA",
+        "ANWIZ 8+1 FULL GIGA",
+        "ANWIZ 4+2 FULL GIGA",
+        "ANWIZ 8+2 FULL GIGA",
+        "ANWIZ 4+2+2 SFP GIGA",
+        "ANWIZ 8+2+2 SFP GIGA",
+        "ANWIZ 16+2 UPLINK GIGA",
+        "ANWIZ 16+2 FULL GIGA",
+        "ANWIZ 3+1 WHITE INDOOR COPPER CABEL",
+        "ANWIZ CAT6 INDOOR GREY CABEL",
+        "ANWIZ CAT6 INDOOR YELLOW COPPER CABEL",
+        "ANWIZ 2U RACK HEAVY",
+        "ANWIZ 4U RACK HEAVY",
+        "ANWIZ 2U RACK",
+        "ANWIZ 4U RACK XT",
+        "4CH SMPS",
+        "8CH SMPS",
+        "16CH SMPS",
+        "12W 1 AMPS",
+        "12W 2 AMPS",
+        "12W 3 AMPS",
+        "12W 5 AMPS",
         "2U MINI ANWIZ",
         "4+2+1 FULL GIGA",
         "4G SOLAR 10X OKAM",
@@ -1900,6 +2588,58 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const cpPlusNames = [
+        "CP PLUS 4 CH DVR 2MP (CP-UVR-0401E1-IC2)",
+        "CP PLUS 8 CH DVR 2MP(CP-UVR-0801E1-IC2)",
+        "CP PLUS 16 CH DVR 2MP (CP-UVR-1601E1-IC2)",
+        "CP PLUS 4 CH DVR 5MP (CP-UVR-0401F1-IC)",
+        "CP PLUS 8 CH DVR 5MP (CP-UVR-0801F1-IC2)",
+        "CP PLUS 16 CH DVR 5MP",
+        "CP PLUS 32 CH DVR 5MP",
+        "CP PLUS 4 CH NVR (CP-UNR-104F1)",
+        "CP PLUS 8 CH NVR (CP-UNR-108F1)",
+        "CP PLUS 16 CH NVR (CP-UNR-4K2161-V4)",
+        "CP PLUS 32 CH NVR (CP-UNR-4K4322-V4)",
+        "CP PLUS 64 CH NVR",
+        "CP PLUS 2.4MP BULLET B/W + AUDIO (CP-URC-TC24PL3C)",
+        "CP PLUS 2.4MP DOME B/W + AUDIO (CP-URC-DC24PL3C)",
+        "CP PLUS 2.4MP BULLET ILLUMAX + AUDIO (CP-URC-TC24PL3C-L-V2)",
+        "CP PLUS 2.4MP DOME ILLUMAX + AUDIO (CP-URC-DC24PL3C-L-V2)",
+        "CP PLUS 2.4MP BULLET COLOR + AUDIO (CP-GPC-TA24PL2C-SE-V2)",
+        "CP PLUS 2MP DOME COLOR + AUDIO (CP-GPC-DA24PL2C-SE-V2)",
+        "CP PLUS 2MP BULLET COLOR + 2 WAY AUDIO (CP-HD-UMC-TA24L3-L)",
+        "CP PLUS 2MP DOME COLOR + 2 WAY AUDIO (CP-HD-UMC-DA24L3-L)",
+        "CP PLUS 5MP BULLET B/W + AUDIO (CP-USC-TC51PL3C-0360)",
+        "CP PLUS 5MP DOME B/W + AUDIO (CP-USC-DC51PL3C-0360)",
+        "CP PLUS 5MP BULLET ILLUMAX + AUDIO (CP-URC-TC51PL3C-L-0360)",
+        "CP PLUS 5MP DOME ILLUMAX + AUDIO (CP-URC-DC51PL3C-L-0360)",
+        "CP PLUS 2MP IP ILLUMAX BULLET C+A- (CP-UNC-TA21L3C-LQ)",
+        "CP PLUS 4MP IP IR DOME (CP-UNC-DA41PL3-0360)",
+        "CP PLUS 2MP IP B/W DOME(CP-UNC-DA21L3C-Q-0280/0360)",
+        "CP PLUS 2MP IP B/W BULLET (CP-UNC-TA21L3C-Q)",
+        "CP PLUS 2MP IP ILLUMAX DOME (CP-UNC-DA21L3C-LQ)",
+        "CP PLUS 2MP IP ILLUMAX BULLET (CP-UNC-TA21L3C-LQ)",
+        "CP PLUS 2MP IP 2-WAY AUDIO DOME (CP-UNC-DA21L3B-LQ)",
+        "CP PLUS 2MP IP 2-WAY AUDIO BULLET (CP-UNC-TA21L3B-LQ)",
+        "CP PLUS 2MP IP B/W 6MM LENS BULLET (CP-UNC-TA21L6C-Q-0600)",
+        "CP PLUS 4MP IP B/W DOME (CP-UNC-DA41L3C-D-Q)",
+        "CP PLUS 4MP IP B/W BULLET (CP-UNC-TA41L3C-D-Q)",
+        "CP PLUS 4MP IP ILLUMAX DOME (CP-UNC-DA41L3C-D-LQ)",
+        "CP PLUS 4MP IP ILLUMAX BULLET (CP-UNC-TA41L3C-D-LQ)",
+        "CP PLUS 4MP IP 2-WAY AUDIO DOME (CP-UNC-DA41L3B-D-LQ)",
+        "CP PLUS 4MP IP 2-WAY AUDIO BULLET (CP-UNC-TA41L3B-D-LQ)",
+        "CP PLUS 4MP IP B/W 6MM LENS BULLET (CP-UNC-TA41L6C-D-Q-0600)",
+        "CP PLUS 6MP IP ILLUMAX DOME (CP-UNC-DA61L3C-LQ)",
+        "CP PLUS 6MP IP ILLUMAX BULLET (CP-UNC-TA61L3C-LQ)",
+        "CP PLUS 8MP IP ILLUMAX DOME (CP-UNC-DA81L3C-LQ)",
+        "CP PLUS 8MP IP ILLUMAX BULLET (CP-UNC-TA81L3C-LQ)",
+        "CP PLUS WIFI 4G (CP-745O)",
+        "CP PLUS 2MP WIFI PT CAMERA (CP-E28Q)",
+        "90MTR INDOOR CABLE",
+        "180MTR INDOOR CABLE",
+        "90MTR OUTDOOR CABLE",
+        "180MTR OUTDOOR CABLE",
+        "305 CAT6 CABLE CCA",
+        "305 CAT6 CABLE COPPER",
         "CP 16CH 2MP DVR",
         "CP 16CH 5MP DVR",
         "CP 16CH NVR",
@@ -1964,7 +2704,52 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         "CP PT OUTDOOR CAMERA"
     ];
 
+    const coefNames = [
+        "COFE DUAL LENS 3+3 SOLAR PTZ (CF-4G-PTSL24-A-DL)",
+        "COFE 3MP 4G DOME (CF-4G-DP06)",
+        "COFE 3MP 4G BULLET (CF-4G-BP07)",
+        "COFE 3MP WIFI DOME(CF-W-DP06(D/L))",
+        "COFE 3MP WIFI BULLET(CF-W-BP07(D/L))"
+    ];
+
+    const vguardNames = [
+        "VGUARD STABILIZER (VG50 SB)",
+        "VGUARD UPS"
+    ];
+
+    const voltaicNames = [
+        "VOLTAIC CAT 6 305 OUTDOOR LDPE",
+        "VOLTAIC CAT6 OUTDOOR 305 KATVISION",
+        "2U RACK",
+        "4U RACK",
+        "WIRELESS BNC"
+    ];
+
+    const intercomSystemsNames = [
+        "4CH",
+        "8CH",
+        "16CH",
+        "32CH",
+        "64CH"
+    ];
+
     const dlinkNames = [
+        "D LINK 2U MINI RACK (NWR-3535)",
+        "D LINK 4U RACK UNLOADED",
+        "D LINK 4U BIG RACK ONLY SPIKE",
+        "D LINK 6U RACK (SPIKE&FAN)",
+        "D LINK 12U RACK",
+        "D LINK RACK TRAY",
+        "D LINK RJ 45 PINS (N) (NPG-5E1TRA031)",
+        "D LINK 4 PORT POE (DES-F1006P-E)",
+        "D LINK 8PORT POE (DES-F1010P-E)",
+        "D LINK 16 PORT POE SWITCH (DGS-F1018P-E)",
+        "D-LINK N300 ROUTER (DIR-650IN)",
+        "D LINK 4G ROUTER N300 WIFI (G403C)",
+        "D LINK 5 PORT DESKTOP SWITCH (DES-1005C)",
+        "D LINK 8 PORT DESKTOP SWITCH (DES-1008C)",
+        "D LINK 4CH SMPS (DPS-F1805)",
+        "D LINK 8CH SMPS (DPS-F1B10)",
         "D LINK 2U MINI RACK",
         "D LINK 2U RACK",
         "D LINK 3+1 180MTRS STANDARD CABLE",
@@ -1998,6 +2783,28 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const dahuaNames = [
+        "DAHUA 4 CH DVR 2MP (DH-XVR4B04-I)",
+        "DAHUA 8 CH DVR 2MP (DH-XVR4B08-I)",
+        "DAHUA 16 CH DVR 2MP (DH-XVR4B16-I)",
+        "DAHUA 4 CH DVR 5MP (DH-XVR4B04H-I)",
+        "DAHUA 8 CH DVR 5MP (DH-XVR4B08H-I)",
+        "DAHUA 16 CH DVR 5MP (DH-XVR4B16H-I)",
+        "DAHUA 4 CH 4K DVR (DH-XVR5104HS-4KL-I3)",
+        "DAHUA 8 CH 4K DVR (DH-XVR5116H-4KL-I3)",
+        "DAHUA 4 CH NVR (DHI-NVR1104HS-S3/H)",
+        "DAHUA 8 CH NVR (DHI-NVR1108HS-S3/H)",
+        "DAHUA 16 CH 4K NVR (DHI-NVR2116HS-4KS3)",
+        "DAHUA 32 CH 4K NVR (DHI-NVR4232-4KS3)",
+        "DAHUA 2MP BULLET B/W + AUDIO (DH-HAC-B1A21P-A)",
+        "DAHUA 2MP DOME B/W + AUDIO (DH-HAC-T1A21P)",
+        "DAHUA 2MP BULLET SMART DUAL LIGHT + AUDIO (DH-HAC-B1A21P-U-IL-A)",
+        "DAHUA 2MP DOME SMART DUAL LIGHT + AUDIO (DH-HAC-T1A21P-U-IL-A)",
+        "DAHUA 2MP BULLET COLOR + AUDIO (DH-HAC-HFW1209CLP-A-LED)",
+        "DAHUA 2MP DOME COLOR + AUDIO (DH-HAC-HDW1209CLQP-A-LED)",
+        "DAHUA 5MP BULLET B/W + AUDIO (DH-HAC-B1A51P)",
+        "DAHUA 5MP DOME B/W + AUDIO (DH-HAC-HFW1501CMP)",
+        "DAHUA 5MP BULLET COLOR + AUDIO (DH-HAC-HFW1509CLP-A-LED)",
+        "DAHUA 5MP DOME COLOR + AUDIO (DH-HAC-HDW1509CLQP-A-LED)",
         "DAH  16CH 5MP DVR",
         "DAH  2MP IP IR (SS) BULLET DH-IPC-HFW1230TL2",
         "DAH  4MP IP COLOUR+ AUDIO 50MTR BULLET",
@@ -2145,6 +2952,21 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const secureyeNames = [
+        "SECUREYE 4G LINKAGE SOLAR (S-SSD-PTZ8)",
+        "SECUREYE 4G POWER LINKAGE (S-SSD-PTZ5)",
+        "SECUREYE 4G PT SINGLE LENS (SC-PTZ1-G)",
+        "SECUREYE 4G BULLET (SIP-3HD-WIRG-4G)",
+        "SECUREYE WIFI POWER LINKAGE (Defender duo wifi)",
+        "SECUREYE WIFI DUAL LENS PT (S-PTZ-4W)",
+        "SECUREYE WIFI SINGLE LENS PT (S-PTZ2-W)",
+        "SECUREYE 8PORT GIGA 8+2+2SF (SSP-8GE-2UG-2UF-NB)",
+        "SECUREYE 16 PORT POE+2UP GIGA+1SFC (16FE-2UG-1UF-300W-NB)",
+        "SECUREYE 16 PORT POE FULLGIGA+2GIGA+1SFC (16GE-2UG-1UF-300W-NB)",
+        "SECUREYE MEDIA CONVERTER 10/100 PAIR (SMP-S-SMSF-FE)",
+        "SECUREYE MEDIA CONVERTER 10/100/1000 GIGA (SMP-S-SMSF-GE)",
+        "SECUREYE 64 GB MEMORY CARD(SD CARD)",
+        "SECUREYE 128 GB MEMORY CARD (SD CARD)",
+        "HDMI TO VGA",
         "SECUREEYE 4G LINKAGE",
         "SECUREYE  4 PORT POE (4+2 10/100)",
         "SECUREYE  8 PORT POE (8+2 10/100)",
@@ -2173,6 +2995,23 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const securusNames = [
+        "SECURUS 6CH NVR (SS-N8006RVA-H1-M5)",
+        "SECURUS 9CH NVR(SS-N8009RVA-H1-M5)",
+        "SECURUS 16CH NVR (SS-N8016RVA-H1-M5)",
+        "SECURUS 16CH NVR 2SATA (SS-N8016RV-H2-M5)",
+        "SECURUS 32CH NVR (SS-N8032RV-H2-M5)",
+        "SECURUS 4CH DVR(SS-8041-TPHD-M1(SF))",
+        "SECURUS 8CH DVR (SS-8081-TPHD-M1(SF))",
+        "SECURUS 3MP IP C+A BULLET (SS-NC20L2XP-HSUTL-M3(S))",
+        "SECURUS 3MP IP C+A DOME(SS-NC15DXLP-HSUTL-M3)",
+        "SECURUS 3MP IP 4 CABEL(NC15DXLP-CSF-M3(S) 4 CABEL)",
+        "SECURUS 3MP IP C+2WAY DOME(NC1DXLP-CSUTL-M3(SM)SL)",
+        "SECURUS 5MP IP BULLET(NC20L2XP-CSFM(S)(MII))",
+        "SECURUS 5MP IP BULLETS(NC50L5CPXM5(4CABEL))",
+        "SECURUS 5MP IP DOME(NC15DXLP-CSF-M5(S)/2.8MM)",
+        "SECURUS 2.4MP COLOUR+AUDIO BULLET(SS-20L2XP-TPCSD-M2.4(S))",
+        "SECURUS 2.4MP COLOUR+AUDIO DOME(SS-15DXP-TPCSD-M2.4)",
+        "SECURUS PTZ 5MP(SS-NE15XSP-M5-4CABEL)",
         "AHUJA NE 630VG MIC",
         "JACK CABEL",
         "SECURUS 6CH NVR",
@@ -2196,6 +3035,39 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const tplinkNames = [
+        "TP LINK 4 CH NVR (NVR1004H)",
+        "TP LINK 8 CH NVR (NVR1008H)",
+        "TP LINK 16 CH NVR 2 SATA(NVR2016H)",
+        "TP LINK 32 CH NVR 4 SATA (NVR4032H)",
+        "TP LINK 4+2 POE 10/100 (LS106LP)",
+        "TP LINK 4+2 POE 10/100 (LS106P)",
+        "TP LINK 4+1 FULL GIGA POE 10/100/1000 (LS105GP)",
+        "TP LINK 8+2 POE 10/100 (LS-110P)",
+        "TP LINK 8+2 UPLINK GIGA POE (LS1210P)",
+        "TP LINK 8+1+1 SFP FULL GIGA POE (SG1210P)",
+        "TP LINK 16PORT GIGA POE (SG1218MPE)",
+        "TP LINK 18PORT GIGA POE RACKMOUNT (SG1218MP)",
+        "TP LINK 24PORT GIGA POE (SG1428PE)",
+        "TP LINK POE ADAPTER (POE2412)",
+        "TP LINK 16+2UPLINK GIGA POE (SL1218MP)",
+        "TP LINK 16PORT GIGA POE (SG1218MPE) + 2 SFP",
+        "TP LINK 24 PORT POE FULL GIGA +2 UPLINK (SG2428P)",
+        "TP LINK 5 PORT GIGA SWITCH (SG1005D)",
+        "TP LINK 8 PORT GIGA SWITCH (SG1008D)",
+        "TP LINK 8 PORT GIGA SWITCH (SG108E)",
+        "TP LINK 16 PORT GIGA SWITCH (SG1016D)",
+        "TP-LINK 16PORT GIGA SWITCH (SG116E)",
+        "TP LINK 24 PORT GIGA SWITCH (SG1024DE)",
+        "TP LINK ACCESS POINT SEALING(EAP115) AC1350",
+        "TP ACCESS POINT SEALING (EAP225)",
+        "TP LINK ACCESS POINT (EAP610) AX1800",
+        "TP LINK ACCESS POINT (CPE210)",
+        "TP LINK ACCESS POINT 300MBPS (CPE510)",
+        "TP LINK ACCESS POINT (CPE610)",
+        "TP LINK ACCESS POINT (CPE710)",
+        "TP LINK VPN GIGABIT VPN ROUTER (ER605)",
+        "TPL N300 ROUTER (WR850N)",
+        "TP LINK AC1200 (ARCHER C6)",
         "TP 16+2UP GIGA(SL1218MP)",
         "TP 4+2 POE 10/100 (LS106LP)",
         "TP 4+2 PORT POE 10/100 (POWER BUDGET SF1006P)",
@@ -2242,6 +3114,20 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const trueviewNames = [
+        "TRUE VIEW 4G LINKAGE SOLAR",
+        "TRUE VIEW 4G DUAL LENS SOLAR",
+        "TRUE VIEW 4G POWER LINKAGE",
+        "TRUE VIEW 4G PT DUAL LENS",
+        "TRUE VIEW 4G PT SINGLE LENS",
+        "TRUE VIEW 4G BULLET",
+        "TRUE VIEW 4G DOME",
+        "TRUE VIEW WIFI POWER LINKAGE",
+        "TRUE VIEW WIFI DUAL LENS PT",
+        "TRUE VIEW WIFI SINGLE LENS PT",
+        "TRUE VIEW WIFI BULLET",
+        "TRUE VIEW WIFI DOME",
+        "TRUEVIEW WIFI ROBOT PAN TILT 3MP",
+        "TRUEVIEW 4G ROUTER",
         "4G TRUE VIEW ROUTER -1",
         "TRUEVIEU WIFI 3MP SMART  MINI PTZ  - T18135",
         "TRUEVIEW 128GB SD CARD",
@@ -2272,6 +3158,16 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const zebNames = [
+        "ZEBRONICS 15 INCH MONITOR",
+        "ZEBRONICS 17 INCH MONITOR",
+        "ZEBRONICS 19 INCH MONITOR",
+        "ZEBRONICS 22 INCH MONITOR",
+        "ZEBRONICS 4 CH SMPS",
+        "ZEBRONICS 8 CH SMPS",
+        "ZEBRONICS 16 CH SMPS",
+        "ZEBRONICS 3+1 CABLE",
+        "ZEBRONICS CAT6 INDOOR",
+        "ZEBRONICS UPS",
         "TELEVISION 32P1S",
         "ZEB 32\" TV",
         "ZEB 4PORT POES",
@@ -2287,6 +3183,9 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     ];
 
     const yadonNames = [
+        "4 PORT POE & 2UP LINK SWITCH WITH UPS (Y100-4P2UP/B)",
+        "8 PORT POE & 2UP LINK SWITCH WITH UPS (Y100-8P2UP/B)",
+        "YADON 12V UPS",
         "SOLAR PANEL",
         "WE SECURE 4G SOLAR  10X",
         "WE-H4LC-5DLMB7 DARK",
@@ -2316,7 +3215,7 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
             originalIndex: accessoryNames.length + index
         })),
         ...cpPlusNames.map((name, index) => ({
-            image: findProductImage(name, "CP PLUS"),
+            image: findProductImage(name, "CP PLUS NEW") || findProductImage(name, "CP PLUS"),
             id: accessoryNames.length + cableNames.length + index + 1,
             name,
             category: "CP PLUS",
@@ -2527,14 +3426,119 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         });
     }
 
+    // Append LAPCARE products to products list
+    if (Array.isArray(lapcareNames) && lapcareNames.length) {
+        lapcareNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "LAPCARE"),
+                id: products.length + 1,
+                name,
+                category: "LAPCARE",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
+    // Append PRAMA products to products list
+    if (Array.isArray(pramaNames) && pramaNames.length) {
+        pramaNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "PRAMA"),
+                id: products.length + 1,
+                name,
+                category: "PRAMA",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
+    // Append SMART PRO products to products list
+    if (Array.isArray(smartProNames) && smartProNames.length) {
+        smartProNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "SMART PRO"),
+                id: products.length + 1,
+                name,
+                category: "SMART PRO",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
     // Append ANWIZ products to products list
     if (Array.isArray(anwizNames) && anwizNames.length) {
         anwizNames.forEach((name) => {
             products.push({
-                image: findProductImage(name, "ANWIZ"),
+                image: findProductImage(name, "ANWIZ CAMERAS") || findProductImage(name, "ANWIZ"),
                 id: products.length + 1,
                 name,
                 category: "ANWIZ",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
+    // Append COEF products to products list
+    if (Array.isArray(coefNames) && coefNames.length) {
+        coefNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "COEF"),
+                id: products.length + 1,
+                name,
+                category: "COEF",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
+    // Append VGUARD products to products list
+    if (Array.isArray(vguardNames) && vguardNames.length) {
+        vguardNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "VGUARD"),
+                id: products.length + 1,
+                name,
+                category: "VGUARD",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
+    // Append VOLTAIC products to products list
+    if (Array.isArray(voltaicNames) && voltaicNames.length) {
+        voltaicNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "VOLTAIC"),
+                id: products.length + 1,
+                name,
+                category: "VOLTAIC",
+                isNew: true,
+                inStock: true,
+                originalIndex: products.length
+            });
+        });
+    }
+
+    // Append INTERCOM SYSTEMS products to products list
+    if (Array.isArray(intercomSystemsNames) && intercomSystemsNames.length) {
+        intercomSystemsNames.forEach((name) => {
+            products.push({
+                image: findProductImage(name, "INTERCOM SYSTEMS"),
+                id: products.length + 1,
+                name,
+                category: "INTERCOM SYSTEMS",
                 isNew: true,
                 inStock: true,
                 originalIndex: products.length
@@ -2588,7 +3592,1129 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
         currentPage: 1,
         perPage: 24,
         selectedCategories: new Set(),
+        selectedAccessorySubcategory: null,
+        selectedAnwizSubcategory: null,
+        selectedCpPlusSubcategory: null,
+        selectedCoefSubcategory: null,
+        selectedVguardSubcategory: null,
+        selectedVoltaicSubcategory: null,
+        selectedDahuaSubcategory: null,
+        selectedTpLinkSubcategory: null,
+        selectedHikvisionSubcategory: null,
+        selectedZebronicsSubcategory: null,
+        selectedTrueViewSubcategory: null,
+        selectedSecureyeSubcategory: null,
+        selectedSecurusSubcategory: null,
+        selectedYadonSubcategory: null,
+        selectedDLinkSubcategory: null,
+        selectedImouSubcategory: null,
+        selectedMaxxionSubcategory: null,
+        selectedErdSubcategory: null,
+        selectedSmartProSubcategory: null,
+        selectedHddSubcategory: null,
         sortBy: "default"
+    };
+
+    const anwizSubcategoryExactNames = {
+        "CAMERAS": new Set([
+            _normalize("ANWIZ 5 MP ELITE BULLET (B1)"),
+            _normalize("ANWIZ 5 MP ELITE DOME (D1)"),
+            _normalize("ANWIZ 5 MP METAL ELITE BULLET (B2)"),
+            _normalize("ANWIZ 5 MP METAL ELITE DOME (D2)"),
+            _normalize("ANWIZ 5 MP METAL PRO BULLET (B4)"),
+            _normalize("ANWIZ 5 MP METAL PRO DOME (D4)"),
+            _normalize("ANWIZ 6 MP METAL PRO BULLET (B4)"),
+            _normalize("ANWIZ 6 MP METAL PRO DOME (D4)"),
+            _normalize("ANWIZ 5 MP DARK HUNTER BULLET (B5)"),
+            _normalize("ANWIZ 5 MP DARK HUNTER DOME (D5)"),
+            _normalize("ANWIZ 5 MP VARIFOCAL BULLET (B6)"),
+            _normalize("ANWIZ 5 MP VARIFOCAL DOME (D6)"),
+            _normalize("ANWIZ 5 MP ULTRA WIDE BULLET (B7)"),
+            _normalize("ANWIZ 5 MP ULTRA WIDE DOME (D7)"),
+            _normalize("ANWIZ 8 MP METAL PRO BULLET (B8)"),
+            _normalize("ANWIZ 8 MP METAL PRO DOME (D8)"),
+            _normalize("ANWIZ VANDAL DOME (FACE) (D9)"),
+            _normalize("ANWIZ 2 WAY AUDIO DOME (D10)")
+        ]),
+        "NVR": new Set([
+            _normalize("ANWIZ 10 CHANNEL NVR"),
+            _normalize("ANWIZ 16 CHANNEL NVR")
+        ]),
+        "POE": new Set([
+            _normalize("ANWIZ 4+2 NORMAL"),
+            _normalize("ANWIZ 8+2 NORMAL"),
+            _normalize("ANWIZ 8+2 UPLINK GIGA"),
+            _normalize("ANWIZ 4+1 FULL GIGA"),
+            _normalize("ANWIZ 8+1 FULL GIGA"),
+            _normalize("ANWIZ 4+2 FULL GIGA"),
+            _normalize("ANWIZ 8+2 FULL GIGA"),
+            _normalize("ANWIZ 4+2+2 SFP GIGA"),
+            _normalize("ANWIZ 8+2+2 SFP GIGA"),
+            _normalize("ANWIZ 16+2 UPLINK GIGA"),
+            _normalize("ANWIZ 16+2 FULL GIGA")
+        ]),
+        "CABLES": new Set([
+            _normalize("ANWIZ 3+1 BLAK COPPER CABEL"),
+            _normalize("ANWIZ 3+1 BLAK COPPER PREMIUM CABEL"),
+            _normalize("ANWIZ 3+1 WHITE INDOOR COPPER CABEL"),
+            _normalize("ANWIZ CAT6 BLACK CABEL"),
+            _normalize("ANWIZ CAT6 BLACK COPPER CABEL"),
+            _normalize("ANWIZ CAT6 INDOOR GREY CABEL"),
+            _normalize("ANWIZ CAT6 INDOOR YELLOW COPPER CABEL")
+        ]),
+        "RACKS": new Set([
+            _normalize("ANWIZ 2U RACK HEAVY"),
+            _normalize("ANWIZ 4U RACK HEAVY"),
+            _normalize("ANWIZ 2U RACK"),
+            _normalize("ANWIZ 4U RACK XT")
+        ]),
+        "SMPS": new Set([
+            _normalize("4CH SMPS"),
+            _normalize("8CH SMPS"),
+            _normalize("16CH SMPS")
+        ]),
+        "ADAPTERS": new Set([
+            _normalize("12W 1 AMPS"),
+            _normalize("12W 2 AMPS"),
+            _normalize("12W 3 AMPS"),
+            _normalize("12W 5 AMPS")
+        ])
+    };
+
+    const cpPlusSubcategoryExactNames = {
+        "DVR": new Set([
+            _normalize("CP PLUS 4 CH DVR 2MP (CP-UVR-0401E1-IC2)"),
+            _normalize("CP PLUS 8 CH DVR 2MP(CP-UVR-0801E1-IC2)"),
+            _normalize("CP PLUS 16 CH DVR 2MP (CP-UVR-1601E1-IC2)"),
+            _normalize("CP PLUS 4 CH DVR 5MP (CP-UVR-0401F1-IC)"),
+            _normalize("CP PLUS 8 CH DVR 5MP (CP-UVR-0801F1-IC2)"),
+            _normalize("CP PLUS 16 CH DVR 5MP"),
+            _normalize("CP PLUS 32 CH DVR 5MP")
+        ]),
+        "NVR": new Set([
+            _normalize("CP PLUS 4 CH NVR (CP-UNR-104F1)"),
+            _normalize("CP PLUS 8 CH NVR (CP-UNR-108F1)"),
+            _normalize("CP PLUS 16 CH NVR (CP-UNR-4K2161-V4)"),
+            _normalize("CP PLUS 32 CH NVR (CP-UNR-4K4322-V4)"),
+            _normalize("CP PLUS 64 CH NVR")
+        ]),
+        "HD CAMERAS": new Set([
+            _normalize("CP PLUS 2.4MP BULLET B/W + AUDIO (CP-URC-TC24PL3C)"),
+            _normalize("CP PLUS 2.4MP DOME B/W + AUDIO (CP-URC-DC24PL3C)"),
+            _normalize("CP PLUS 2.4MP BULLET ILLUMAX + AUDIO (CP-URC-TC24PL3C-L-V2)"),
+            _normalize("CP PLUS 2.4MP DOME ILLUMAX + AUDIO (CP-URC-DC24PL3C-L-V2)"),
+            _normalize("CP PLUS 2.4MP BULLET COLOR + AUDIO (CP-GPC-TA24PL2C-SE-V2)"),
+            _normalize("CP PLUS 2MP DOME COLOR + AUDIO (CP-GPC-DA24PL2C-SE-V2)"),
+            _normalize("CP PLUS 2MP BULLET COLOR + 2 WAY AUDIO (CP-HD-UMC-TA24L3-L)"),
+            _normalize("CP PLUS 2MP DOME COLOR + 2 WAY AUDIO (CP-HD-UMC-DA24L3-L)"),
+            _normalize("CP PLUS 5MP BULLET B/W + AUDIO (CP-USC-TC51PL3C-0360)"),
+            _normalize("CP PLUS 5MP DOME B/W + AUDIO (CP-USC-DC51PL3C-0360)"),
+            _normalize("CP PLUS 5MP BULLET ILLUMAX + AUDIO (CP-URC-TC51PL3C-L-0360)"),
+            _normalize("CP PLUS 5MP DOME ILLUMAX + AUDIO (CP-URC-DC51PL3C-L-0360)")
+        ]),
+        "IP CAMERAS": new Set([
+            _normalize("CP PLUS 2MP IP ILLUMAX BULLET C+A- (CP-UNC-TA21L3C-LQ)"),
+            _normalize("CP PLUS 4MP IP IR DOME (CP-UNC-DA41PL3-0360)"),
+            _normalize("CP PLUS 2MP IP B/W DOME(CP-UNC-DA21L3C-Q-0280/0360)"),
+            _normalize("CP PLUS 2MP IP B/W BULLET (CP-UNC-TA21L3C-Q)"),
+            _normalize("CP PLUS 2MP IP ILLUMAX DOME (CP-UNC-DA21L3C-LQ)"),
+            _normalize("CP PLUS 2MP IP ILLUMAX BULLET (CP-UNC-TA21L3C-LQ)"),
+            _normalize("CP PLUS 2MP IP 2-WAY AUDIO DOME (CP-UNC-DA21L3B-LQ)"),
+            _normalize("CP PLUS 2MP IP 2-WAY AUDIO BULLET (CP-UNC-TA21L3B-LQ)"),
+            _normalize("CP PLUS 2MP IP B/W 6MM LENS BULLET (CP-UNC-TA21L6C-Q-0600)"),
+            _normalize("CP PLUS 4MP IP B/W DOME (CP-UNC-DA41L3C-D-Q)"),
+            _normalize("CP PLUS 4MP IP B/W BULLET (CP-UNC-TA41L3C-D-Q)"),
+            _normalize("CP PLUS 4MP IP ILLUMAX DOME (CP-UNC-DA41L3C-D-LQ)"),
+            _normalize("CP PLUS 4MP IP ILLUMAX BULLET (CP-UNC-TA41L3C-D-LQ)"),
+            _normalize("CP PLUS 4MP IP 2-WAY AUDIO DOME (CP-UNC-DA41L3B-D-LQ)"),
+            _normalize("CP PLUS 4MP IP 2-WAY AUDIO BULLET (CP-UNC-TA41L3B-D-LQ)"),
+            _normalize("CP PLUS 4MP IP B/W 6MM LENS BULLET (CP-UNC-TA41L6C-D-Q-0600)"),
+            _normalize("CP PLUS 6MP IP ILLUMAX DOME (CP-UNC-DA61L3C-LQ)"),
+            _normalize("CP PLUS 6MP IP ILLUMAX BULLET (CP-UNC-TA61L3C-LQ)"),
+            _normalize("CP PLUS 8MP IP ILLUMAX DOME (CP-UNC-DA81L3C-LQ)"),
+            _normalize("CP PLUS 8MP IP ILLUMAX BULLET (CP-UNC-TA81L3C-LQ)")
+        ]),
+        "4G &  WIFI": new Set([
+            _normalize("CP PLUS WIFI 4G (CP-745O)"),
+            _normalize("CP PLUS 2MP WIFI PT CAMERA (CP-E28Q)")
+        ]),
+        "POE": new Set([]),
+        "CABLES": new Set([
+            _normalize("90MTR INDOOR CABLE"),
+            _normalize("180MTR INDOOR CABLE"),
+            _normalize("90MTR OUTDOOR CABLE"),
+            _normalize("180MTR OUTDOOR CABLE"),
+            _normalize("305 CAT6 CABLE CCA"),
+            _normalize("305 CAT6 CABLE COPPER")
+        ])
+    };
+
+    const coefSubcategoryExactNames = {
+        "SOLAR CAMERAS": new Set([
+            _normalize("COFE DUAL LENS 3+3 SOLAR PTZ (CF-4G-PTSL24-A-DL)")
+        ]),
+        "4G - WIFI CAMERAS": new Set([
+            _normalize("COFE 3MP 4G DOME (CF-4G-DP06)"),
+            _normalize("COFE 3MP 4G BULLET (CF-4G-BP07)"),
+            _normalize("COFE 3MP WIFI DOME(CF-W-DP06(D/L))"),
+            _normalize("COFE 3MP WIFI BULLET(CF-W-BP07(D/L))")
+        ])
+    };
+
+    const vguardSubcategoryExactNames = {
+        "STABILIZER": new Set([
+            _normalize("VGUARD STABILIZER (VG50 SB)")
+        ]),
+        "UPS": new Set([
+            _normalize("VGUARD UPS")
+        ])
+    };
+
+    const voltaicSubcategoryExactNames = {
+        "CABLES": new Set([
+            _normalize("VOLTAIC CAT 6 305 OUTDOOR LDPE"),
+            _normalize("VOLTAIC CAT6 OUTDOOR 305 KATVISION")
+        ]),
+        "RACK": new Set([
+            _normalize("2U RACK"),
+            _normalize("4U RACK")
+        ]),
+        "BNC": new Set([
+            _normalize("WIRELESS BNC")
+        ])
+    };
+
+    const dahuaSubcategoryExactNames = {
+        "DVR": new Set([
+            _normalize("DAHUA 4 CH DVR 2MP (DH-XVR4B04-I)"),
+            _normalize("DAHUA 8 CH DVR 2MP (DH-XVR4B08-I)"),
+            _normalize("DAHUA 16 CH DVR 2MP (DH-XVR4B16-I)"),
+            _normalize("DAHUA 4 CH DVR 5MP (DH-XVR4B04H-I)"),
+            _normalize("DAHUA 8 CH DVR 5MP (DH-XVR4B08H-I)"),
+            _normalize("DAHUA 16 CH DVR 5MP (DH-XVR4B16H-I)"),
+            _normalize("DAHUA 4 CH 4K DVR (DH-XVR5104HS-4KL-I3)"),
+            _normalize("DAHUA 8 CH 4K DVR (DH-XVR5116H-4KL-I3)")
+        ]),
+        "NVR": new Set([
+            _normalize("DAHUA 4 CH NVR (DHI-NVR1104HS-S3/H)"),
+            _normalize("DAHUA 8 CH NVR (DHI-NVR1108HS-S3/H)"),
+            _normalize("DAHUA 16 CH 4K NVR (DHI-NVR2116HS-4KS3)"),
+            _normalize("DAHUA 32 CH 4K NVR (DHI-NVR4232-4KS3)")
+        ]),
+        "HD CAMERAS": new Set([
+            _normalize("DAHUA 2MP BULLET B/W + AUDIO (DH-HAC-B1A21P-A)"),
+            _normalize("DAHUA 2MP DOME B/W + AUDIO (DH-HAC-T1A21P)"),
+            _normalize("DAHUA 2MP BULLET SMART DUAL LIGHT + AUDIO (DH-HAC-B1A21P-U-IL-A)"),
+            _normalize("DAHUA 2MP DOME SMART DUAL LIGHT + AUDIO (DH-HAC-T1A21P-U-IL-A)"),
+            _normalize("DAHUA 2MP BULLET COLOR + AUDIO (DH-HAC-HFW1209CLP-A-LED)"),
+            _normalize("DAHUA 2MP DOME COLOR + AUDIO (DH-HAC-HDW1209CLQP-A-LED)"),
+            _normalize("DAHUA 5MP BULLET B/W + AUDIO (DH-HAC-B1A51P)"),
+            _normalize("DAHUA 5MP DOME B/W + AUDIO (DH-HAC-HFW1501CMP)"),
+            _normalize("DAHUA 5MP BULLET COLOR + AUDIO (DH-HAC-HFW1509CLP-A-LED)"),
+            _normalize("DAHUA 5MP DOME COLOR + AUDIO (DH-HAC-HDW1509CLQP-A-LED)")
+        ])
+    };
+
+    const tpLinkSubcategoryExactNames = {
+        "NVR": new Set([
+            _normalize("TP LINK 4 CH NVR (NVR1004H)"),
+            _normalize("TP LINK 8 CH NVR (NVR1008H)"),
+            _normalize("TP LINK 16 CH NVR 2 SATA(NVR2016H)"),
+            _normalize("TP LINK 32 CH NVR 4 SATA (NVR4032H)")
+        ]),
+        "POE": new Set([
+            _normalize("TP LINK 4+2 POE 10/100 (LS106LP)"),
+            _normalize("TP LINK 4+2 POE 10/100 (LS106P)"),
+            _normalize("TP LINK 4+1 FULL GIGA POE 10/100/1000 (LS105GP)"),
+            _normalize("TP LINK 8+2 POE 10/100 (LS-110P)"),
+            _normalize("TP LINK 8+2 UPLINK GIGA POE (LS1210P)"),
+            _normalize("TP LINK 8+1+1 SFP FULL GIGA POE (SG1210P)"),
+            _normalize("TP LINK 16PORT GIGA POE (SG1218MPE)"),
+            _normalize("TP LINK 18PORT GIGA POE RACKMOUNT (SG1218MP)"),
+            _normalize("TP LINK 24PORT GIGA POE (SG1428PE)"),
+            _normalize("TP LINK POE ADAPTER (POE2412)"),
+            _normalize("TP LINK 16+2UPLINK GIGA POE (SL1218MP)"),
+            _normalize("TP LINK 16PORT GIGA POE (SG1218MPE) + 2 SFP"),
+            _normalize("TP LINK 24 PORT POE FULL GIGA +2 UPLINK (SG2428P)")
+        ]),
+        "SWITCHES": new Set([
+            _normalize("TP LINK 5 PORT GIGA SWITCH (SG1005D)"),
+            _normalize("TP LINK 8 PORT GIGA SWITCH (SG1008D)"),
+            _normalize("TP LINK 8 PORT GIGA SWITCH (SG108E)"),
+            _normalize("TP LINK 16 PORT GIGA SWITCH (SG1016D)"),
+            _normalize("TP-LINK 16PORT GIGA SWITCH (SG116E)"),
+            _normalize("TP LINK 24 PORT GIGA SWITCH (SG1024DE)")
+        ]),
+        "ACCESS POINTS": new Set([
+            _normalize("TP LINK ACCESS POINT SEALING(EAP115) AC1350"),
+            _normalize("TP ACCESS POINT SEALING (EAP225)"),
+            _normalize("TP LINK ACCESS POINT (EAP610) AX1800"),
+            _normalize("TP LINK ACCESS POINT (CPE210)"),
+            _normalize("TP LINK ACCESS POINT 300MBPS (CPE510)"),
+            _normalize("TP LINK ACCESS POINT (CPE610)"),
+            _normalize("TP LINK ACCESS POINT (CPE710)")
+        ]),
+        "ROUTERS": new Set([
+            _normalize("TP LINK VPN GIGABIT VPN ROUTER (ER605)"),
+            _normalize("TPL N300 ROUTER (WR850N)"),
+            _normalize("TP LINK AC1200 (ARCHER C6)")
+        ])
+    };
+
+    const hikvisionSubcategoryExactNames = {
+        "DVR": new Set([
+            _normalize("HIKVISION 4 CH DVR 2MP (DS-7104HGHI-M1/T)"),
+            _normalize("HIKVISION 8 CH DVR 2MP (DS-7108HGHI-M1/T)"),
+            _normalize("HIKVISION 16 CH DVR 2MP (DS-7116HGHI-K1)"),
+            _normalize("HIKVISION 4 CH DVR 5MP (IDS-7104HQHI-M1/S)"),
+            _normalize("HIKVISION 8 CH DVR 5MP (IDS-7108HQHI-M1/T)"),
+            _normalize("HIKVISION 16 CH DVR 5MP (IDS-7116HQHI-M1/S)"),
+            _normalize("HIKVISION 32 CH DVR 5MP")
+        ]),
+        "NVR": new Set([
+            _normalize("HIKVISION 4 CH NVR Q1/M (DS-7104NI-Q1/M)"),
+            _normalize("HIKVISION 8 CH NVR Q1/M (DS-7108NI-Q1/M)"),
+            _normalize("HIKVISION 16 CH NVR Q1/M (DS-7116NI-Q1/M)"),
+            _normalize("HIKVISION 4 CH NVR Q1 (DS-7604NI-Q1)"),
+            _normalize("HIKVISION 8 CH NVR Q1 (DS-7608NI-Q1)"),
+            _normalize("HIKVISION 16 CH NVR Q1 (DS-7616NI-Q1)"),
+            _normalize("HIKVISION 4 CH NVR K1 (DS-7604NXI-K1)"),
+            _normalize("HIKVISION 8 CH NVR K1 (DS-7608NXI-K1)"),
+            _normalize("HIKVISION 16 CH NVR K1 (DS-7616NXI-K1)"),
+            _normalize("HIKVISION 16 CH NVR K2 (DS-7616NXI-K2)"),
+            _normalize("HIKVISION 32 CH NVR K2 (DS-7632NXI-K2)"),
+            _normalize("HIKVISION 32 CH NVR K4"),
+            _normalize("HIKVISION 64 CH NVR K4"),
+            _normalize("HIKVISION 64 CH NVR K8")
+        ]),
+        "HD CAMERAS": new Set([
+            _normalize("HIKVISION 2MP BULLET B/W + AUDIO (DS-2CE16D0T-ITPFS)"),
+            _normalize("HIKVISION 2MP DOME B/W + AUDIO (DS-2CE76D0T-ITPFS)"),
+            _normalize("HIKVISION 2MP BULLET HYBRID + AUDIO (DS-2CE16D0T-LPFS)"),
+            _normalize("HIKVISION 2MP DOME HYBRID + AUDIO (DS-2CE76D0T-LPFS)"),
+            _normalize("HIKVISION 2MP BULLET COLOR + AUDIO (DS-2CE10DF0T-PFS)"),
+            _normalize("HIKVISION 2MP DOME COLOR + AUDIO (DS-2CE70DF0T-PFS)"),
+            _normalize("HIKVISION 2MP BULLET COLOR + 2 WAY AUDIO (DS-2CE16D0T-LPTS)"),
+            _normalize("HIKVISION 2MP DOME COLOR + 2 WAY AUDIO (DS-2CE70D0T-PTLTS)"),
+            _normalize("HIKVISION 5MP BULLET B/W + AUDIO (DS-2CE16H0T-ITPFS)"),
+            _normalize("HIKVISION 5MP DOME B/W + AUDIO (DS-2CE76H0T-ITPFS)"),
+            _normalize("HIKVISION 5MP BULLET HYBRID + AUDIO (DS-2CE16K0T-LPFS)"),
+            _normalize("HIKVISION 5MP DOME HYBRID + AUDIO (DS-2CE76K0T-LPFS)"),
+            _normalize("HIKVISION 5MP BULLET COLOR + AUDIO (DS-2CE10KF0T-PFS)"),
+            _normalize("HIKVISION 5MP DOME COLOR + AUDIO (DS-2CE70KF0T-PFS)"),
+            _normalize("HIKVISION 5MP BULLET COLOR + 2 WAY AUDIO"),
+            _normalize("HIKVISION 5MP DOME COLOR + 2 WAY AUDIO")
+        ]),
+        "CABLES": new Set([
+            _normalize("180MTR 3+1 OUTDOOR CABLE")
+        ])
+    };
+
+    const zebronicsSubcategoryExactNames = {
+        "MONITORS": new Set([
+            _normalize("ZEBRONICS 15 INCH MONITOR"),
+            _normalize("ZEBRONICS 17 INCH MONITOR"),
+            _normalize("ZEBRONICS 19 INCH MONITOR"),
+            _normalize("ZEBRONICS 22 INCH MONITOR")
+        ]),
+        "SMPS": new Set([
+            _normalize("ZEBRONICS 4 CH SMPS"),
+            _normalize("ZEBRONICS 8 CH SMPS"),
+            _normalize("ZEBRONICS 16 CH SMPS")
+        ]),
+        "CABLES": new Set([
+            _normalize("ZEBRONICS 3+1 CABLE"),
+            _normalize("ZEBRONICS CAT6 INDOOR")
+        ]),
+        "UPS": new Set([
+            _normalize("ZEBRONICS UPS")
+        ])
+    };
+
+    const trueViewSubcategoryExactNames = {
+        "4G & WIFI": new Set([
+            _normalize("TRUE VIEW 4G LINKAGE SOLAR"),
+            _normalize("TRUE VIEW 4G DUAL LENS SOLAR"),
+            _normalize("TRUE VIEW 4G POWER LINKAGE"),
+            _normalize("TRUE VIEW 4G PT DUAL LENS"),
+            _normalize("TRUE VIEW 4G PT SINGLE LENS"),
+            _normalize("TRUE VIEW 4G BULLET"),
+            _normalize("TRUE VIEW 4G DOME"),
+            _normalize("TRUE VIEW WIFI POWER LINKAGE"),
+            _normalize("TRUE VIEW WIFI DUAL LENS PT"),
+            _normalize("TRUE VIEW WIFI SINGLE LENS PT"),
+            _normalize("TRUE VIEW WIFI BULLET"),
+            _normalize("TRUE VIEW WIFI DOME"),
+            _normalize("TRUEVIEW WIFI ROBOT PAN TILT 3MP")
+        ]),
+        "MEMORY CARDS": new Set([]),
+        "ROUTER": new Set([
+            _normalize("TRUEVIEW 4G ROUTER")
+        ])
+    };
+
+    const secureyeSubcategoryExactNames = {
+        "4G & WIFI": new Set([
+            _normalize("SECUREYE 4G LINKAGE SOLAR (S-SSD-PTZ8)"),
+            _normalize("SECUREYE 4G POWER LINKAGE (S-SSD-PTZ5)"),
+            _normalize("SECUREYE 4G PT SINGLE LENS (SC-PTZ1-G)"),
+            _normalize("SECUREYE 4G BULLET (SIP-3HD-WIRG-4G)"),
+            _normalize("SECUREYE WIFI POWER LINKAGE (Defender duo wifi)"),
+            _normalize("SECUREYE WIFI DUAL LENS PT (S-PTZ-4W)"),
+            _normalize("SECUREYE WIFI SINGLE LENS PT (S-PTZ2-W)")
+        ]),
+        "POE": new Set([
+            _normalize("SECUREYE 8PORT GIGA 8+2+2SF (SSP-8GE-2UG-2UF-NB)"),
+            _normalize("SECUREYE 16 PORT POE+2UP GIGA+1SFC (16FE-2UG-1UF-300W-NB)"),
+            _normalize("SECUREYE 16 PORT POE FULLGIGA+2GIGA+1SFC (16GE-2UG-1UF-300W-NB)")
+        ]),
+        "MEDIA CONVERTERS": new Set([
+            _normalize("SECUREYE MEDIA CONVERTER 10/100 PAIR (SMP-S-SMSF-FE)"),
+            _normalize("SECUREYE MEDIA CONVERTER 10/100/1000 GIGA (SMP-S-SMSF-GE)")
+        ]),
+        "MEMORY CARDS": new Set([
+            _normalize("SECUREYE 64 GB MEMORY CARD(SD CARD)"),
+            _normalize("SECUREYE 128 GB MEMORY CARD (SD CARD)")
+        ]),
+        "CONVERTER": new Set([
+            _normalize("HDMI TO VGA")
+        ])
+    };
+
+    const securusSubcategoryExactNames = {
+        "NVR": new Set([
+            _normalize("SECURUS 6CH NVR (SS-N8006RVA-H1-M5)"),
+            _normalize("SECURUS 9CH NVR(SS-N8009RVA-H1-M5)"),
+            _normalize("SECURUS 16CH NVR (SS-N8016RVA-H1-M5)"),
+            _normalize("SECURUS 16CH NVR 2SATA (SS-N8016RV-H2-M5)"),
+            _normalize("SECURUS 32CH NVR (SS-N8032RV-H2-M5)")
+        ]),
+        "DVR": new Set([
+            _normalize("SECURUS 4CH DVR(SS-8041-TPHD-M1(SF))"),
+            _normalize("SECURUS 8CH DVR (SS-8081-TPHD-M1(SF))")
+        ]),
+        "IP CAMERAS": new Set([
+            _normalize("SECURUS 3MP IP C+A BULLET (SS-NC20L2XP-HSUTL-M3(S))"),
+            _normalize("SECURUS 3MP IP C+A DOME(SS-NC15DXLP-HSUTL-M3)"),
+            _normalize("SECURUS 3MP IP 4 CABEL(NC15DXLP-CSF-M3(S) 4 CABEL)"),
+            _normalize("SECURUS 3MP IP C+2WAY DOME(NC1DXLP-CSUTL-M3(SM)SL)"),
+            _normalize("SECURUS 5MP IP BULLET(NC20L2XP-CSFM(S)(MII))"),
+            _normalize("SECURUS 5MP IP BULLETS(NC50L5CPXM5(4CABEL))"),
+            _normalize("SECURUS 5MP IP DOME(NC15DXLP-CSF-M5(S)/2.8MM)")
+        ]),
+        "HD CAMERA": new Set([
+            _normalize("SECURUS 2.4MP COLOUR+AUDIO BULLET(SS-20L2XP-TPCSD-M2.4(S))"),
+            _normalize("SECURUS 2.4MP COLOUR+AUDIO DOME(SS-15DXP-TPCSD-M2.4)")
+        ]),
+        "PTZ": new Set([
+            _normalize("SECURUS PTZ 5MP(SS-NE15XSP-M5-4CABEL)")
+        ])
+    };
+
+    const yadonSubcategoryExactNames = {
+        "POE": new Set([
+            _normalize("4 PORT POE & 2UP LINK SWITCH WITH UPS (Y100-4P2UP/B)"),
+            _normalize("8 PORT POE & 2UP LINK SWITCH WITH UPS (Y100-8P2UP/B)"),
+            _normalize("YADON 4PORT POE SWITCH WITH BACKUP"),
+            _normalize("YADON 8PORT POE SWITCH WITH BACKUP")
+        ]),
+        "UPS": new Set([
+            _normalize("YADON 12V UPS")
+        ])
+    };
+
+    const dLinkSubcategoryExactNames = {
+        "RACKS": new Set([
+            _normalize("D LINK 2U MINI RACK (NWR-3535)"),
+            _normalize("D LINK 2U RACK"),
+            _normalize("D LINK 4U RACK UNLOADED"),
+            _normalize("D LINK 4U BIG RACK ONLY SPIKE"),
+            _normalize("D LINK 6U RACK (SPIKE&FAN)"),
+            _normalize("D LINK 9U RACK"),
+            _normalize("D LINK 12U RACK"),
+            _normalize("D LINK RACK TRAY")
+        ]),
+        "CABLES": new Set([
+            _normalize("D LINK 3+1 180MTRS STANDARD CABLE"),
+            _normalize("D LINK 3+1 90 MTRS OUTDOOR CABLE"),
+            _normalize("D LINK 3+1 90MTRS STANDARD CABLE"),
+            _normalize("D LINK CAT6 100 MTRS"),
+            _normalize("D LINK CAT6 305MTR CABLE"),
+            _normalize("D LINK CAT6 305MTR CABLE OUTDOOR"),
+            _normalize("DLINK CAT6 NEWW")
+        ]),
+        "ACCESSORIES": new Set([
+            _normalize("D LINK RJ 45 PINS (N) (NPG-5E1TRA031)"),
+            _normalize("D LINK SPIKE"),
+            _normalize("DLINK BACK BOX"),
+            _normalize("DLINK FACEPLATE DUAL"),
+            _normalize("DLINK FACEPLATE SINGLE"),
+            _normalize("DLINK KEYSTONE"),
+            _normalize("DLINK PATCHCARD 1MTR"),
+            _normalize("DLINK PATCHCARD 2MTR")
+        ]),
+        "POE": new Set([
+            _normalize("D LINK 4 PORT POE (DES-F1006P-E)"),
+            _normalize("D LINK 8PORT POE (DES-F1010P-E)"),
+            _normalize("D LINK 16 PORT POE SWITCH (DGS-F1018P-E)")
+        ]),
+        "ROUTER": new Set([
+            _normalize("D-LINK N300 ROUTER (DIR-650IN)"),
+            _normalize("D LINK 4G ROUTER N300 WIFI (G403C)")
+        ]),
+        "SWITCHES": new Set([
+            _normalize("D LINK 5 PORT DESKTOP SWITCH (DES-1005C)"),
+            _normalize("D LINK 8 PORT DESKTOP SWITCH (DES-1008C)")
+        ]),
+        "SMPS/POWER SUPPLY": new Set([
+            _normalize("D LINK 4CH SMPS (DPS-F1805)"),
+            _normalize("D LINK 8CH SMPS (DPS-F1B10)")
+        ])
+    };
+
+    const imouSubcategoryExactNames = {
+        "4G - WIFI": new Set([
+            _normalize("IMOU BULLET 2E (IPC-K3D3H0WF)"),
+            _normalize("IMOU 5+5 MP DUAL LENS (IPC-S7XE10M0WED)"),
+            _normalize("IMOU 3+3 MP DUAL LENS (IPC-S7XEP76M0WED)")
+        ])
+    };
+
+    const maxxionSubcategoryExactNames = {
+        "POE EXTENDERS OUTDOOR": new Set([
+            _normalize("MAXXION GIGA POE EXTENDER WATER PROOF 30W (MX-PE13G-OD3W)"),
+            _normalize("MAXXION GIGA POE EXTENDER WATER PROOF 90W (MX-PE13G-OD9W)")
+        ]),
+        "STANDS": new Set([
+            _normalize("EZVIZ ROBO STAND (MX-ERS)"),
+            _normalize("MAXXION DUAL SIDE POLE STAND (MX-PTS)"),
+            _normalize("MAXXION METAL DOME STAND (MX-MDS401)"),
+            _normalize("MAXXION ALUMINIUM SMALL STAND 12CM (MX-AS05A)")
+        ]),
+        "HDMI CABLES": new Set([
+            _normalize("MAXXION HDMI 4K 1.5MTR"),
+            _normalize("MAXXION HDMI 4K 3MTR"),
+            _normalize("MAXXION HDMI 4K 5MTR"),
+            _normalize("MAXXION HDMI 4K 10MTR"),
+            _normalize("MAXXION HDMI 4K 15MTR"),
+            _normalize("MAXXION HDMI 4K 20MTR"),
+            _normalize("MAXXION HDMI 4K 30MTR")
+        ]),
+        "SPIKE/POWER SOCKETS": new Set([
+            _normalize("MAXXION 3PIN POWER SOCKET"),
+            _normalize("MAXXION 6SOCKET POWER")
+        ]),
+        "ACCESSORIES": new Set([
+            _normalize("MAXXION CABINET LOCK (MX-CDL)"),
+            _normalize("MAXXION CABEL MANAGER"),
+            _normalize("MAXXION DC SCREW TYPE"),
+            _normalize("MAXXION BNC SCREW TYPE"),
+            _normalize("MAXXION CRIMPING TOOL HEAVY"),
+            _normalize("MAXXION ROUND BOX HEAVY (MX-HBRS)"),
+            _normalize("MAXXION ROUND BOX HEAVY 5XS (MX-HBR)"),
+            _normalize("MAXXION SQUARE BOX HEAVY 5X5"),
+            _normalize("MAXXION JUNCTION BOX"),
+            _normalize("MAXXION PUNCH DOWN TOOL"),
+            _normalize("MAXXION WIRE BNC ELIGHT"),
+            _normalize("RACK FAN")
+        ])
+    };
+
+    const erdSubcategoryExactNames = {
+        "ADAPTERS": new Set([
+            _normalize("ERD 12V-1AMP PLUGIN"),
+            _normalize("ERD 12V-2AMP PLUGIN"),
+            _normalize("ERD 12V-3AMP PLUGIN"),
+            _normalize("ERD 12V-3AMP DESKTOP SWITCH"),
+            _normalize("ERD 12V - 5AMP ADAPTOR"),
+            _normalize("ERD 16CH SMPS"),
+            _normalize("ERD 48V-1.25AMP POE ADAPTER"),
+            _normalize("ERD 4CH SMPS"),
+            _normalize("ERD 5V 1 AMP PLUGIN"),
+            _normalize("ERD 8CH SMPS"),
+            _normalize("ERD SPIKE 1.5MTRS"),
+            _normalize("ERD SPIKE 3MTR"),
+            _normalize("ERD SPIKE 5MTR")
+        ])
+    };
+
+    const lapcareSubcategoryExactNames = {
+        "MONITOR": new Set([
+            _normalize("LAPCARE 19'' MONITOR (HDMI&VGA) (LM195WDH)")
+        ]),
+        "MOUSES": new Set([
+            _normalize("LAPCARE WIRELESS MOUSE")
+        ])
+    };
+
+    const smartProSubcategoryExactNames = {
+        "HDMI CABLE": new Set([
+            _normalize("HDMI SP 3MTR"),
+            _normalize("HDMI SP 5MTR")
+        ]),
+        "HDMI EXTENDERS": new Set([
+            _normalize("60MTR EXTENDER"),
+            _normalize("120MTR EXTENDER"),
+            _normalize("60MTR KVM EXTENDER"),
+            _normalize("120MTR KVM EXTENDER")
+        ]),
+        "CONVERTERS": new Set([
+            _normalize("VGA TO HDMI CONVERTER"),
+            _normalize("HDMI TO VGA CONVERTER")
+        ]),
+        "LAN TESTER": new Set([
+            _normalize("LAN TESTER")
+        ])
+    };
+
+    const hddSubcategoryExactNames = {
+        "NORMAL": new Set([
+            _normalize("500GB BLUE FEATHER"),
+            _normalize("500GB SEGATE HDD"),
+            _normalize("500GB SEGATE HDD WD"),
+            _normalize("HARD DISK 500 GB [S]"),
+            _normalize("HDD 500GB IMP"),
+            _normalize("1TB INTERNAL"),
+            _normalize("1TB SEAGATE SKYHAWK"),
+            _normalize("1TB SEGATE HDD"),
+            _normalize("1TB SEGATE HDD - 2"),
+            _normalize("1TB SEGATE HDD WD"),
+            _normalize("1TB TOSHIBA"),
+            _normalize("1TB TOSHIBA (S)"),
+            _normalize("1TB WD PURPLE"),
+            _normalize("2TB BLUE FEATHER"),
+            _normalize("2TB SEAGATE SKYHAWK"),
+            _normalize("2TB SEGATE HDD"),
+            _normalize("2TB SEGATE HDD WD"),
+            _normalize("2TB TOSHIBA"),
+            _normalize("2TB WD PURPLE"),
+            _normalize("SEAGATE 2TB SKYHAWK (NEW)84717020"),
+            _normalize("3TB SEGATE HDD"),
+            _normalize("4TB BLUE FEATHER"),
+            _normalize("4TB SEAGATE SKYHAWK"),
+            _normalize("4TB SEGATE HDD"),
+            _normalize("4TB TOSHIBA"),
+            _normalize("4TB WD PURPLE"),
+            _normalize("4TB WD PURPLE(N)")
+        ]),
+        "3 YEAR COMPANY WARRANTY": new Set([
+            _normalize("1TB INTERNAL"),
+            _normalize("1TB SEAGATE SKYHAWK"),
+            _normalize("1TB SEGATE HDD"),
+            _normalize("1TB SEGATE HDD - 2"),
+            _normalize("1TB SEGATE HDD WD"),
+            _normalize("1TB TOSHIBA"),
+            _normalize("1TB TOSHIBA (S)"),
+            _normalize("1TB WD PURPLE"),
+            _normalize("2TB BLUE FEATHER"),
+            _normalize("2TB SEAGATE SKYHAWK"),
+            _normalize("2TB SEGATE HDD"),
+            _normalize("2TB SEGATE HDD WD"),
+            _normalize("2TB TOSHIBA"),
+            _normalize("2TB WD PURPLE"),
+            _normalize("SEAGATE 2TB SKYHAWK (NEW)84717020"),
+            _normalize("4TB BLUE FEATHER"),
+            _normalize("4TB SEAGATE SKYHAWK"),
+            _normalize("4TB SEGATE HDD"),
+            _normalize("4TB TOSHIBA"),
+            _normalize("4TB WD PURPLE"),
+            _normalize("4TB WD PURPLE(N)"),
+            _normalize("6TB HDD SEGATE"),
+            _normalize("6TB SEAGATE SKYHAWK"),
+            _normalize("6TB TOSHIBA"),
+            _normalize("6TB WD PURPLE"),
+            _normalize("8TB WD PURPLE"),
+            _normalize("SEAGATE 8TB SKYHAWK (NEW)")
+        ])
+    };
+
+    const accessorySubcategoryMatchers = {
+        "MEMORY/SD CARDS": [
+            /\bsd\s*card\b/i,
+            /\bmemory\b/i,
+            /\bmicro\s*sd\b/i
+        ],
+        "STANDS": [
+            /\bstand\b/i,
+            /\bstends?\b/i,
+            /\bmount\b/i,
+            /\bwall\s*mount\b/i,
+            /\bpole\s*mount\b/i,
+            /\bptz\b/i,
+            /\bdome\s*stand\b/i,
+            /\bmonitor\s*stand\b/i,
+            /\bmoniter\s*stand\b/i,
+            /\bl\s*type\b/i,
+            /\bi\s*type\b/i
+        ],
+        "RACKS": [
+            /\brack\b/i,
+            /\bracks\b/i,
+            /\brack\s*tray\b/i,
+            /\btray\b/i,
+            /\bmx\s*[- ]?800[def]\b/i,
+            /\bpoe\b.*\brack\b/i,
+            /\bsgs\b.*\brack\b/i,
+            /\bd\s*link\b.*\brack\b/i,
+            /\bvoltaic\b.*\brack\b/i
+        ],
+        "UPS/BATTERIES": [
+            /\bups\b/i,
+            /\bbattery\b/i,
+            /\bcmos\b/i,
+            /\bcr\s*1220\b/i,
+            /\bhw\s*battery\b/i,
+            /\byad\s*on\s*ups\b/i,
+            /\byadon\s*batery\b/i
+        ]
+    };
+
+    const accessorySubcategoryExactNames = {
+        "SPIKES": new Set([
+            _normalize("MAXXIXOM POWER SPIKE 4+1 2MTR"),
+            _normalize("MAXXIXOM POWER SPIKE 4+1 5MTR"),
+            _normalize("VOLTAIC 1.5 MTR SPIKE"),
+            _normalize("VOLTIC SPIKE 3MTRS"),
+            _normalize("SPIKE BRIGHT 5MTR"),
+            _normalize("SPIKE MAXCOM 2MTR"),
+            _normalize("SPIKE MAXCOM 5 MTR")
+        ]),
+        "CABLE TIES": new Set([
+            _normalize("CABLE TIES 100MM"),
+            _normalize("CABLE TIES 200 MM 3.6"),
+            _normalize("CABLE TIES 200MM 4.8"),
+            _normalize("CABLE TIES 250MM 4.8 MM"),
+            _normalize("CABLE TIES 300MM 4.8"),
+            _normalize("CABLE TIES 350MM 4.8"),
+            _normalize("CABLE TIES 400MM 4.8"),
+            _normalize("CABLE TIES 450MM 4.8"),
+            _normalize("CABLE TIES BLACK 200 MM 4.8"),
+            _normalize("CABLE TIES BLACK 300 MM 4.8")
+        ]),
+        "CLIPS & C CLAMPS": new Set([
+            _normalize("6MM CLIPS"),
+            _normalize("8MM CLIPS"),
+            _normalize("10MM CLIPS"),
+            _normalize("12MM CLIPS")
+        ]),
+        "COUPLERS": new Set([
+            _normalize("1X1 LAN COPULER"),
+            _normalize("2X1 LAN COPULER")
+        ]),
+        "TAGS": new Set([
+            _normalize("TAG 100MM"),
+            _normalize("TAG 2.5 X 250 MM"),
+            _normalize("TAG 200MM[3.6MM]"),
+            _normalize("TAG150MM"),
+            _normalize("TAGS 200MM[4.8MM]"),
+            _normalize("TAGS 250[3.6MM]]")
+        ]),
+        "TAPES & PLASTER": new Set([
+            _normalize("PVC INSULATION TAPES BLACK & WHITE")
+        ]),
+        "MONITOR": new Set([
+            _normalize("7 INCH HD TFT COLOR MONITOR")
+        ]),
+        "RING STAND": new Set([
+            _normalize("METAL RING 10CM (SRB-PR10C)"),
+            _normalize("METAL RING 20CM (SRB-PR20C)"),
+            _normalize("METAL RING 30CM (SRB-PR30C)"),
+            _normalize("METAL RING 40CM (SRB-PR40C)")
+        ]),
+        "LAN PATCH CARDS": new Set([
+            _normalize("LAN 1MTR PATCH CARD"),
+            _normalize("LAN 2MTR PATCH CARD"),
+            _normalize("LAN 3MTR PATCH CARD"),
+            _normalize("LAN 5MTR PATCH CARD"),
+            _normalize("LAN 10MTR PATCH CARD"),
+            _normalize("LAN 15MTR PATCH CARD"),
+            _normalize("LAN 25MTR PATCH CARD")
+        ]),
+        "HDMI CABLES": new Set([
+            _normalize("HDMI CABLE 4K 1.5M"),
+            _normalize("HDMI CABLE 4K 3 M"),
+            _normalize("HDMI CABLE 4K 5 M"),
+            _normalize("HDMI CABLE 4K 10 M"),
+            _normalize("HDMI CABLE 4K 15 M"),
+            _normalize("HDMI CABLE 4K 20 M"),
+            _normalize("HDMI CABLE 4K 30 M"),
+            _normalize("HDMI Y CABLE"),
+            _normalize("SATA BLACK CABLE")
+        ]),
+        "PVC BOX": new Set([
+            _normalize("4X4 ELCO  BRASS BOX"),
+            _normalize("4X4 ELCO PVC BOX"),
+            _normalize("4X4 ELCO PVC OUTDOORE BOX"),
+            _normalize("4X4 JASCOM PVC BOX"),
+            _normalize("4X4 PVC BOX (N)"),
+            _normalize("4X4 ROUND BOX"),
+            _normalize("4X4 ROUND PVC"),
+            _normalize("4x4 SQARE PVC BOX"),
+            _normalize("5X5  JASCOM PVC BOX"),
+            _normalize("MAXXION ROUND BOX HEAVY (MX-HBRS)"),
+            _normalize("MAXXION ROUND BOX HEAVY 5X5 (MX-HBR)"),
+            _normalize("MAXXION SQUARE BOX HEAVY 5X5"),
+            _normalize("MAXXION JUNCTION BOX"),
+            _normalize("HEAVY JUNCTION BOX 150*110*70MM (SRB-HJB)"),
+            _normalize("POE BOX WHITE")
+        ]),
+        "PVC TOOLS": new Set([
+            _normalize("4X4 ELCO  BRASS BOX"),
+            _normalize("4X4 ELCO PVC BOX"),
+            _normalize("4X4 ELCO PVC OUTDOORE BOX"),
+            _normalize("4X4 JASCOM PVC BOX"),
+            _normalize("4X4 PVC BOX (N)"),
+            _normalize("4X4 ROUND BOX"),
+            _normalize("4X4 ROUND PVC"),
+            _normalize("4x4 SQARE PVC BOX"),
+            _normalize("5X5  JASCOM PVC BOX"),
+            _normalize("MAXXION ROUND BOX HEAVY (MX-HBRS)"),
+            _normalize("MAXXION ROUND BOX HEAVY 5X5 (MX-HBR)"),
+            _normalize("MAXXION SQUARE BOX HEAVY 5X5"),
+            _normalize("MAXXION JUNCTION BOX"),
+            _normalize("HEAVY JUNCTION BOX 150*110*70MM (SRB-HJB)"),
+            _normalize("POE BOX WHITE")
+        ]),
+        "TOOLS": new Set([
+            _normalize("BLUE RJ45 CRIMPING TOOL"),
+            _normalize("BOSI RJ45 CRIMPING TOOL"),
+            _normalize("CABLE CUTTERS (M)"),
+            _normalize("CLIMPING TOOL HEAVY"),
+            _normalize("CONTINUTY TESTER"),
+            _normalize("CRIMPING TOOL BLUE"),
+            _normalize("LAN TESTER"),
+            _normalize("LAN TESTER SMART PRO"),
+            _normalize("LAN WATER PROOF JOINTER"),
+            _normalize("MAXXION PUNCH DOWN TOOL"),
+            _normalize("POE  INJECTOR"),
+            _normalize("POE MULTI PLUXER")
+        ]),
+        "EXTENDERS": new Set([
+            _normalize("HDMI 30 MTR LAN EXTENDER"),
+            _normalize("HDMI 60 MTRS LAN EXTENDER"),
+            _normalize("HDMI EXTENDAR UPTO 120MTR"),
+            _normalize("HDMI KVM 120 MTR EXTENDER"),
+            _normalize("HDMI KVM 60 MTR EXTENDER"),
+            _normalize("USB EXTENSION  1.5 MTR CABLE ANZ"),
+            _normalize("USB  EXTENSION 3MTR CABLE ANZ"),
+            _normalize("USB  EXTENSION 5MTR CABLE ANZ"),
+            _normalize("USB  EXTENSION 10MTR CABLE ANZ"),
+            _normalize("USB  EXTENSION 20MTR CABLE ANZ"),
+            _normalize("USB EXTENSION 200 MTRS")
+        ]),
+        "CONVERTERS": new Set([
+            _normalize("DP TO HDMI 1.8 MTR"),
+            _normalize("DP TO HDMI CONVERTOR"),
+            _normalize("DP TO VGA CARBONIX"),
+            _normalize("DVI TO VGA (GP-10306)"),
+            _normalize("HDMI 1X2 RJ45 CONVERTORS"),
+            _normalize("HDMI 4X1 QUAD CONVERTOR"),
+            _normalize("HDMI TO AV"),
+            _normalize("HDMI TO MINI HDMI 1.5MTR CABLE"),
+            _normalize("HDMI TO VGA AUDIO"),
+            _normalize("HDMI TO VGA CONVERTOR"),
+            _normalize("LAN TO USB"),
+            _normalize("MINI DP TO HDMI 1.8 MTR"),
+            _normalize("MINI DP TO VGA 1.8 MTR"),
+            _normalize("SMART PRO HDMI TO VGA"),
+            _normalize("SMART PRO VGA TO HDMI"),
+            _normalize("TYPE C TO HDMI CONVERTER"),
+            _normalize("USB TO HDMI CONVERTOR"),
+            _normalize("VGA TO HDMI CONVERTOR"),
+            _normalize("HD PASSIVE VIDEO BALUN (LAN TO BNC)")
+        ]),
+        "ADAPTERS": new Set([
+            _normalize("USB TO C ADAPTOR"),
+            _normalize("USB TO LAN ADAPTOR"),
+            _normalize("TYPE-C TO HDMI ADAPTER"),
+            _normalize("USB ETHERNET ADAPTER RANZ"),
+            _normalize("HDMI TO VGA ADAPTER"),
+            _normalize("VGA TO HDMI ADAPTER"),
+            _normalize("SECUREYE WIFI DONGLE/ADAPTER")
+        ]),
+        "CAPTURE CARD": new Set([
+            _normalize("HDMI VIDEO CAPTURE CARD"),
+            _normalize("HDMI VIDEO CAPTURE CARD TYPE C")
+        ]),
+        "CCTV ACCESSORIES": new Set([
+            _normalize("8MP VIDEO BALUN (SRB-VB8)"),
+            _normalize("RJ45 VIDEO BALUN (SRB-VBB/RJ45)"),
+            _normalize("4CH UTP BALUN  (SRB-4CHUTP)"),
+            _normalize("8CH UTP BALUN   (SRB-8CHUTP)"),
+            _normalize("DC PIN  (SRB-DC100)"),
+            _normalize("FEMALE DC PIN  (SRB-FDC100)"),
+            _normalize("SCREW DC (SRB-SBNC)"),
+            _normalize("SCREW BNC"),
+            _normalize("RJ45 JOINTER"),
+            _normalize("RJ45 SPLITTER 1/2"),
+            _normalize("POLICE LIGHT"),
+            _normalize("POE INJECTOR 30MTRS"),
+            _normalize("POE 2 WAY SPLITTER"),
+            _normalize("48V POE SPLITTER"),
+            _normalize("POE 1 IN 2 OUT SPLITTER"),
+            _normalize("POE 1 IN 4 OUT SPLITTER"),
+            _normalize("USB EXTENDER 150FT"),
+            _normalize("USB EXTENDER 200M"),
+            _normalize("ANALOG CABLE TO IP CONVERTER (IP BALUN)"),
+            _normalize("CCTV MIC BALL"),
+            _normalize("FEMALE DC PIN"),
+            _normalize("RJ 45 BOOTS"),
+            _normalize("RJ45 JACKS METAL"),
+            _normalize("RJ45 PINS DLINK"),
+            _normalize("ROYAL PLUGS")
+        ]),
+        "POE EXTENDERS": new Set([
+            _normalize("3 Port POE Extender (10/100 Mbps, 30W, Outdoor)"),
+            _normalize("3 Port Gigabit POE Extender (100/1000 Mbps, 30W, Outdoor)"),
+            _normalize("4 Port POE Extender (10/100 Mbps, 90W, Outdoor)"),
+            _normalize("4 Port Gigabit POE Extender (10/1000 Mbps, 90W, Outdoor)")
+        ]),
+        "BNC": new Set([
+            _normalize("JASCOM WIRE BNC"),
+            _normalize("MAXXION BNC"),
+            _normalize("WHITE COLOUR BNC"),
+            _normalize("BLACK COLOUR BNC"),
+            _normalize("HEAVY QUALITY BNC"),
+            _normalize("2PIN CONNECTOR  BNC"),
+            _normalize("VOLTAIC WIRELESS BNC")
+        ]),
+        "DC": new Set([
+            _normalize("DC 2PIN CONNECTOR"),
+            _normalize("MAXXION DC"),
+            _normalize("WHITE COLOUR DC"),
+            _normalize("BLACK COLOUR DC"),
+            _normalize("DC PIN ORANGE"),
+            _normalize("DC PIN RED WIRE (MAXXION)"),
+            _normalize("DC PIN YELLOW"),
+            _normalize("DC RED PIN")
+        ])
+    };
+
+    const filterAccessoryProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = accessorySubcategoryExactNames[subcategoryName];
+        if (exactNames instanceof Set) {
+            return inputProducts.filter((item) => {
+                if (item.category !== 'ACCESSORIES') return false;
+                return exactNames.has(_normalize(item.name || ""));
+            });
+        }
+
+        const matchers = accessorySubcategoryMatchers[subcategoryName];
+        if (!Array.isArray(matchers) || matchers.length === 0) return inputProducts;
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'ACCESSORIES') return false;
+            return matchers.some((pattern) => pattern.test(item.name || ""));
+        });
+    };
+
+    const filterAnwizProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = anwizSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'ANWIZ') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterCpPlusProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = cpPlusSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'CP PLUS') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterCoefProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = coefSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'COEF') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterVguardProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = vguardSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'VGUARD') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterVoltaicProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = voltaicSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'VOLTAIC') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterDahuaProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = dahuaSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'DAHUA') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterTpLinkProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = tpLinkSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'TP LINK') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterHikvisionProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = hikvisionSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'HIKVISION') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterZebronicsProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = zebronicsSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'ZEBRONICS') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterTrueViewProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = trueViewSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'TRUE VIEW') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterSecureyeProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = secureyeSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'SECUREYE') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterSecurusProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = securusSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'SECURUS') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterYadonProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = yadonSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'YADON') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterDLinkProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = dLinkSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'D-LINK') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterImouProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = imouSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'IMOU') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterMaxxionProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = maxxionSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'MAXXION') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterErdProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = erdSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'ERD') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterSmartProProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = smartProSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'SMART PRO') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterHddProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = hddSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'HDD') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
     };
 
 
@@ -2597,6 +4723,246 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
         if (state.selectedCategories.size > 0) {
             filtered = filtered.filter(item => state.selectedCategories.has(item.category));
+        }
+
+        // If only ACCESSORIES is selected and no subcategory selected, return empty array
+        // (we'll show accessory subcategory cards instead).
+        const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 && 
+                                          state.selectedCategories.has('ACCESSORIES');
+        if (isOnlyAccessoriesSelected) {
+            if (!state.selectedAccessorySubcategory) {
+                return [];
+            }
+
+            filtered = filterAccessoryProductsBySubcategory(state.selectedAccessorySubcategory, filtered);
+        }
+
+        // If only ANWIZ is selected and no subcategory selected, return empty array
+        // (we'll show ANWIZ subcategory cards instead).
+        const isOnlyAnwizSelected = state.selectedCategories.size === 1 &&
+                                    state.selectedCategories.has('ANWIZ');
+        if (isOnlyAnwizSelected) {
+            if (!state.selectedAnwizSubcategory) {
+                return [];
+            }
+
+            filtered = filterAnwizProductsBySubcategory(state.selectedAnwizSubcategory, filtered);
+        }
+
+        // If only CP PLUS is selected and no subcategory selected, return empty array
+        // (we'll show CP PLUS subcategory cards instead).
+        const isOnlyCpPlusSelected = state.selectedCategories.size === 1 &&
+                                     state.selectedCategories.has('CP PLUS');
+        if (isOnlyCpPlusSelected) {
+            if (!state.selectedCpPlusSubcategory) {
+                return [];
+            }
+
+            filtered = filterCpPlusProductsBySubcategory(state.selectedCpPlusSubcategory, filtered);
+        }
+
+        // If only COEF is selected and no subcategory selected, return empty array
+        // (we'll show COEF subcategory cards instead).
+        const isOnlyCoefSelected = state.selectedCategories.size === 1 &&
+                                   state.selectedCategories.has('COEF');
+        if (isOnlyCoefSelected) {
+            if (!state.selectedCoefSubcategory) {
+                return [];
+            }
+
+            filtered = filterCoefProductsBySubcategory(state.selectedCoefSubcategory, filtered);
+        }
+
+        // If only VGUARD is selected and no subcategory selected, return empty array
+        // (we'll show VGUARD subcategory cards instead).
+        const isOnlyVguardSelected = state.selectedCategories.size === 1 &&
+                                     state.selectedCategories.has('VGUARD');
+        if (isOnlyVguardSelected) {
+            if (!state.selectedVguardSubcategory) {
+                return [];
+            }
+
+            filtered = filterVguardProductsBySubcategory(state.selectedVguardSubcategory, filtered);
+        }
+
+        // If only VOLTAIC is selected and no subcategory selected, return empty array
+        // (we'll show VOLTAIC subcategory cards instead).
+        const isOnlyVoltaicSelected = state.selectedCategories.size === 1 &&
+                                      state.selectedCategories.has('VOLTAIC');
+        if (isOnlyVoltaicSelected) {
+            if (!state.selectedVoltaicSubcategory) {
+                return [];
+            }
+
+            filtered = filterVoltaicProductsBySubcategory(state.selectedVoltaicSubcategory, filtered);
+        }
+
+        // If only DAHUA is selected and no subcategory selected, return empty array
+        // (we'll show DAHUA subcategory cards instead).
+        const isOnlyDahuaSelected = state.selectedCategories.size === 1 &&
+                                    state.selectedCategories.has('DAHUA');
+        if (isOnlyDahuaSelected) {
+            if (!state.selectedDahuaSubcategory) {
+                return [];
+            }
+
+            filtered = filterDahuaProductsBySubcategory(state.selectedDahuaSubcategory, filtered);
+        }
+
+        // If only TP LINK is selected and no subcategory selected, return empty array
+        // (we'll show TP LINK subcategory cards instead).
+        const isOnlyTpLinkSelected = state.selectedCategories.size === 1 &&
+                                     state.selectedCategories.has('TP LINK');
+        if (isOnlyTpLinkSelected) {
+            if (!state.selectedTpLinkSubcategory) {
+                return [];
+            }
+
+            filtered = filterTpLinkProductsBySubcategory(state.selectedTpLinkSubcategory, filtered);
+        }
+
+        // If only HIKVISION is selected and no subcategory selected, return empty array
+        // (we'll show HIKVISION subcategory cards instead).
+        const isOnlyHikvisionSelected = state.selectedCategories.size === 1 &&
+                                        state.selectedCategories.has('HIKVISION');
+        if (isOnlyHikvisionSelected) {
+            if (!state.selectedHikvisionSubcategory) {
+                return [];
+            }
+
+            filtered = filterHikvisionProductsBySubcategory(state.selectedHikvisionSubcategory, filtered);
+        }
+
+        // If only ZEBRONICS is selected and no subcategory selected, return empty array
+        // (we'll show ZEBRONICS subcategory cards instead).
+        const isOnlyZebronicsSelected = state.selectedCategories.size === 1 &&
+                                        state.selectedCategories.has('ZEBRONICS');
+        if (isOnlyZebronicsSelected) {
+            if (!state.selectedZebronicsSubcategory) {
+                return [];
+            }
+
+            filtered = filterZebronicsProductsBySubcategory(state.selectedZebronicsSubcategory, filtered);
+        }
+
+        // If only TRUE VIEW is selected and no subcategory selected, return empty array
+        // (we'll show TRUE VIEW subcategory cards instead).
+        const isOnlyTrueViewSelected = state.selectedCategories.size === 1 &&
+                                       state.selectedCategories.has('TRUE VIEW');
+        if (isOnlyTrueViewSelected) {
+            if (!state.selectedTrueViewSubcategory) {
+                return [];
+            }
+
+            filtered = filterTrueViewProductsBySubcategory(state.selectedTrueViewSubcategory, filtered);
+        }
+
+        // If only SECUREYE is selected and no subcategory selected, return empty array
+        // (we'll show SECUREYE subcategory cards instead).
+        const isOnlySecureyeSelected = state.selectedCategories.size === 1 &&
+                                       state.selectedCategories.has('SECUREYE');
+        if (isOnlySecureyeSelected) {
+            if (!state.selectedSecureyeSubcategory) {
+                return [];
+            }
+
+            filtered = filterSecureyeProductsBySubcategory(state.selectedSecureyeSubcategory, filtered);
+        }
+
+        // If only SECURUS is selected and no subcategory selected, return empty array
+        // (we'll show SECURUS subcategory cards instead).
+        const isOnlySecurusSelected = state.selectedCategories.size === 1 &&
+                                      state.selectedCategories.has('SECURUS');
+        if (isOnlySecurusSelected) {
+            if (!state.selectedSecurusSubcategory) {
+                return [];
+            }
+
+            filtered = filterSecurusProductsBySubcategory(state.selectedSecurusSubcategory, filtered);
+        }
+
+        // If only YADON is selected and no subcategory selected, return empty array
+        // (we'll show YADON subcategory cards instead).
+        const isOnlyYadonSelected = state.selectedCategories.size === 1 &&
+                                    state.selectedCategories.has('YADON');
+        if (isOnlyYadonSelected) {
+            if (!state.selectedYadonSubcategory) {
+                return [];
+            }
+
+            filtered = filterYadonProductsBySubcategory(state.selectedYadonSubcategory, filtered);
+        }
+
+        // If only D-LINK is selected and no subcategory selected, return empty array
+        // (we'll show D-LINK subcategory cards instead).
+        const isOnlyDLinkSelected = state.selectedCategories.size === 1 &&
+                                    state.selectedCategories.has('D-LINK');
+        if (isOnlyDLinkSelected) {
+            if (!state.selectedDLinkSubcategory) {
+                return [];
+            }
+
+            filtered = filterDLinkProductsBySubcategory(state.selectedDLinkSubcategory, filtered);
+        }
+
+        // If only IMOU is selected and no subcategory selected, return empty array
+        // (we'll show IMOU subcategory cards instead).
+        const isOnlyImouSelected = state.selectedCategories.size === 1 &&
+                                   state.selectedCategories.has('IMOU');
+        if (isOnlyImouSelected) {
+            if (!state.selectedImouSubcategory) {
+                return [];
+            }
+
+            filtered = filterImouProductsBySubcategory(state.selectedImouSubcategory, filtered);
+        }
+
+        // If only MAXXION is selected and no subcategory selected, return empty array
+        // (we'll show MAXXION subcategory cards instead).
+        const isOnlyMaxxionSelected = state.selectedCategories.size === 1 &&
+                                      state.selectedCategories.has('MAXXION');
+        if (isOnlyMaxxionSelected) {
+            if (!state.selectedMaxxionSubcategory) {
+                return [];
+            }
+
+            filtered = filterMaxxionProductsBySubcategory(state.selectedMaxxionSubcategory, filtered);
+        }
+
+        // If only ERD is selected and no subcategory selected, return empty array
+        // (we'll show ERD subcategory cards instead).
+        const isOnlyErdSelected = state.selectedCategories.size === 1 &&
+                                  state.selectedCategories.has('ERD');
+        if (isOnlyErdSelected) {
+            if (!state.selectedErdSubcategory) {
+                return [];
+            }
+
+            filtered = filterErdProductsBySubcategory(state.selectedErdSubcategory, filtered);
+        }
+
+        // If only SMART PRO is selected and no subcategory selected, return empty array
+        // (we'll show SMART PRO subcategory cards instead).
+        const isOnlySmartProSelected = state.selectedCategories.size === 1 &&
+                                       state.selectedCategories.has('SMART PRO');
+        if (isOnlySmartProSelected) {
+            if (!state.selectedSmartProSubcategory) {
+                return [];
+            }
+
+            filtered = filterSmartProProductsBySubcategory(state.selectedSmartProSubcategory, filtered);
+        }
+
+        // If only HDD is selected and no subcategory selected, return empty array
+        // (we'll show HDD subcategory cards instead).
+        const isOnlyHddSelected = state.selectedCategories.size === 1 &&
+                                  state.selectedCategories.has('HDD');
+        if (isOnlyHddSelected) {
+            if (!state.selectedHddSubcategory) {
+                return [];
+            }
+
+            filtered = filterHddProductsBySubcategory(state.selectedHddSubcategory, filtered);
         }
 
         if (state.searchQuery) {
@@ -2710,22 +5076,1028 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
     const renderProducts = (filtered) => {
         if (!elements.productsGrid) return;
 
+        // Check if only ACCESSORIES is selected
+        const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 && 
+                                          state.selectedCategories.has('ACCESSORIES');
+        const isOnlyAnwizSelected = state.selectedCategories.size === 1 &&
+                        state.selectedCategories.has('ANWIZ');
+        const isOnlyCpPlusSelected = state.selectedCategories.size === 1 &&
+                state.selectedCategories.has('CP PLUS');
+        const isOnlyCoefSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('COEF');
+        const isOnlyVguardSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('VGUARD');
+        const isOnlyVoltaicSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('VOLTAIC');
+        const isOnlyDahuaSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('DAHUA');
+        const isOnlyTpLinkSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('TP LINK');
+        const isOnlyHikvisionSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('HIKVISION');
+        const isOnlyZebronicsSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('ZEBRONICS');
+        const isOnlyTrueViewSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('TRUE VIEW');
+        const isOnlySecureyeSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('SECUREYE');
+        const isOnlySecurusSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('SECURUS');
+        const isOnlyYadonSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('YADON');
+        const isOnlyDLinkSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('D-LINK');
+        const isOnlyImouSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('IMOU');
+        const isOnlyMaxxionSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('MAXXION');
+        const isOnlyErdSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('ERD');
+        const isOnlySmartProSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('SMART PRO');
+        const isOnlyHddSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('HDD');
+
+        // If only ACCESSORIES is selected and no subcategory is picked, show accessory subcategory cards
+        if (isOnlyAccessoriesSelected && !state.selectedAccessorySubcategory) {
+            // Remove pagination when showing categories
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+            
+            elements.productsGrid.innerHTML = accessorySubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedAccessorySubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.subcategory;
+                    if (!subcategory) return;
+
+                    state.selectedAccessorySubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    // Scroll to top of products area after subcategory selection
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only ANWIZ is selected and no subcategory is picked, show ANWIZ subcategory cards
+        if (isOnlyAnwizSelected && !state.selectedAnwizSubcategory) {
+            // Remove pagination when showing categories
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = anwizSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedAnwizSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-anwiz-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.anwizSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedAnwizSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only CP PLUS is selected and no subcategory is picked, show CP PLUS subcategory cards
+        if (isOnlyCpPlusSelected && !state.selectedCpPlusSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = cpPlusSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedCpPlusSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-cpplus-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.cpplusSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedCpPlusSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only COEF is selected and no subcategory is picked, show COEF subcategory cards
+        if (isOnlyCoefSelected && !state.selectedCoefSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = coefSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedCoefSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-coef-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.coefSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedCoefSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only VGUARD is selected and no subcategory is picked, show VGUARD subcategory cards
+        if (isOnlyVguardSelected && !state.selectedVguardSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = vguardSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedVguardSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-vguard-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.vguardSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedVguardSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only VOLTAIC is selected and no subcategory is picked, show VOLTAIC subcategory cards
+        if (isOnlyVoltaicSelected && !state.selectedVoltaicSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = voltaicSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedVoltaicSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-voltaic-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.voltaicSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedVoltaicSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only DAHUA is selected and no subcategory is picked, show DAHUA subcategory cards
+        if (isOnlyDahuaSelected && !state.selectedDahuaSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = dahuaSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedDahuaSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-dahua-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.dahuaSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedDahuaSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only TP LINK is selected and no subcategory is picked, show TP LINK subcategory cards
+        if (isOnlyTpLinkSelected && !state.selectedTpLinkSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = tpLinkSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedTpLinkSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-tplink-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.tplinkSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedTpLinkSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only HIKVISION is selected and no subcategory is picked, show HIKVISION subcategory cards
+        if (isOnlyHikvisionSelected && !state.selectedHikvisionSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = hikvisionSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedHikvisionSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-hikvision-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.hikvisionSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedHikvisionSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only ZEBRONICS is selected and no subcategory is picked, show ZEBRONICS subcategory cards
+        if (isOnlyZebronicsSelected && !state.selectedZebronicsSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = zebronicsSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedZebronicsSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-zebronics-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.zebronicsSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedZebronicsSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only TRUE VIEW is selected and no subcategory is picked, show TRUE VIEW subcategory cards
+        if (isOnlyTrueViewSelected && !state.selectedTrueViewSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = trueViewSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedTrueViewSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-trueview-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.trueviewSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedTrueViewSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only SECUREYE is selected and no subcategory is picked, show SECUREYE subcategory cards
+        if (isOnlySecureyeSelected && !state.selectedSecureyeSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = secureyeSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedSecureyeSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-secureye-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.secureyeSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedSecureyeSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only SECURUS is selected and no subcategory is picked, show SECURUS subcategory cards
+        if (isOnlySecurusSelected && !state.selectedSecurusSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = securusSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedSecurusSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-securus-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.securusSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedSecurusSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only YADON is selected and no subcategory is picked, show YADON subcategory cards
+        if (isOnlyYadonSelected && !state.selectedYadonSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = yadonSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedYadonSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-yadon-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.yadonSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedYadonSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only D-LINK is selected and no subcategory is picked, show D-LINK subcategory cards
+        if (isOnlyDLinkSelected && !state.selectedDLinkSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = dLinkSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedDLinkSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-dlink-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.dlinkSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedDLinkSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only IMOU is selected and no subcategory is picked, show IMOU subcategory cards
+        if (isOnlyImouSelected && !state.selectedImouSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = imouSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedImouSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-imou-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.imouSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedImouSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only MAXXION is selected and no subcategory is picked, show MAXXION subcategory cards
+        if (isOnlyMaxxionSelected && !state.selectedMaxxionSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = maxxionSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedMaxxionSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-maxxion-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.maxxionSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedMaxxionSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only ERD is selected and no subcategory is picked, show ERD subcategory cards
+        if (isOnlyErdSelected && !state.selectedErdSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = erdSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedErdSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-erd-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.erdSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedErdSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only SMART PRO is selected and no subcategory is picked, show SMART PRO subcategory cards
+        if (isOnlySmartProSelected && !state.selectedSmartProSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = smartProSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedSmartProSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-smartpro-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.smartproSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedSmartProSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only HDD is selected and no subcategory is picked, show HDD subcategory cards
+        if (isOnlyHddSelected && !state.selectedHddSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = hddSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedHddSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-hdd-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.hddSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedHddSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // Normal product rendering for other categories
         const start = (state.currentPage - 1) * state.perPage;
         const end = start + state.perPage;
         const pageItems = filtered.slice(start, end);
 
+        const showCategoryBackButton = (isOnlyAccessoriesSelected && !!state.selectedAccessorySubcategory) ||
+                                       (isOnlyAnwizSelected && !!state.selectedAnwizSubcategory) ||
+                                       (isOnlyCpPlusSelected && !!state.selectedCpPlusSubcategory) ||
+                                       (isOnlyCoefSelected && !!state.selectedCoefSubcategory) ||
+                                       (isOnlyVguardSelected && !!state.selectedVguardSubcategory) ||
+                                       (isOnlyVoltaicSelected && !!state.selectedVoltaicSubcategory) ||
+                                       (isOnlyDahuaSelected && !!state.selectedDahuaSubcategory) ||
+                                       (isOnlyTpLinkSelected && !!state.selectedTpLinkSubcategory) ||
+                                       (isOnlyHikvisionSelected && !!state.selectedHikvisionSubcategory) ||
+                                       (isOnlyZebronicsSelected && !!state.selectedZebronicsSubcategory) ||
+                                       (isOnlyTrueViewSelected && !!state.selectedTrueViewSubcategory) ||
+                                       (isOnlySecureyeSelected && !!state.selectedSecureyeSubcategory) ||
+                                       (isOnlySecurusSelected && !!state.selectedSecurusSubcategory) ||
+                                       (isOnlyYadonSelected && !!state.selectedYadonSubcategory) ||
+                                       (isOnlyDLinkSelected && !!state.selectedDLinkSubcategory) ||
+                                       (isOnlyImouSelected && !!state.selectedImouSubcategory) ||
+                                       (isOnlyMaxxionSelected && !!state.selectedMaxxionSubcategory) ||
+                                       (isOnlyErdSelected && !!state.selectedErdSubcategory) ||
+                                       (isOnlySmartProSelected && !!state.selectedSmartProSubcategory) ||
+                                       (isOnlyHddSelected && !!state.selectedHddSubcategory);
+        const backButtonMarkup = showCategoryBackButton
+            ? `
+                <div class="accessory-back-wrap">
+                    <button type="button" class="accessory-back-btn" id="backToAccessoryCategories">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to Categories
+                    </button>
+                </div>
+            `
+            : '';
+
         if (pageItems.length === 0) {
             elements.productsGrid.innerHTML = `
+                ${backButtonMarkup}
                 <div class="no-products-found">
                     <i class="fa-solid fa-box-open"></i>
                     <h3>No products found</h3>
                     <p>Try adjusting your filters.</p>
                 </div>
             `;
+
+            const backBtnEmpty = document.getElementById('backToAccessoryCategories');
+            if (backBtnEmpty) {
+                backBtnEmpty.addEventListener('click', () => {
+                    if (isOnlyAccessoriesSelected) state.selectedAccessorySubcategory = null;
+                    if (isOnlyAnwizSelected) state.selectedAnwizSubcategory = null;
+                    if (isOnlyCpPlusSelected) state.selectedCpPlusSubcategory = null;
+                    if (isOnlyCoefSelected) state.selectedCoefSubcategory = null;
+                    if (isOnlyVguardSelected) state.selectedVguardSubcategory = null;
+                    if (isOnlyVoltaicSelected) state.selectedVoltaicSubcategory = null;
+                    if (isOnlyDahuaSelected) state.selectedDahuaSubcategory = null;
+                    if (isOnlyTpLinkSelected) state.selectedTpLinkSubcategory = null;
+                    if (isOnlyHikvisionSelected) state.selectedHikvisionSubcategory = null;
+                    if (isOnlyZebronicsSelected) state.selectedZebronicsSubcategory = null;
+                    if (isOnlyTrueViewSelected) state.selectedTrueViewSubcategory = null;
+                    if (isOnlySecureyeSelected) state.selectedSecureyeSubcategory = null;
+                    if (isOnlySecurusSelected) state.selectedSecurusSubcategory = null;
+                    if (isOnlyYadonSelected) state.selectedYadonSubcategory = null;
+                    if (isOnlyDLinkSelected) state.selectedDLinkSubcategory = null;
+                    if (isOnlyImouSelected) state.selectedImouSubcategory = null;
+                    if (isOnlyMaxxionSelected) state.selectedMaxxionSubcategory = null;
+                    if (isOnlyErdSelected) state.selectedErdSubcategory = null;
+                    if (isOnlySmartProSelected) state.selectedSmartProSubcategory = null;
+                    if (isOnlyHddSelected) state.selectedHddSubcategory = null;
+                    state.currentPage = 1;
+                    render();
+                });
+            }
             return;
         }
 
-        elements.productsGrid.innerHTML = pageItems
+        elements.productsGrid.innerHTML = backButtonMarkup + pageItems
             .map((product) => {
                 return `
                     <div class="product-card" data-category="${product.category}" data-product-id="${product.id}">
@@ -2754,6 +6126,34 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                 `;
             })
             .join("");
+
+        const backBtn = document.getElementById('backToAccessoryCategories');
+        if (backBtn) {
+            backBtn.addEventListener('click', () => {
+                if (isOnlyAccessoriesSelected) state.selectedAccessorySubcategory = null;
+                if (isOnlyAnwizSelected) state.selectedAnwizSubcategory = null;
+                if (isOnlyCpPlusSelected) state.selectedCpPlusSubcategory = null;
+                if (isOnlyCoefSelected) state.selectedCoefSubcategory = null;
+                if (isOnlyVguardSelected) state.selectedVguardSubcategory = null;
+                if (isOnlyVoltaicSelected) state.selectedVoltaicSubcategory = null;
+                if (isOnlyDahuaSelected) state.selectedDahuaSubcategory = null;
+                if (isOnlyTpLinkSelected) state.selectedTpLinkSubcategory = null;
+                if (isOnlyHikvisionSelected) state.selectedHikvisionSubcategory = null;
+                if (isOnlyZebronicsSelected) state.selectedZebronicsSubcategory = null;
+                if (isOnlyTrueViewSelected) state.selectedTrueViewSubcategory = null;
+                if (isOnlySecureyeSelected) state.selectedSecureyeSubcategory = null;
+                if (isOnlySecurusSelected) state.selectedSecurusSubcategory = null;
+                if (isOnlyYadonSelected) state.selectedYadonSubcategory = null;
+                if (isOnlyDLinkSelected) state.selectedDLinkSubcategory = null;
+                if (isOnlyImouSelected) state.selectedImouSubcategory = null;
+                if (isOnlyMaxxionSelected) state.selectedMaxxionSubcategory = null;
+                if (isOnlyErdSelected) state.selectedErdSubcategory = null;
+                if (isOnlySmartProSelected) state.selectedSmartProSubcategory = null;
+                if (isOnlyHddSelected) state.selectedHddSubcategory = null;
+                state.currentPage = 1;
+                render();
+            });
+        }
 
         // After rendering, wire up controls and sync initial states from localStorage
         const CART_KEY = 'pvcCart';
@@ -2923,6 +6323,86 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                 const compText = compsSelected.join(', ');
                 html += `<li class="breadcrumb-item active" aria-current="page">${compText}</li>`;
             }
+
+            if (state.selectedAccessorySubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedAccessorySubcategory}</li>`;
+            }
+
+            if (state.selectedAnwizSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedAnwizSubcategory}</li>`;
+            }
+
+            if (state.selectedCpPlusSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedCpPlusSubcategory}</li>`;
+            }
+
+            if (state.selectedCoefSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedCoefSubcategory}</li>`;
+            }
+
+            if (state.selectedVguardSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedVguardSubcategory}</li>`;
+            }
+
+            if (state.selectedVoltaicSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedVoltaicSubcategory}</li>`;
+            }
+
+            if (state.selectedDahuaSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedDahuaSubcategory}</li>`;
+            }
+
+            if (state.selectedTpLinkSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedTpLinkSubcategory}</li>`;
+            }
+
+            if (state.selectedHikvisionSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedHikvisionSubcategory}</li>`;
+            }
+
+            if (state.selectedZebronicsSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedZebronicsSubcategory}</li>`;
+            }
+
+            if (state.selectedTrueViewSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedTrueViewSubcategory}</li>`;
+            }
+
+            if (state.selectedSecureyeSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedSecureyeSubcategory}</li>`;
+            }
+
+            if (state.selectedSecurusSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedSecurusSubcategory}</li>`;
+            }
+
+            if (state.selectedYadonSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedYadonSubcategory}</li>`;
+            }
+
+            if (state.selectedDLinkSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedDLinkSubcategory}</li>`;
+            }
+
+            if (state.selectedImouSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedImouSubcategory}</li>`;
+            }
+
+            if (state.selectedMaxxionSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedMaxxionSubcategory}</li>`;
+            }
+
+            if (state.selectedErdSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedErdSubcategory}</li>`;
+            }
+
+            if (state.selectedSmartProSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedSmartProSubcategory}</li>`;
+            }
+
+            if (state.selectedHddSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedHddSubcategory}</li>`;
+            }
         }
 
         elements.breadcrumb.innerHTML = html;
@@ -2978,9 +6458,6 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                 const target = e.target;
                 if (!target || target.name !== 'category') return;
 
-                // preserve scroll position to avoid unwanted jumps during filtering
-                const scrollY = window.scrollY || document.documentElement.scrollTop || 0;
-
                 const allInput = elements.categoryFilters.querySelector("input[name='category'][value='ALL CATEGORIES']");
 
                 // If user clicked the ALL CATEGORIES checkbox
@@ -2998,9 +6475,8 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                         if (allInput) allInput.checked = true;
                         setTimeout(() => { ignoreCategoryChange = false; }, 0);
                     } else {
-                        // user unchecked ALL -> if no other categories are checked, re-check ALL (keep default)
-                        const otherChecked = elements.categoryFilters.querySelectorAll("input[name='category']:checked:not([value='ALL CATEGORIES'])");
-                        if (otherChecked.length === 0 && allInput) {
+                        // user unchecked ALL -> keep default state as ALL checked
+                        if (allInput) {
                             ignoreCategoryChange = true;
                             allInput.checked = true;
                             setTimeout(() => { ignoreCategoryChange = false; }, 0);
@@ -3008,33 +6484,131 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                         state.selectedCategories = new Set();
                     }
                 } else {
-                    // User clicked a non-ALL category
-                    const otherChecked = elements.categoryFilters.querySelectorAll("input[name='category']:checked:not([value='ALL CATEGORIES'])");
-
+                    // User clicked a non-ALL category (single-select mode)
                     if (target.checked) {
-                        // uncheck ALL if it's currently checked
-                        if (allInput && allInput.checked) {
-                            ignoreCategoryChange = true;
-                            allInput.checked = false;
-                            setTimeout(() => { ignoreCategoryChange = false; }, 0);
-                        }
-                    }
+                        ignoreCategoryChange = true;
 
-                    // If after this action no non-ALL categories are checked, re-enable ALL
-                    const remaining = elements.categoryFilters.querySelectorAll("input[name='category']:checked:not([value='ALL CATEGORIES'])");
-                    if (remaining.length === 0) {
-                        // no specific categories selected -> default back to ALL
-                        if (allInput) {
-                            ignoreCategoryChange = true;
-                            allInput.checked = true;
-                            setTimeout(() => { ignoreCategoryChange = false; }, 0);
-                        }
-                        state.selectedCategories = new Set();
+                        // Uncheck all other categories and ALL CATEGORIES
+                        elements.categoryFilters
+                            .querySelectorAll("input[name='category']")
+                            .forEach((input) => {
+                                input.checked = input === target;
+                            });
+
+                        state.selectedCategories = new Set([target.value]);
+                        setTimeout(() => { ignoreCategoryChange = false; }, 0);
                     } else {
-                        // collect selected categories into state
-                        const values = Array.from(remaining).map(i => i.value);
-                        state.selectedCategories = new Set(values);
+                        // If selected category is unchecked, fall back to ALL CATEGORIES
+                        ignoreCategoryChange = true;
+                        if (allInput) allInput.checked = true;
+                        elements.categoryFilters
+                            .querySelectorAll("input[name='category']:not([value='ALL CATEGORIES'])")
+                            .forEach((input) => {
+                                input.checked = false;
+                            });
+                        state.selectedCategories = new Set();
+                        setTimeout(() => { ignoreCategoryChange = false; }, 0);
                     }
+                }
+
+                const accessoriesOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('ACCESSORIES');
+                if (!accessoriesOnlyAfterChange) {
+                    state.selectedAccessorySubcategory = null;
+                }
+
+                const anwizOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('ANWIZ');
+                if (!anwizOnlyAfterChange) {
+                    state.selectedAnwizSubcategory = null;
+                }
+
+                const cpPlusOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('CP PLUS');
+                if (!cpPlusOnlyAfterChange) {
+                    state.selectedCpPlusSubcategory = null;
+                }
+
+                const coefOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('COEF');
+                if (!coefOnlyAfterChange) {
+                    state.selectedCoefSubcategory = null;
+                }
+
+                const vguardOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('VGUARD');
+                if (!vguardOnlyAfterChange) {
+                    state.selectedVguardSubcategory = null;
+                }
+
+                const voltaicOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('VOLTAIC');
+                if (!voltaicOnlyAfterChange) {
+                    state.selectedVoltaicSubcategory = null;
+                }
+
+                const dahuaOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('DAHUA');
+                if (!dahuaOnlyAfterChange) {
+                    state.selectedDahuaSubcategory = null;
+                }
+
+                const tpLinkOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('TP LINK');
+                if (!tpLinkOnlyAfterChange) {
+                    state.selectedTpLinkSubcategory = null;
+                }
+
+                const hikvisionOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('HIKVISION');
+                if (!hikvisionOnlyAfterChange) {
+                    state.selectedHikvisionSubcategory = null;
+                }
+
+                const zebronicsOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('ZEBRONICS');
+                if (!zebronicsOnlyAfterChange) {
+                    state.selectedZebronicsSubcategory = null;
+                }
+
+                const trueViewOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('TRUE VIEW');
+                if (!trueViewOnlyAfterChange) {
+                    state.selectedTrueViewSubcategory = null;
+                }
+
+                const secureyeOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('SECUREYE');
+                if (!secureyeOnlyAfterChange) {
+                    state.selectedSecureyeSubcategory = null;
+                }
+
+                const securusOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('SECURUS');
+                if (!securusOnlyAfterChange) {
+                    state.selectedSecurusSubcategory = null;
+                }
+
+                const yadonOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('YADON');
+                if (!yadonOnlyAfterChange) {
+                    state.selectedYadonSubcategory = null;
+                }
+
+                const dLinkOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('D-LINK');
+                if (!dLinkOnlyAfterChange) {
+                    state.selectedDLinkSubcategory = null;
+                }
+
+                const imouOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('IMOU');
+                if (!imouOnlyAfterChange) {
+                    state.selectedImouSubcategory = null;
+                }
+
+                const maxxionOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('MAXXION');
+                if (!maxxionOnlyAfterChange) {
+                    state.selectedMaxxionSubcategory = null;
+                }
+
+                const erdOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('ERD');
+                if (!erdOnlyAfterChange) {
+                    state.selectedErdSubcategory = null;
+                }
+
+                const smartProOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('SMART PRO');
+                if (!smartProOnlyAfterChange) {
+                    state.selectedSmartProSubcategory = null;
+                }
+
+                const hddOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('HDD');
+                if (!hddOnlyAfterChange) {
+                    state.selectedHddSubcategory = null;
                 }
 
                 // Visual state is now handled by render() -> syncFilterLabels()
@@ -3042,9 +6616,16 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                 state.currentPage = 1;
                 render();
 
-                // restore scroll position immediately after rendering
+                // Scroll to top of products area after category change
                 setTimeout(() => {
-                    window.scrollTo({ top: scrollY, left: 0, behavior: 'auto' });
+                    const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                    if (productsSection) {
+                        const headerHeight = 100;
+                        const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                    } else {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
                 }, 0);
             });
 
@@ -3081,6 +6662,26 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                     elements.inStockFilter.checked = false;
                 }
                 state.selectedCategories = new Set();
+                state.selectedAccessorySubcategory = null;
+                state.selectedAnwizSubcategory = null;
+                state.selectedCpPlusSubcategory = null;
+                state.selectedCoefSubcategory = null;
+                state.selectedVguardSubcategory = null;
+                state.selectedVoltaicSubcategory = null;
+                state.selectedDahuaSubcategory = null;
+                state.selectedTpLinkSubcategory = null;
+                state.selectedHikvisionSubcategory = null;
+                state.selectedZebronicsSubcategory = null;
+                state.selectedTrueViewSubcategory = null;
+                state.selectedSecureyeSubcategory = null;
+                state.selectedSecurusSubcategory = null;
+                state.selectedYadonSubcategory = null;
+                state.selectedDLinkSubcategory = null;
+                state.selectedImouSubcategory = null;
+                state.selectedMaxxionSubcategory = null;
+                state.selectedErdSubcategory = null;
+                state.selectedSmartProSubcategory = null;
+                state.selectedHddSubcategory = null;
                 state.currentPage = 1;
                 render();
             });
@@ -3220,6 +6821,72 @@ const _normalize = (s) => (s || "").toLowerCase().replace(/[^a-z0-9]/g, "");
                             else lbl.classList.remove('is-checked');
                         });
                     }
+                }
+            }
+
+            // Handle accessory subcategory
+            const subcategoryParam = params.get('subcategory') || params.get('subcat');
+            if (subcategoryParam) {
+                const normalizedSubcat = String(subcategoryParam).trim().toUpperCase();
+                const isOnlyAnwizSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('ANWIZ');
+                const isOnlyCpPlusSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('CP PLUS');
+                const isOnlyCoefSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('COEF');
+                const isOnlyVguardSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('VGUARD');
+                const isOnlyVoltaicSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('VOLTAIC');
+                const isOnlyDahuaSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('DAHUA');
+                const isOnlyTpLinkSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('TP LINK');
+                const isOnlyHikvisionSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('HIKVISION');
+                const isOnlyZebronicsSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('ZEBRONICS');
+                const isOnlyTrueViewSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('TRUE VIEW');
+                const isOnlySecureyeSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('SECUREYE');
+                const isOnlySecurusSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('SECURUS');
+                const isOnlyYadonSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('YADON');
+                const isOnlyDLinkSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('D-LINK');
+                const isOnlyImouSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('IMOU');
+                const isOnlyMaxxionSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('MAXXION');
+                const isOnlyErdSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('ERD');
+                const isOnlySmartProSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('SMART PRO');
+                const isOnlyHddSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('HDD');
+                if (isOnlyAnwizSelected) {
+                    state.selectedAnwizSubcategory = normalizedSubcat;
+                } else if (isOnlyCpPlusSelected) {
+                    state.selectedCpPlusSubcategory = normalizedSubcat;
+                } else if (isOnlyCoefSelected) {
+                    state.selectedCoefSubcategory = normalizedSubcat;
+                } else if (isOnlyVguardSelected) {
+                    state.selectedVguardSubcategory = normalizedSubcat;
+                } else if (isOnlyVoltaicSelected) {
+                    state.selectedVoltaicSubcategory = normalizedSubcat;
+                } else if (isOnlyDahuaSelected) {
+                    state.selectedDahuaSubcategory = normalizedSubcat;
+                } else if (isOnlyTpLinkSelected) {
+                    state.selectedTpLinkSubcategory = normalizedSubcat;
+                } else if (isOnlyHikvisionSelected) {
+                    state.selectedHikvisionSubcategory = normalizedSubcat;
+                } else if (isOnlyZebronicsSelected) {
+                    state.selectedZebronicsSubcategory = normalizedSubcat;
+                } else if (isOnlyTrueViewSelected) {
+                    state.selectedTrueViewSubcategory = normalizedSubcat;
+                } else if (isOnlySecureyeSelected) {
+                    state.selectedSecureyeSubcategory = normalizedSubcat;
+                } else if (isOnlySecurusSelected) {
+                    state.selectedSecurusSubcategory = normalizedSubcat;
+                } else if (isOnlyYadonSelected) {
+                    state.selectedYadonSubcategory = normalizedSubcat;
+                } else if (isOnlyDLinkSelected) {
+                    state.selectedDLinkSubcategory = normalizedSubcat;
+                } else if (isOnlyImouSelected) {
+                    state.selectedImouSubcategory = normalizedSubcat;
+                } else if (isOnlyMaxxionSelected) {
+                    state.selectedMaxxionSubcategory = normalizedSubcat;
+                } else if (isOnlyErdSelected) {
+                    state.selectedErdSubcategory = normalizedSubcat;
+                } else if (isOnlySmartProSelected) {
+                    state.selectedSmartProSubcategory = normalizedSubcat;
+                } else if (isOnlyHddSelected) {
+                    state.selectedHddSubcategory = normalizedSubcat;
+                } else {
+                    state.selectedAccessorySubcategory = normalizedSubcat;
                 }
             }
 

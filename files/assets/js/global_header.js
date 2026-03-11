@@ -196,6 +196,11 @@ function initPvcHeader() {
     mobileClose.addEventListener('click', toggleMobileMenu); // Close event
     overlay.addEventListener('click', toggleMobileMenu);
 
+    // Prevent desktop nav top-level '#' links from jumping the page
+    document.querySelectorAll('.pvc-nav-item.has-mega-brand > a[href="#"], .pvc-nav-item.has-mega-category > a[href="#"]').forEach(link => {
+        link.addEventListener('click', (e) => e.preventDefault());
+    });
+
     // Mobile Mega Menu Toggle
     document.querySelectorAll('.pvc-mobile-link-wrapper').forEach(wrapper => {
         wrapper.addEventListener('click', (e) => {
