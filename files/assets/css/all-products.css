@@ -770,3 +770,312 @@
 .active-filter-tag button:hover {
     color: #b8860b;
 }
+/* ==========================================================================
+   SUB-PRODUCTS EXPANDABLE STRUCTURE
+   ========================================================================== */
+
+/* Expand indicator for products with sub-products */
+.product-card.has-sub-products {
+    position: relative;
+    cursor: pointer;
+}
+
+.expand-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    background: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.expand-indicator:hover {
+    background: #b8860b;
+    transform: scale(1.1);
+}
+
+.expand-indicator i {
+    color: #fff;
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.product-card.expanded .expand-indicator {
+    background: #b8860b;
+}
+
+.product-card.expanded .expand-indicator i {
+    transform: rotate(180deg);
+}
+
+/* Sub-products container */
+.sub-products-container {
+    width: 100%;
+    background: #f8f9fa;
+    border-top: 2px solid #e0e0e0;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 0 0 8px 8px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Individual sub-product item */
+.sub-product-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.sub-product-item:last-child {
+    margin-bottom: 0;
+}
+
+.sub-product-item:hover {
+    border-color: #b8860b;
+    box-shadow: 0 2px 8px rgba(184, 134, 11, 0.1);
+    transform: translateX(5px);
+}
+
+.sub-product-name {
+    flex: 1;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.sub-product-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.sub-add-cart {
+    padding: 6px 16px;
+    background: #000;
+    color: #b8860b;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sub-add-cart:hover {
+    background: #b8860b;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.sub-add-cart:active {
+    transform: scale(0.98);
+}
+
+/* Smooth expand/collapse animation */
+.product-card.has-sub-products {
+    transition: all 0.3s ease;
+}
+
+.product-card.expanded {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments for sub-products */
+@media (max-width: 768px) {
+    .sub-products-container {
+        padding: 10px;
+        max-height: 300px;
+    }
+    
+    .sub-product-item {
+        padding: 10px 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .sub-product-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .expand-indicator {
+        width: 26px;
+        height: 26px;
+    }
+    
+    .expand-indicator i {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sub-products-container {
+        padding: 8px;
+        max-height: 250px;
+    }
+    
+    .sub-product-item {
+        padding: 8px 10px;
+    }
+    
+    .sub-product-name {
+        font-size: 13px;
+    }
+    
+    .sub-add-cart {
+        padding: 5px 12px;
+        font-size: 12px;
+    }
+}
+
+/* ==========================================================================
+   ACCESSORY CATEGORY CARDS - Category Grid Style
+   ========================================================================== */
+/* Wider grid for category cards - 4 columns instead of 6 */
+.products-grid:has(.accessory-category-card) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.accessory-category-card {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.accessory-category-card:hover {
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    border-color: #b8860b;
+}
+
+/* Image Box - Similar to shop-cat-card */
+.accessory-cat-img {
+    width: 100%;
+    height: 180px;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.accessory-cat-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.accessory-category-card:hover .accessory-cat-img img {
+    transform: scale(1.05);
+}
+
+/* Category Name - Below the image */
+.accessory-cat-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+    padding: 14px 12px 18px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.accessory-category-card:hover .accessory-cat-name {
+    color: #b8860b;
+}
+
+/* Back button shown inside accessory subcategory products */
+.accessory-back-wrap {
+    grid-column: 1 / -1;
+    margin-bottom: 6px;
+}
+
+.accessory-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    color: #333;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.accessory-back-btn:hover {
+    border-color: #b8860b;
+    color: #b8860b;
+    background: #fffdf7;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 991px) {
+    .products-grid:has(.accessory-category-card) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .accessory-cat-img {
+        height: 150px;
+    }
+
+    .accessory-cat-name {
+        font-size: 13px;
+        padding: 12px 10px 16px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 768px) {
+    .products-grid:has(.accessory-category-card) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .accessory-cat-img {
+        height: 140px;
+        padding: 15px;
+    }
+
+    .accessory-cat-name {
+        font-size: 12px;
+        padding: 10px 8px 14px;
+    }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 480px) {
+    .accessory-cat-img {
+        height: 110px;
+        padding: 10px;
+    }
+
+    .accessory-cat-name {
+        font-size: 10px;
+        padding: 6px 4px 10px;
+    }
+}
