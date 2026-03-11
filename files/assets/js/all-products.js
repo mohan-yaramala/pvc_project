@@ -2309,8 +2309,18 @@ const _numericTokenOverlap = (a, b) => {
         (list || []).map((file) => ({ file, path }))
     );
 
+    const forcedProductImages = {
+        [_normalize("7 INCH HD TFT COLOR MONITOR")]: "assets/img/MONITOR/ZEBSTER%2019''%20INCH%20LED%20%20mONITOR%20(HDMI).JPG",
+        [_normalize("METAL RING 10CM (SRB-PR10C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
+        [_normalize("METAL RING 20CM (SRB-PR20C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
+        [_normalize("METAL RING 30CM (SRB-PR30C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
+        [_normalize("METAL RING 40CM (SRB-PR40C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg"
+    };
+
     const findProductImage = (productName, category) => {
         const pn = _normalize(productName);
+        if (forcedProductImages[pn]) return forcedProductImages[pn];
+
         const config = catMap[category];
         if (!config) return null;
 
@@ -4725,6 +4735,15 @@ const _numericTokenOverlap = (a, b) => {
             filtered = filtered.filter(item => state.selectedCategories.has(item.category));
         }
 
+        // Debug: Log MONITOR filtering
+        if (state.selectedCategories.has('MONITOR')) {
+            console.log('MONITOR category selected');
+            console.log('Total MONITOR products found:', filtered.length);
+            if (filtered.length > 0) {
+                console.log('Sample MONITOR product:', filtered[0]);
+            }
+        }
+
         // If only ACCESSORIES is selected and no subcategory selected, return empty array
         // (we'll show accessory subcategory cards instead).
         const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 && 
@@ -4953,17 +4972,16 @@ const _numericTokenOverlap = (a, b) => {
             filtered = filterSmartProProductsBySubcategory(state.selectedSmartProSubcategory, filtered);
         }
 
-        // If only HDD is selected and no subcategory selected, return empty array
-        // (we'll show HDD subcategory cards instead).
+        // If only HDD is selected, show all HDD products by default.
+        // Apply HDD subcategory filter only when explicitly selected.
         const isOnlyHddSelected = state.selectedCategories.size === 1 &&
                                   state.selectedCategories.has('HDD');
-        if (isOnlyHddSelected) {
-            if (!state.selectedHddSubcategory) {
-                return [];
-            }
-
+        if (isOnlyHddSelected && state.selectedHddSubcategory) {
             filtered = filterHddProductsBySubcategory(state.selectedHddSubcategory, filtered);
         }
+
+        // MONITOR category should show all products directly (no subcategory required)
+        // No special handling needed - products with category="MONITOR" will be shown
 
         if (state.searchQuery) {
             const query = state.searchQuery.toLowerCase().trim();
@@ -5976,50 +5994,7 @@ const _numericTokenOverlap = (a, b) => {
             return;
         }
 
-        // If only HDD is selected and no subcategory is picked, show HDD subcategory cards
-        if (isOnlyHddSelected && !state.selectedHddSubcategory) {
-            if (elements.pagination) {
-                elements.pagination.innerHTML = '';
-            }
-
-            elements.productsGrid.innerHTML = hddSubcategories
-                .map((subcat) => {
-                    const isActive = state.selectedHddSubcategory === subcat.name;
-                    return `
-                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-hdd-subcategory="${subcat.name}">
-                            <div class="accessory-cat-img">
-                                <img src="${subcat.image}" alt="${subcat.name}" />
-                            </div>
-                            <h3 class="accessory-cat-name">${subcat.name}</h3>
-                        </div>
-                    `;
-                })
-                .join("");
-
-            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
-                card.addEventListener('click', () => {
-                    const subcategory = card.dataset.hddSubcategory;
-                    if (!subcategory) return;
-
-                    state.selectedHddSubcategory = subcategory;
-                    state.currentPage = 1;
-                    render();
-
-                    setTimeout(() => {
-                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
-                        if (productsSection) {
-                            const headerHeight = 100;
-                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
-                        } else {
-                            window.scrollTo({ top: 0, behavior: 'smooth' });
-                        }
-                    }, 0);
-                });
-            });
-
-            return;
-        }
+        // HDD now follows normal product rendering (no mandatory subcategory step)
 
         // Normal product rendering for other categories
         const start = (state.currentPage - 1) * state.perPage;
