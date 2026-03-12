@@ -11,6 +11,7 @@ const PVC_FOOTER_DATA = {
     phone2: '+91 91144 67777',
     phone2Clean: '+919114467777',
     email: 'pvcsecurity@gmail.com',
+    address: 'NEAR KLM SHOPPING MALL,Bhimavaram Town - 1',
     serviceArea: 'Andhra Pradesh & Telangana',
     whatsapp: '+919114456666',
     workingHours: 'Mon - Sat: 10:00 AM - 8:00 PM'
@@ -78,8 +79,8 @@ function initPvcFooter() {
                         <li class="pvc-contact-item">
                             <a href="contact-us.html" class="pvc-contact-icon" aria-label="Our Location"><i class="fa-solid fa-location-dot"></i></a>
                             <div class="pvc-contact-text">
-                                <span>Service Area</span>
-                                <p>${PVC_FOOTER_DATA.serviceArea}</p>
+                                <span>Our Address</span>
+                                <p>${PVC_FOOTER_DATA.address}</p>
                             </div>
                         </li>
                     </ul>

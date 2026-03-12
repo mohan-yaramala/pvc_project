@@ -85,12 +85,14 @@ function initPvcHeader() {
             <div class="pvc-header-utils">
                 <!-- Inline Expandable Search -->
                 <div class="pvc-search-container">
-                    <form class="pvc-search-form-inline" action="all-products.html" method="GET" style="display:flex; width:100%;">
-                        <input type="text" id="liveSearchInput" name="search" class="pvc-search-input-inline" placeholder="Search products..." style="width:100%; outline:none;" autocomplete="off">
-                        <button type="submit" class="pvc-search-submit" style="background:none; border:none; color:var(--pvc-gold-mid);"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form class="pvc-search-form-inline" action="all-products.html" method="GET">
+                        <input type="text" id="liveSearchInput" name="search" class="pvc-search-input-inline" placeholder="Search products..." autocomplete="off">
+                        <button type="submit" class="pvc-search-submit" aria-label="Submit Search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
                     </form>
                     <div class="pvc-search-results" id="pvc-search-results" role="listbox" aria-label="Search suggestions"></div>
-                    <button class="pvc-util-btn pvc-search-btn-toggle" aria-label="Search">
+                    <button class="pvc-util-btn pvc-search-btn-toggle" aria-label="Search Toggle">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </div>
