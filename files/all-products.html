@@ -291,6 +291,15 @@
                     <div class="products-content-area">
                         <!-- Top Bar with Sort -->
                         <div class="products-top-bar">
+                            <div class="products-search-group">
+                                <label class="products-search-label" for="productSearchInput">Search Products</label>
+                                <div class="products-search-input-wrap">
+                                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                                    <input type="search" id="productSearchInput" class="products-search-input"
+                                        placeholder="Search by product name" autocomplete="off" spellcheck="false">
+                                </div>
+                            </div>
+                            <div class="results-count">Showing <span id="productCount">0</span> products</div>
                             <div class="sort-wrapper">
                                 <label>Sort By</label>
                                 <select id="sortSelect" class="sort-select">

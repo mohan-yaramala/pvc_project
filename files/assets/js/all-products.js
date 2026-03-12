@@ -2314,7 +2314,12 @@ const _numericTokenOverlap = (a, b) => {
         [_normalize("METAL RING 10CM (SRB-PR10C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
         [_normalize("METAL RING 20CM (SRB-PR20C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
         [_normalize("METAL RING 30CM (SRB-PR30C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
-        [_normalize("METAL RING 40CM (SRB-PR40C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg"
+        [_normalize("METAL RING 40CM (SRB-PR40C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
+        [_normalize("4CH")]: "assets/img/products/video-intercom-update.png",
+        [_normalize("8CH")]: "assets/img/products/video-intercom-update.png",
+        [_normalize("16CH")]: "assets/img/products/video-intercom-update.png",
+        [_normalize("32CH")]: "assets/img/products/video-intercom-update.png",
+        [_normalize("64CH")]: "assets/img/products/video-intercom-update.png"
     };
 
     const findProductImage = (productName, category) => {
@@ -3583,11 +3588,16 @@ const _numericTokenOverlap = (a, b) => {
             seenKeys.add(key);
             return true;
         });
+
+        products.forEach((product) => {
+            product.searchTitle = String(product.name || "").trim().toLowerCase();
+        });
     }
 
     const elements = {
         productsGrid: document.getElementById("productsGrid"),
         productCount: document.getElementById("productCount"),
+        searchInput: document.getElementById("productSearchInput"),
         sortSelect: document.getElementById("sortSelect"),
         pagination: document.getElementById("pagination"),
         clearFilters: document.getElementById("clearFilters"),
@@ -3622,8 +3632,14 @@ const _numericTokenOverlap = (a, b) => {
         selectedErdSubcategory: null,
         selectedSmartProSubcategory: null,
         selectedHddSubcategory: null,
+        searchQuery: "",
         sortBy: "default"
     };
+
+    let searchRenderFrame = null;
+
+    const getNormalizedSearchQuery = () => String(state.searchQuery || "").trim().toLowerCase();
+    const hasActiveSearchQuery = () => getNormalizedSearchQuery().length > 0;
 
     const anwizSubcategoryExactNames = {
         "CAMERAS": new Set([
@@ -4730,6 +4746,21 @@ const _numericTokenOverlap = (a, b) => {
 
     const getFilteredProducts = () => {
         let filtered = [...products];
+        const searchQuery = getNormalizedSearchQuery();
+        const searchIsActive = searchQuery.length > 0;
+
+        const applySubcategoryFilter = (isOnlySelected, selectedSubcategory, filterFn) => {
+            if (!isOnlySelected) return;
+
+            if (!selectedSubcategory) {
+                if (!searchIsActive) {
+                    filtered = [];
+                }
+                return;
+            }
+
+            filtered = filterFn(selectedSubcategory, filtered);
+        };
 
         if (state.selectedCategories.size > 0) {
             filtered = filtered.filter(item => state.selectedCategories.has(item.category));
@@ -4748,229 +4779,115 @@ const _numericTokenOverlap = (a, b) => {
         // (we'll show accessory subcategory cards instead).
         const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 && 
                                           state.selectedCategories.has('ACCESSORIES');
-        if (isOnlyAccessoriesSelected) {
-            if (!state.selectedAccessorySubcategory) {
-                return [];
-            }
-
-            filtered = filterAccessoryProductsBySubcategory(state.selectedAccessorySubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyAccessoriesSelected, state.selectedAccessorySubcategory, filterAccessoryProductsBySubcategory);
 
         // If only ANWIZ is selected and no subcategory selected, return empty array
         // (we'll show ANWIZ subcategory cards instead).
         const isOnlyAnwizSelected = state.selectedCategories.size === 1 &&
                                     state.selectedCategories.has('ANWIZ');
-        if (isOnlyAnwizSelected) {
-            if (!state.selectedAnwizSubcategory) {
-                return [];
-            }
-
-            filtered = filterAnwizProductsBySubcategory(state.selectedAnwizSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyAnwizSelected, state.selectedAnwizSubcategory, filterAnwizProductsBySubcategory);
 
         // If only CP PLUS is selected and no subcategory selected, return empty array
         // (we'll show CP PLUS subcategory cards instead).
         const isOnlyCpPlusSelected = state.selectedCategories.size === 1 &&
                                      state.selectedCategories.has('CP PLUS');
-        if (isOnlyCpPlusSelected) {
-            if (!state.selectedCpPlusSubcategory) {
-                return [];
-            }
-
-            filtered = filterCpPlusProductsBySubcategory(state.selectedCpPlusSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyCpPlusSelected, state.selectedCpPlusSubcategory, filterCpPlusProductsBySubcategory);
 
         // If only COEF is selected and no subcategory selected, return empty array
         // (we'll show COEF subcategory cards instead).
         const isOnlyCoefSelected = state.selectedCategories.size === 1 &&
                                    state.selectedCategories.has('COEF');
-        if (isOnlyCoefSelected) {
-            if (!state.selectedCoefSubcategory) {
-                return [];
-            }
-
-            filtered = filterCoefProductsBySubcategory(state.selectedCoefSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyCoefSelected, state.selectedCoefSubcategory, filterCoefProductsBySubcategory);
 
         // If only VGUARD is selected and no subcategory selected, return empty array
         // (we'll show VGUARD subcategory cards instead).
         const isOnlyVguardSelected = state.selectedCategories.size === 1 &&
                                      state.selectedCategories.has('VGUARD');
-        if (isOnlyVguardSelected) {
-            if (!state.selectedVguardSubcategory) {
-                return [];
-            }
-
-            filtered = filterVguardProductsBySubcategory(state.selectedVguardSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyVguardSelected, state.selectedVguardSubcategory, filterVguardProductsBySubcategory);
 
         // If only VOLTAIC is selected and no subcategory selected, return empty array
         // (we'll show VOLTAIC subcategory cards instead).
         const isOnlyVoltaicSelected = state.selectedCategories.size === 1 &&
                                       state.selectedCategories.has('VOLTAIC');
-        if (isOnlyVoltaicSelected) {
-            if (!state.selectedVoltaicSubcategory) {
-                return [];
-            }
-
-            filtered = filterVoltaicProductsBySubcategory(state.selectedVoltaicSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyVoltaicSelected, state.selectedVoltaicSubcategory, filterVoltaicProductsBySubcategory);
 
         // If only DAHUA is selected and no subcategory selected, return empty array
         // (we'll show DAHUA subcategory cards instead).
         const isOnlyDahuaSelected = state.selectedCategories.size === 1 &&
                                     state.selectedCategories.has('DAHUA');
-        if (isOnlyDahuaSelected) {
-            if (!state.selectedDahuaSubcategory) {
-                return [];
-            }
-
-            filtered = filterDahuaProductsBySubcategory(state.selectedDahuaSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyDahuaSelected, state.selectedDahuaSubcategory, filterDahuaProductsBySubcategory);
 
         // If only TP LINK is selected and no subcategory selected, return empty array
         // (we'll show TP LINK subcategory cards instead).
         const isOnlyTpLinkSelected = state.selectedCategories.size === 1 &&
                                      state.selectedCategories.has('TP LINK');
-        if (isOnlyTpLinkSelected) {
-            if (!state.selectedTpLinkSubcategory) {
-                return [];
-            }
-
-            filtered = filterTpLinkProductsBySubcategory(state.selectedTpLinkSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyTpLinkSelected, state.selectedTpLinkSubcategory, filterTpLinkProductsBySubcategory);
 
         // If only HIKVISION is selected and no subcategory selected, return empty array
         // (we'll show HIKVISION subcategory cards instead).
         const isOnlyHikvisionSelected = state.selectedCategories.size === 1 &&
                                         state.selectedCategories.has('HIKVISION');
-        if (isOnlyHikvisionSelected) {
-            if (!state.selectedHikvisionSubcategory) {
-                return [];
-            }
-
-            filtered = filterHikvisionProductsBySubcategory(state.selectedHikvisionSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyHikvisionSelected, state.selectedHikvisionSubcategory, filterHikvisionProductsBySubcategory);
 
         // If only ZEBRONICS is selected and no subcategory selected, return empty array
         // (we'll show ZEBRONICS subcategory cards instead).
         const isOnlyZebronicsSelected = state.selectedCategories.size === 1 &&
                                         state.selectedCategories.has('ZEBRONICS');
-        if (isOnlyZebronicsSelected) {
-            if (!state.selectedZebronicsSubcategory) {
-                return [];
-            }
-
-            filtered = filterZebronicsProductsBySubcategory(state.selectedZebronicsSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyZebronicsSelected, state.selectedZebronicsSubcategory, filterZebronicsProductsBySubcategory);
 
         // If only TRUE VIEW is selected and no subcategory selected, return empty array
         // (we'll show TRUE VIEW subcategory cards instead).
         const isOnlyTrueViewSelected = state.selectedCategories.size === 1 &&
                                        state.selectedCategories.has('TRUE VIEW');
-        if (isOnlyTrueViewSelected) {
-            if (!state.selectedTrueViewSubcategory) {
-                return [];
-            }
-
-            filtered = filterTrueViewProductsBySubcategory(state.selectedTrueViewSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyTrueViewSelected, state.selectedTrueViewSubcategory, filterTrueViewProductsBySubcategory);
 
         // If only SECUREYE is selected and no subcategory selected, return empty array
         // (we'll show SECUREYE subcategory cards instead).
         const isOnlySecureyeSelected = state.selectedCategories.size === 1 &&
                                        state.selectedCategories.has('SECUREYE');
-        if (isOnlySecureyeSelected) {
-            if (!state.selectedSecureyeSubcategory) {
-                return [];
-            }
-
-            filtered = filterSecureyeProductsBySubcategory(state.selectedSecureyeSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlySecureyeSelected, state.selectedSecureyeSubcategory, filterSecureyeProductsBySubcategory);
 
         // If only SECURUS is selected and no subcategory selected, return empty array
         // (we'll show SECURUS subcategory cards instead).
         const isOnlySecurusSelected = state.selectedCategories.size === 1 &&
                                       state.selectedCategories.has('SECURUS');
-        if (isOnlySecurusSelected) {
-            if (!state.selectedSecurusSubcategory) {
-                return [];
-            }
-
-            filtered = filterSecurusProductsBySubcategory(state.selectedSecurusSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlySecurusSelected, state.selectedSecurusSubcategory, filterSecurusProductsBySubcategory);
 
         // If only YADON is selected and no subcategory selected, return empty array
         // (we'll show YADON subcategory cards instead).
         const isOnlyYadonSelected = state.selectedCategories.size === 1 &&
                                     state.selectedCategories.has('YADON');
-        if (isOnlyYadonSelected) {
-            if (!state.selectedYadonSubcategory) {
-                return [];
-            }
-
-            filtered = filterYadonProductsBySubcategory(state.selectedYadonSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyYadonSelected, state.selectedYadonSubcategory, filterYadonProductsBySubcategory);
 
         // If only D-LINK is selected and no subcategory selected, return empty array
         // (we'll show D-LINK subcategory cards instead).
         const isOnlyDLinkSelected = state.selectedCategories.size === 1 &&
                                     state.selectedCategories.has('D-LINK');
-        if (isOnlyDLinkSelected) {
-            if (!state.selectedDLinkSubcategory) {
-                return [];
-            }
-
-            filtered = filterDLinkProductsBySubcategory(state.selectedDLinkSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyDLinkSelected, state.selectedDLinkSubcategory, filterDLinkProductsBySubcategory);
 
         // If only IMOU is selected and no subcategory selected, return empty array
         // (we'll show IMOU subcategory cards instead).
         const isOnlyImouSelected = state.selectedCategories.size === 1 &&
                                    state.selectedCategories.has('IMOU');
-        if (isOnlyImouSelected) {
-            if (!state.selectedImouSubcategory) {
-                return [];
-            }
-
-            filtered = filterImouProductsBySubcategory(state.selectedImouSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyImouSelected, state.selectedImouSubcategory, filterImouProductsBySubcategory);
 
         // If only MAXXION is selected and no subcategory selected, return empty array
         // (we'll show MAXXION subcategory cards instead).
         const isOnlyMaxxionSelected = state.selectedCategories.size === 1 &&
                                       state.selectedCategories.has('MAXXION');
-        if (isOnlyMaxxionSelected) {
-            if (!state.selectedMaxxionSubcategory) {
-                return [];
-            }
-
-            filtered = filterMaxxionProductsBySubcategory(state.selectedMaxxionSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyMaxxionSelected, state.selectedMaxxionSubcategory, filterMaxxionProductsBySubcategory);
 
         // If only ERD is selected and no subcategory selected, return empty array
         // (we'll show ERD subcategory cards instead).
         const isOnlyErdSelected = state.selectedCategories.size === 1 &&
                                   state.selectedCategories.has('ERD');
-        if (isOnlyErdSelected) {
-            if (!state.selectedErdSubcategory) {
-                return [];
-            }
-
-            filtered = filterErdProductsBySubcategory(state.selectedErdSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlyErdSelected, state.selectedErdSubcategory, filterErdProductsBySubcategory);
 
         // If only SMART PRO is selected and no subcategory selected, return empty array
         // (we'll show SMART PRO subcategory cards instead).
         const isOnlySmartProSelected = state.selectedCategories.size === 1 &&
                                        state.selectedCategories.has('SMART PRO');
-        if (isOnlySmartProSelected) {
-            if (!state.selectedSmartProSubcategory) {
-                return [];
-            }
-
-            filtered = filterSmartProProductsBySubcategory(state.selectedSmartProSubcategory, filtered);
-        }
+        applySubcategoryFilter(isOnlySmartProSelected, state.selectedSmartProSubcategory, filterSmartProProductsBySubcategory);
 
         // If only HDD is selected, show all HDD products by default.
         // Apply HDD subcategory filter only when explicitly selected.
@@ -4983,12 +4900,8 @@ const _numericTokenOverlap = (a, b) => {
         // MONITOR category should show all products directly (no subcategory required)
         // No special handling needed - products with category="MONITOR" will be shown
 
-        if (state.searchQuery) {
-            const query = state.searchQuery.toLowerCase().trim();
-            filtered = filtered.filter(item =>
-                item.name.toLowerCase().includes(query) ||
-                item.category.toLowerCase().includes(query)
-            );
+        if (searchIsActive) {
+            filtered = filtered.filter(item => (item.searchTitle || "").startsWith(searchQuery));
         }
 
         if (elements.inStockFilter && elements.inStockFilter.checked) {
@@ -5094,6 +5007,8 @@ const _numericTokenOverlap = (a, b) => {
     const renderProducts = (filtered) => {
         if (!elements.productsGrid) return;
 
+        const searchIsActive = hasActiveSearchQuery();
+
         // Check if only ACCESSORIES is selected
         const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 && 
                                           state.selectedCategories.has('ACCESSORIES');
@@ -5137,7 +5052,7 @@ const _numericTokenOverlap = (a, b) => {
             state.selectedCategories.has('HDD');
 
         // If only ACCESSORIES is selected and no subcategory is picked, show accessory subcategory cards
-        if (isOnlyAccessoriesSelected && !state.selectedAccessorySubcategory) {
+        if (!searchIsActive && isOnlyAccessoriesSelected && !state.selectedAccessorySubcategory) {
             // Remove pagination when showing categories
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
@@ -5184,7 +5099,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only ANWIZ is selected and no subcategory is picked, show ANWIZ subcategory cards
-        if (isOnlyAnwizSelected && !state.selectedAnwizSubcategory) {
+        if (!searchIsActive && isOnlyAnwizSelected && !state.selectedAnwizSubcategory) {
             // Remove pagination when showing categories
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
@@ -5230,7 +5145,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only CP PLUS is selected and no subcategory is picked, show CP PLUS subcategory cards
-        if (isOnlyCpPlusSelected && !state.selectedCpPlusSubcategory) {
+        if (!searchIsActive && isOnlyCpPlusSelected && !state.selectedCpPlusSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5275,7 +5190,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only COEF is selected and no subcategory is picked, show COEF subcategory cards
-        if (isOnlyCoefSelected && !state.selectedCoefSubcategory) {
+        if (!searchIsActive && isOnlyCoefSelected && !state.selectedCoefSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5320,7 +5235,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only VGUARD is selected and no subcategory is picked, show VGUARD subcategory cards
-        if (isOnlyVguardSelected && !state.selectedVguardSubcategory) {
+        if (!searchIsActive && isOnlyVguardSelected && !state.selectedVguardSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5365,7 +5280,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only VOLTAIC is selected and no subcategory is picked, show VOLTAIC subcategory cards
-        if (isOnlyVoltaicSelected && !state.selectedVoltaicSubcategory) {
+        if (!searchIsActive && isOnlyVoltaicSelected && !state.selectedVoltaicSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5410,7 +5325,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only DAHUA is selected and no subcategory is picked, show DAHUA subcategory cards
-        if (isOnlyDahuaSelected && !state.selectedDahuaSubcategory) {
+        if (!searchIsActive && isOnlyDahuaSelected && !state.selectedDahuaSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5455,7 +5370,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only TP LINK is selected and no subcategory is picked, show TP LINK subcategory cards
-        if (isOnlyTpLinkSelected && !state.selectedTpLinkSubcategory) {
+        if (!searchIsActive && isOnlyTpLinkSelected && !state.selectedTpLinkSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5500,7 +5415,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only HIKVISION is selected and no subcategory is picked, show HIKVISION subcategory cards
-        if (isOnlyHikvisionSelected && !state.selectedHikvisionSubcategory) {
+        if (!searchIsActive && isOnlyHikvisionSelected && !state.selectedHikvisionSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5545,7 +5460,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only ZEBRONICS is selected and no subcategory is picked, show ZEBRONICS subcategory cards
-        if (isOnlyZebronicsSelected && !state.selectedZebronicsSubcategory) {
+        if (!searchIsActive && isOnlyZebronicsSelected && !state.selectedZebronicsSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5590,7 +5505,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only TRUE VIEW is selected and no subcategory is picked, show TRUE VIEW subcategory cards
-        if (isOnlyTrueViewSelected && !state.selectedTrueViewSubcategory) {
+        if (!searchIsActive && isOnlyTrueViewSelected && !state.selectedTrueViewSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5635,7 +5550,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only SECUREYE is selected and no subcategory is picked, show SECUREYE subcategory cards
-        if (isOnlySecureyeSelected && !state.selectedSecureyeSubcategory) {
+        if (!searchIsActive && isOnlySecureyeSelected && !state.selectedSecureyeSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5680,7 +5595,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only SECURUS is selected and no subcategory is picked, show SECURUS subcategory cards
-        if (isOnlySecurusSelected && !state.selectedSecurusSubcategory) {
+        if (!searchIsActive && isOnlySecurusSelected && !state.selectedSecurusSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5725,7 +5640,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only YADON is selected and no subcategory is picked, show YADON subcategory cards
-        if (isOnlyYadonSelected && !state.selectedYadonSubcategory) {
+        if (!searchIsActive && isOnlyYadonSelected && !state.selectedYadonSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5770,7 +5685,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only D-LINK is selected and no subcategory is picked, show D-LINK subcategory cards
-        if (isOnlyDLinkSelected && !state.selectedDLinkSubcategory) {
+        if (!searchIsActive && isOnlyDLinkSelected && !state.selectedDLinkSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5815,7 +5730,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only IMOU is selected and no subcategory is picked, show IMOU subcategory cards
-        if (isOnlyImouSelected && !state.selectedImouSubcategory) {
+        if (!searchIsActive && isOnlyImouSelected && !state.selectedImouSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5860,7 +5775,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only MAXXION is selected and no subcategory is picked, show MAXXION subcategory cards
-        if (isOnlyMaxxionSelected && !state.selectedMaxxionSubcategory) {
+        if (!searchIsActive && isOnlyMaxxionSelected && !state.selectedMaxxionSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5905,7 +5820,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only ERD is selected and no subcategory is picked, show ERD subcategory cards
-        if (isOnlyErdSelected && !state.selectedErdSubcategory) {
+        if (!searchIsActive && isOnlyErdSelected && !state.selectedErdSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -5950,7 +5865,7 @@ const _numericTokenOverlap = (a, b) => {
         }
 
         // If only SMART PRO is selected and no subcategory is picked, show SMART PRO subcategory cards
-        if (isOnlySmartProSelected && !state.selectedSmartProSubcategory) {
+        if (!searchIsActive && isOnlySmartProSelected && !state.selectedSmartProSubcategory) {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
@@ -6038,7 +5953,7 @@ const _numericTokenOverlap = (a, b) => {
                 <div class="no-products-found">
                     <i class="fa-solid fa-box-open"></i>
                     <h3>No products found</h3>
-                    <p>Try adjusting your filters.</p>
+                    <p class="search-active-empty-text">${searchIsActive ? 'No products found' : 'Try adjusting your filters.'}</p>
                 </div>
             `;
 
@@ -6424,6 +6339,22 @@ const _numericTokenOverlap = (a, b) => {
             });
         }
 
+        if (elements.searchInput) {
+            elements.searchInput.addEventListener("input", (e) => {
+                state.searchQuery = e.target.value;
+                state.currentPage = 1;
+
+                if (searchRenderFrame) {
+                    cancelAnimationFrame(searchRenderFrame);
+                }
+
+                searchRenderFrame = requestAnimationFrame(() => {
+                    searchRenderFrame = null;
+                    render();
+                });
+            });
+        }
+
         if (elements.categoryFilters) {
             // Prevent feedback loops when we programmatically change checkboxes
             let ignoreCategoryChange = false;
@@ -6657,6 +6588,10 @@ const _numericTokenOverlap = (a, b) => {
                 state.selectedErdSubcategory = null;
                 state.selectedSmartProSubcategory = null;
                 state.selectedHddSubcategory = null;
+                state.searchQuery = "";
+                if (elements.searchInput) {
+                    elements.searchInput.value = "";
+                }
                 state.currentPage = 1;
                 render();
             });
@@ -6869,6 +6804,9 @@ const _numericTokenOverlap = (a, b) => {
             const searchParam = params.get('search') || params.get('q');
             if (searchParam) {
                 state.searchQuery = String(searchParam).trim();
+                if (elements.searchInput) {
+                    elements.searchInput.value = state.searchQuery;
+                }
             }
 
         } catch (e) {
