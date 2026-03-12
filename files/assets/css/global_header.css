@@ -91,6 +91,9 @@
 
 /* Navigation Menu - THE GOLD RING */
 .pvc-main-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     height: 100%;
@@ -131,6 +134,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
     padding: 0;
     transition: var(--transition-smooth);
     display: flex;
@@ -541,15 +545,15 @@
         width: 38px;
         height: 38px;
     }
-    
+
     .pvc-search-main {
         font-size: 12px;
     }
-    
+
     .pvc-search-sub {
         font-size: 11px;
     }
-    
+
     .pvc-search-type {
         font-size: 9px;
         padding: 3px 6px;
@@ -562,13 +566,13 @@
         max-width: 360px;
         max-height: calc(100vh - 85px);
     }
-    
+
     .pvc-search-item {
         grid-template-columns: 36px 52px 1fr;
         padding: 7px 6px;
         gap: 2px 8px;
     }
-    
+
     .pvc-search-thumb-wrap {
         width: 36px;
         height: 36px;
@@ -583,40 +587,40 @@
         border-radius: 8px;
         top: 75px;
     }
-    
+
     .pvc-search-item {
         grid-template-columns: 32px 48px 1fr;
         padding: 6px 5px;
         gap: 2px 6px;
     }
-    
+
     .pvc-search-thumb-wrap {
         width: 32px;
         height: 32px;
         border-radius: 6px;
     }
-    
+
     .pvc-search-main {
         font-size: 11px;
     }
-    
+
     .pvc-search-sub {
         font-size: 10px;
     }
-    
+
     .pvc-search-type {
         font-size: 8px;
         padding: 2px 5px;
     }
-    
+
     .pvc-search-empty {
         padding: 10px 8px;
     }
-    
+
     .pvc-search-empty-title {
         font-size: 12px;
     }
-    
+
     .pvc-search-empty-sub {
         font-size: 11px;
     }

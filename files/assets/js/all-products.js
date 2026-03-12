@@ -1518,13 +1518,13 @@ const _numericTokenOverlap = (a, b) => {
         "CP PLUS 8MP IP ILLUMAX BULLET CPUNCTA81L3CLQ.jpeg",
         "CP PLUS WIFI 4G (CP-745O).jpeg",
         "CP PLUS WIFI 4G (CP-745O).webp",
-            "CP PLUS 2MP WIFI PT CAMERA (CP-E28Q).jpg",
-            "90MTR INDOOR CABLE.jpeg",
-            "180MTR INDOOR CABLE.jpeg",
-            "90MTR OUTDOOR CABLE.jpeg",
-            "180MTR OUTDOOR CABLE.webp",
-            "305 CAT6 CABLE CCA.jpeg",
-            "305 CAT6 CABLE COPPER.jpeg"
+        "CP PLUS 2MP WIFI PT CAMERA (CP-E28Q).jpg",
+        "90MTR INDOOR CABLE.jpeg",
+        "180MTR INDOOR CABLE.jpeg",
+        "90MTR OUTDOOR CABLE.jpeg",
+        "180MTR OUTDOOR CABLE.webp",
+        "305 CAT6 CABLE CCA.jpeg",
+        "305 CAT6 CABLE COPPER.jpeg"
     ];
 
     const dlinkImageFiles = [
@@ -4746,8 +4746,8 @@ const _numericTokenOverlap = (a, b) => {
 
         // If only ACCESSORIES is selected and no subcategory selected, return empty array
         // (we'll show accessory subcategory cards instead).
-        const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 && 
-                                          state.selectedCategories.has('ACCESSORIES');
+        const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('ACCESSORIES');
         if (isOnlyAccessoriesSelected) {
             if (!state.selectedAccessorySubcategory) {
                 return [];
@@ -4759,7 +4759,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only ANWIZ is selected and no subcategory selected, return empty array
         // (we'll show ANWIZ subcategory cards instead).
         const isOnlyAnwizSelected = state.selectedCategories.size === 1 &&
-                                    state.selectedCategories.has('ANWIZ');
+            state.selectedCategories.has('ANWIZ');
         if (isOnlyAnwizSelected) {
             if (!state.selectedAnwizSubcategory) {
                 return [];
@@ -4771,7 +4771,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only CP PLUS is selected and no subcategory selected, return empty array
         // (we'll show CP PLUS subcategory cards instead).
         const isOnlyCpPlusSelected = state.selectedCategories.size === 1 &&
-                                     state.selectedCategories.has('CP PLUS');
+            state.selectedCategories.has('CP PLUS');
         if (isOnlyCpPlusSelected) {
             if (!state.selectedCpPlusSubcategory) {
                 return [];
@@ -4783,7 +4783,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only COEF is selected and no subcategory selected, return empty array
         // (we'll show COEF subcategory cards instead).
         const isOnlyCoefSelected = state.selectedCategories.size === 1 &&
-                                   state.selectedCategories.has('COEF');
+            state.selectedCategories.has('COEF');
         if (isOnlyCoefSelected) {
             if (!state.selectedCoefSubcategory) {
                 return [];
@@ -4795,7 +4795,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only VGUARD is selected and no subcategory selected, return empty array
         // (we'll show VGUARD subcategory cards instead).
         const isOnlyVguardSelected = state.selectedCategories.size === 1 &&
-                                     state.selectedCategories.has('VGUARD');
+            state.selectedCategories.has('VGUARD');
         if (isOnlyVguardSelected) {
             if (!state.selectedVguardSubcategory) {
                 return [];
@@ -4807,7 +4807,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only VOLTAIC is selected and no subcategory selected, return empty array
         // (we'll show VOLTAIC subcategory cards instead).
         const isOnlyVoltaicSelected = state.selectedCategories.size === 1 &&
-                                      state.selectedCategories.has('VOLTAIC');
+            state.selectedCategories.has('VOLTAIC');
         if (isOnlyVoltaicSelected) {
             if (!state.selectedVoltaicSubcategory) {
                 return [];
@@ -4819,7 +4819,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only DAHUA is selected and no subcategory selected, return empty array
         // (we'll show DAHUA subcategory cards instead).
         const isOnlyDahuaSelected = state.selectedCategories.size === 1 &&
-                                    state.selectedCategories.has('DAHUA');
+            state.selectedCategories.has('DAHUA');
         if (isOnlyDahuaSelected) {
             if (!state.selectedDahuaSubcategory) {
                 return [];
@@ -4831,7 +4831,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only TP LINK is selected and no subcategory selected, return empty array
         // (we'll show TP LINK subcategory cards instead).
         const isOnlyTpLinkSelected = state.selectedCategories.size === 1 &&
-                                     state.selectedCategories.has('TP LINK');
+            state.selectedCategories.has('TP LINK');
         if (isOnlyTpLinkSelected) {
             if (!state.selectedTpLinkSubcategory) {
                 return [];
@@ -4843,7 +4843,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only HIKVISION is selected and no subcategory selected, return empty array
         // (we'll show HIKVISION subcategory cards instead).
         const isOnlyHikvisionSelected = state.selectedCategories.size === 1 &&
-                                        state.selectedCategories.has('HIKVISION');
+            state.selectedCategories.has('HIKVISION');
         if (isOnlyHikvisionSelected) {
             if (!state.selectedHikvisionSubcategory) {
                 return [];
@@ -4855,7 +4855,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only ZEBRONICS is selected and no subcategory selected, return empty array
         // (we'll show ZEBRONICS subcategory cards instead).
         const isOnlyZebronicsSelected = state.selectedCategories.size === 1 &&
-                                        state.selectedCategories.has('ZEBRONICS');
+            state.selectedCategories.has('ZEBRONICS');
         if (isOnlyZebronicsSelected) {
             if (!state.selectedZebronicsSubcategory) {
                 return [];
@@ -4867,7 +4867,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only TRUE VIEW is selected and no subcategory selected, return empty array
         // (we'll show TRUE VIEW subcategory cards instead).
         const isOnlyTrueViewSelected = state.selectedCategories.size === 1 &&
-                                       state.selectedCategories.has('TRUE VIEW');
+            state.selectedCategories.has('TRUE VIEW');
         if (isOnlyTrueViewSelected) {
             if (!state.selectedTrueViewSubcategory) {
                 return [];
@@ -4879,7 +4879,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only SECUREYE is selected and no subcategory selected, return empty array
         // (we'll show SECUREYE subcategory cards instead).
         const isOnlySecureyeSelected = state.selectedCategories.size === 1 &&
-                                       state.selectedCategories.has('SECUREYE');
+            state.selectedCategories.has('SECUREYE');
         if (isOnlySecureyeSelected) {
             if (!state.selectedSecureyeSubcategory) {
                 return [];
@@ -4891,7 +4891,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only SECURUS is selected and no subcategory selected, return empty array
         // (we'll show SECURUS subcategory cards instead).
         const isOnlySecurusSelected = state.selectedCategories.size === 1 &&
-                                      state.selectedCategories.has('SECURUS');
+            state.selectedCategories.has('SECURUS');
         if (isOnlySecurusSelected) {
             if (!state.selectedSecurusSubcategory) {
                 return [];
@@ -4903,7 +4903,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only YADON is selected and no subcategory selected, return empty array
         // (we'll show YADON subcategory cards instead).
         const isOnlyYadonSelected = state.selectedCategories.size === 1 &&
-                                    state.selectedCategories.has('YADON');
+            state.selectedCategories.has('YADON');
         if (isOnlyYadonSelected) {
             if (!state.selectedYadonSubcategory) {
                 return [];
@@ -4915,7 +4915,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only D-LINK is selected and no subcategory selected, return empty array
         // (we'll show D-LINK subcategory cards instead).
         const isOnlyDLinkSelected = state.selectedCategories.size === 1 &&
-                                    state.selectedCategories.has('D-LINK');
+            state.selectedCategories.has('D-LINK');
         if (isOnlyDLinkSelected) {
             if (!state.selectedDLinkSubcategory) {
                 return [];
@@ -4927,7 +4927,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only IMOU is selected and no subcategory selected, return empty array
         // (we'll show IMOU subcategory cards instead).
         const isOnlyImouSelected = state.selectedCategories.size === 1 &&
-                                   state.selectedCategories.has('IMOU');
+            state.selectedCategories.has('IMOU');
         if (isOnlyImouSelected) {
             if (!state.selectedImouSubcategory) {
                 return [];
@@ -4939,7 +4939,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only MAXXION is selected and no subcategory selected, return empty array
         // (we'll show MAXXION subcategory cards instead).
         const isOnlyMaxxionSelected = state.selectedCategories.size === 1 &&
-                                      state.selectedCategories.has('MAXXION');
+            state.selectedCategories.has('MAXXION');
         if (isOnlyMaxxionSelected) {
             if (!state.selectedMaxxionSubcategory) {
                 return [];
@@ -4951,7 +4951,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only ERD is selected and no subcategory selected, return empty array
         // (we'll show ERD subcategory cards instead).
         const isOnlyErdSelected = state.selectedCategories.size === 1 &&
-                                  state.selectedCategories.has('ERD');
+            state.selectedCategories.has('ERD');
         if (isOnlyErdSelected) {
             if (!state.selectedErdSubcategory) {
                 return [];
@@ -4963,7 +4963,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only SMART PRO is selected and no subcategory selected, return empty array
         // (we'll show SMART PRO subcategory cards instead).
         const isOnlySmartProSelected = state.selectedCategories.size === 1 &&
-                                       state.selectedCategories.has('SMART PRO');
+            state.selectedCategories.has('SMART PRO');
         if (isOnlySmartProSelected) {
             if (!state.selectedSmartProSubcategory) {
                 return [];
@@ -4975,7 +4975,7 @@ const _numericTokenOverlap = (a, b) => {
         // If only HDD is selected, show all HDD products by default.
         // Apply HDD subcategory filter only when explicitly selected.
         const isOnlyHddSelected = state.selectedCategories.size === 1 &&
-                                  state.selectedCategories.has('HDD');
+            state.selectedCategories.has('HDD');
         if (isOnlyHddSelected && state.selectedHddSubcategory) {
             filtered = filterHddProductsBySubcategory(state.selectedHddSubcategory, filtered);
         }
@@ -4984,11 +4984,16 @@ const _numericTokenOverlap = (a, b) => {
         // No special handling needed - products with category="MONITOR" will be shown
 
         if (state.searchQuery) {
-            const query = state.searchQuery.toLowerCase().trim();
-            filtered = filtered.filter(item =>
-                item.name.toLowerCase().includes(query) ||
-                item.category.toLowerCase().includes(query)
-            );
+            // Split the search query into individual words (e.g., "CP DOME" -> ["cp", "dome"])
+            const searchTerms = state.searchQuery.toLowerCase().trim().split(/\s+/);
+
+            filtered = filtered.filter(item => {
+                // Combine product name and category for a deep search string
+                const itemString = `${item.name} ${item.category}`.toLowerCase();
+
+                // Check if EVERY typed word/letter exists somewhere in the product string
+                return searchTerms.every(term => itemString.includes(term));
+            });
         }
 
         if (elements.inStockFilter && elements.inStockFilter.checked) {
@@ -5095,12 +5100,12 @@ const _numericTokenOverlap = (a, b) => {
         if (!elements.productsGrid) return;
 
         // Check if only ACCESSORIES is selected
-        const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 && 
-                                          state.selectedCategories.has('ACCESSORIES');
+        const isOnlyAccessoriesSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('ACCESSORIES');
         const isOnlyAnwizSelected = state.selectedCategories.size === 1 &&
-                        state.selectedCategories.has('ANWIZ');
+            state.selectedCategories.has('ANWIZ');
         const isOnlyCpPlusSelected = state.selectedCategories.size === 1 &&
-                state.selectedCategories.has('CP PLUS');
+            state.selectedCategories.has('CP PLUS');
         const isOnlyCoefSelected = state.selectedCategories.size === 1 &&
             state.selectedCategories.has('COEF');
         const isOnlyVguardSelected = state.selectedCategories.size === 1 &&
@@ -5142,7 +5147,7 @@ const _numericTokenOverlap = (a, b) => {
             if (elements.pagination) {
                 elements.pagination.innerHTML = '';
             }
-            
+
             elements.productsGrid.innerHTML = accessorySubcategories
                 .map((subcat) => {
                     const isActive = state.selectedAccessorySubcategory === subcat.name;
@@ -6002,25 +6007,25 @@ const _numericTokenOverlap = (a, b) => {
         const pageItems = filtered.slice(start, end);
 
         const showCategoryBackButton = (isOnlyAccessoriesSelected && !!state.selectedAccessorySubcategory) ||
-                                       (isOnlyAnwizSelected && !!state.selectedAnwizSubcategory) ||
-                                       (isOnlyCpPlusSelected && !!state.selectedCpPlusSubcategory) ||
-                                       (isOnlyCoefSelected && !!state.selectedCoefSubcategory) ||
-                                       (isOnlyVguardSelected && !!state.selectedVguardSubcategory) ||
-                                       (isOnlyVoltaicSelected && !!state.selectedVoltaicSubcategory) ||
-                                       (isOnlyDahuaSelected && !!state.selectedDahuaSubcategory) ||
-                                       (isOnlyTpLinkSelected && !!state.selectedTpLinkSubcategory) ||
-                                       (isOnlyHikvisionSelected && !!state.selectedHikvisionSubcategory) ||
-                                       (isOnlyZebronicsSelected && !!state.selectedZebronicsSubcategory) ||
-                                       (isOnlyTrueViewSelected && !!state.selectedTrueViewSubcategory) ||
-                                       (isOnlySecureyeSelected && !!state.selectedSecureyeSubcategory) ||
-                                       (isOnlySecurusSelected && !!state.selectedSecurusSubcategory) ||
-                                       (isOnlyYadonSelected && !!state.selectedYadonSubcategory) ||
-                                       (isOnlyDLinkSelected && !!state.selectedDLinkSubcategory) ||
-                                       (isOnlyImouSelected && !!state.selectedImouSubcategory) ||
-                                       (isOnlyMaxxionSelected && !!state.selectedMaxxionSubcategory) ||
-                                       (isOnlyErdSelected && !!state.selectedErdSubcategory) ||
-                                       (isOnlySmartProSelected && !!state.selectedSmartProSubcategory) ||
-                                       (isOnlyHddSelected && !!state.selectedHddSubcategory);
+            (isOnlyAnwizSelected && !!state.selectedAnwizSubcategory) ||
+            (isOnlyCpPlusSelected && !!state.selectedCpPlusSubcategory) ||
+            (isOnlyCoefSelected && !!state.selectedCoefSubcategory) ||
+            (isOnlyVguardSelected && !!state.selectedVguardSubcategory) ||
+            (isOnlyVoltaicSelected && !!state.selectedVoltaicSubcategory) ||
+            (isOnlyDahuaSelected && !!state.selectedDahuaSubcategory) ||
+            (isOnlyTpLinkSelected && !!state.selectedTpLinkSubcategory) ||
+            (isOnlyHikvisionSelected && !!state.selectedHikvisionSubcategory) ||
+            (isOnlyZebronicsSelected && !!state.selectedZebronicsSubcategory) ||
+            (isOnlyTrueViewSelected && !!state.selectedTrueViewSubcategory) ||
+            (isOnlySecureyeSelected && !!state.selectedSecureyeSubcategory) ||
+            (isOnlySecurusSelected && !!state.selectedSecurusSubcategory) ||
+            (isOnlyYadonSelected && !!state.selectedYadonSubcategory) ||
+            (isOnlyDLinkSelected && !!state.selectedDLinkSubcategory) ||
+            (isOnlyImouSelected && !!state.selectedImouSubcategory) ||
+            (isOnlyMaxxionSelected && !!state.selectedMaxxionSubcategory) ||
+            (isOnlyErdSelected && !!state.selectedErdSubcategory) ||
+            (isOnlySmartProSelected && !!state.selectedSmartProSubcategory) ||
+            (isOnlyHddSelected && !!state.selectedHddSubcategory);
         const backButtonMarkup = showCategoryBackButton
             ? `
                 <div class="accessory-back-wrap">
@@ -6422,6 +6427,7 @@ const _numericTokenOverlap = (a, b) => {
                 state.currentPage = 1;
                 render();
             });
+
         }
 
         if (elements.categoryFilters) {
@@ -6625,6 +6631,11 @@ const _numericTokenOverlap = (a, b) => {
 
         if (elements.clearFilters) {
             elements.clearFilters.addEventListener("click", () => {
+
+                // ADD THESE TWO LINES TO CLEAR SEARCH:
+                state.searchQuery = '';
+                if (document.getElementById('liveSearchInput')) document.getElementById('liveSearchInput').value = '';
+
                 if (elements.categoryFilters) {
                     elements.categoryFilters
                         .querySelectorAll("input[name='category']")
@@ -6758,14 +6769,41 @@ const _numericTokenOverlap = (a, b) => {
                         actions.style.display = '';
                     }
                 }
+
             });
         }
 
         // Note: mobile toggle behavior is handled above (openMobileFilters/closeMobileFilters)
+
+        // --- LIVE SEARCH FUNCTIONALITY START ---
+        const liveSearchInput = document.getElementById('liveSearchInput');
+        if (liveSearchInput) {
+            // Pre-fill the input if a search query came from the URL
+            if (state.searchQuery) {
+                liveSearchInput.value = state.searchQuery;
+            }
+
+            // Real-time typing search
+            liveSearchInput.addEventListener('input', (e) => {
+                state.searchQuery = e.target.value;
+                state.currentPage = 1;
+                render();
+            });
+
+            // Handle the 'x' clear button in search inputs
+            liveSearchInput.addEventListener('search', (e) => {
+                if (e.target.value === '') {
+                    state.searchQuery = '';
+                    state.currentPage = 1;
+                    render();
+                }
+            });
+        }
+        // --- LIVE SEARCH FUNCTIONALITY END ---
+
     };
 
     bindEvents();
-
 
     // If a category was passed via query param (e.g. ?category=ACCESSORIES), apply it before initial render
     (function applyFiltersFromUrl() {

@@ -9910,7 +9910,7 @@ html {
 #loading-icon {
   /* Perfectly centered, no position tricks needed */
   display: block;
-  width: 800px;
+  width: 400px;
   /* Massively increased for high impact */
   height: auto;
   flex-shrink: 0;
@@ -9957,15 +9957,16 @@ html {
   background-clip: text !important;
   color: transparent !important;
   font-family: 'Outfit', sans-serif;
-  font-size: 32px;
-  /* Massive impact size */
+  font-size: 24px;
+  /* Proportional impact size for 450px width logo */
   font-weight: 900;
   /* Maximum bold */
-  letter-spacing: 12px;
+  letter-spacing: 10px;
   text-transform: uppercase;
   white-space: nowrap;
   text-align: center;
   margin-top: 10px !important;
+  margin-left: 70px !important;
   line-height: 1.2 !important;
   animation: loadingPulseBrilliant 2.5s ease-in-out infinite;
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
@@ -10021,6 +10022,7 @@ html {
   #loading-text {
     font-size: 14px;
     letter-spacing: 4px;
+    margin-left: 30px !important;
   }
 
   #loading-icon img {
@@ -10045,6 +10047,7 @@ html {
   #loading-text {
     font-size: 12px;
     letter-spacing: 3px;
+    margin-left: 20px !important;
   }
 }
 
@@ -10128,9 +10131,12 @@ html {
 }
 
 @keyframes loadingTextFade {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0.4;
   }
+
   50% {
     opacity: 1;
   }
