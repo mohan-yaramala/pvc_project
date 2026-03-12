@@ -95,14 +95,15 @@
 }
 
 .about-header-area h2 {
-    font-size: 38px !important;
+    font-size: 43px !important;
     font-weight: 700 !important;
-    color: var(--text-dark) !important;
+    color: var(--pvc-gold-dark) !important;
     line-height: 1.25;
     margin-bottom: 18px !important;
     margin-top: 0 !important;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -0.5px;
+    text-transform: uppercase !important;
 }
 
 .about-header-area>p {
@@ -198,7 +199,7 @@
 
 @media (max-width: 991px) {
     .about-header-area h2 {
-        font-size: 32px !important;
+        font-size: 36px !important;
     }
 
     .about3-section-area {
@@ -220,7 +221,7 @@
 
 @media (max-width: 767px) {
     .about-header-area h2 {
-        font-size: 24px !important;
+        font-size: 28px !important;
     }
 
     .about-header-area h5 {
@@ -333,12 +334,13 @@
 }
 
 .service-header h2 {
-    font-size: 42px !important;
+    font-size: 43px !important;
     font-weight: 700 !important;
-    color: var(--text-dark) !important;
+    color: var(--pvc-gold-dark) !important;
     margin: 20px 0 !important;
     font-family: 'Poppins', sans-serif;
     letter-spacing: -0.5px;
+    text-transform: uppercase !important;
 }
 
 .service-header p {
@@ -608,7 +610,7 @@
     }
 
     .service-header h2 {
-        font-size: 32px !important;
+        font-size: 36px !important;
     }
 
     .service-boxarea {
@@ -639,7 +641,7 @@
     }
 
     .service-header h2 {
-        font-size: 26px !important;
+        font-size: 28px !important;
     }
 
     .service-header p {
@@ -1335,10 +1337,6 @@ body.homepage3-body {
     /* prevents extra white space */
 }
 
-#home {
-    margin-top: 70px !important;
-}
-
 #home .hero3-section-area {
     height: 65vh;
     /* MAIN HEIGHT CONTROL */
@@ -1351,13 +1349,64 @@ body.homepage3-body {
 /* Mobile Optimization */
 @media (max-width: 768px) {
     #home .hero3-section-area {
-        height: 80vh;
+        height: 65vh;
         min-height: auto;
     }
 }
 
 .hero3-section-area {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   MOBILE OPTIMIZATIONS - Statistics and Square Card UI
+   ========================================================================== */
+@media (max-width: 767px) {
+
+    /* Statistics Section Square Style */
+    .counter-boxarea {
+        padding: 20px 10px !important;
+        margin-bottom: 10px;
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .counter-boxarea h2 {
+        font-size: 32px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .counter-boxarea p {
+        font-size: 11px !important;
+        letter-spacing: 1px !important;
+    }
+
+    .counter-boxarea .icon-box {
+        width: 50px !important;
+        height: 50px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .counter-boxarea .icon-box i {
+        font-size: 20px !important;
+    }
+
+    /* Common Card Reductions for Square Feel */
+    .premium-header-section {
+        margin-bottom: 25px !important;
+    }
+
+    .premium-title {
+        font-size: 24px !important;
+    }
+
+    .premium-icon-box {
+        width: 60px !important;
+        height: 60px !important;
+    }
 }

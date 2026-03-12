@@ -28,6 +28,7 @@
       --pvc-off-white: #F8F8F8;
       --pvc-text-dark: #1a1a1a;
       --pvc-text-gray: #444444;
+      --pvc-gold-dark: #b8860b;
       --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -118,12 +119,14 @@
     }
 
     .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
     }
 
     .service-card {
+      flex: 0 0 calc(25% - 30px);
       background: var(--pvc-white);
       border-radius: 20px;
       padding: 40px 30px;
@@ -136,7 +139,8 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
-      height: 100%;
+      height: auto;
+      min-height: 100%;
     }
 
     .service-card:hover {
@@ -144,6 +148,7 @@
       box-shadow: 0 20px 50px rgba(184, 134, 11, 0.15);
       border-color: rgba(184, 134, 11, 0.3);
     }
+
 
     .service-icon-wrapper {
       width: 80px;
@@ -171,6 +176,7 @@
       font-weight: 700;
       color: var(--pvc-black);
       margin-bottom: 15px;
+      text-transform: uppercase;
     }
 
     .service-card p {
@@ -208,6 +214,14 @@
       width: 100%;
     }
 
+    .shop-cat-title {
+      font-size: 43px;
+      font-weight: 700;
+      color: var(--pvc-gold-dark);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
     /* =========================================
        WHY CHOOSE US
        ========================================= */
@@ -216,30 +230,40 @@
       padding: 100px 0;
     }
 
-    .section-header {
+    .section-header,
+    .shop-cat-header {
       text-align: center;
       margin-bottom: 60px;
     }
 
     .section-header h2 {
-      font-size: 42px;
+      font-size: 43px;
       font-weight: 700;
-      color: var(--pvc-text-dark);
+      color: var(--pvc-gold-dark);
       margin-bottom: 20px;
       font-family: 'Poppins', sans-serif;
       letter-spacing: -0.5px;
       line-height: 1.25;
+      text-transform: uppercase;
     }
 
     .trust-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 30px;
       text-align: center;
     }
 
     .trust-item {
+      flex: 0 0 calc(20% - 30px);
       padding: 20px;
+    }
+
+    @media (max-width: 991px) {
+      .trust-item {
+        flex: 0 0 calc(50% - 30px);
+      }
     }
 
     .trust-item i {
@@ -348,8 +372,8 @@
     }
 
     .final-cta-content h2 {
-      font-size: 3rem;
-      font-weight: 800;
+      font-size: 43px;
+      font-weight: 700;
       background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
       -webkit-background-clip: text;
       background-clip: text;
@@ -403,6 +427,13 @@
        RESPONSIVE
        ========================================= */
     @media (max-width: 991px) {
+
+      .section-header h2,
+      .final-cta-content h2,
+      .shop-cat-title {
+        font-size: 36px;
+      }
+
       .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -413,31 +444,50 @@
     }
 
     @media (max-width: 767px) {
+
+      .section-header h2,
+      .final-cta-content h2,
+      .shop-cat-title {
+        font-size: 28px;
+      }
+
       .services-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
       }
 
       .service-card {
-        padding: 20px 15px;
+        flex: 0 0 calc(50% - 15px);
+        aspect-ratio: 1 / 1.1;
+        padding: 15px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
 
       .service-card h3 {
-        font-size: 1rem;
-        margin-bottom: 10px;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        line-height: 1.2;
       }
 
       .service-card p {
-        font-size: 0.85rem;
-        margin-bottom: 15px;
+        font-size: 0.75rem;
+        margin-bottom: 0;
+        line-height: 1.3;
+        text-align: center;
       }
 
       .service-icon-wrapper {
-        width: 60px;
-        height: 60px;
-        font-size: 24px;
-        margin-bottom: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+        margin-bottom: 12px;
       }
+
 
       .hero-title {
         font-size: 2rem;
@@ -549,8 +599,26 @@
 
 
 
+        <!-- Service 5 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3>Maintenance</h3>
+          <p>Regular system health checks, firmware updates, and comprehensive support to keep your security active.</p>
+        </div>
+
         <!-- Service 6 -->
         <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="service-icon-wrapper">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <h3>Remote Access</h3>
+          <p>Secure cloud backup and mobile integration for real-time alerts and remote viewing from anywhere.</p>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
           <div class="service-icon-wrapper">
             <i class="fa-solid fa-screwdriver-wrench"></i>
           </div>
@@ -558,17 +626,16 @@
           <p>Annual Maintenance Contracts to keep your security systems running at peak performance.</p>
         </div>
 
-        <!-- Service 7 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <!-- Service 8 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="450">
           <div class="service-icon-wrapper">
             <i class="fa-solid fa-arrow-up-right-dots"></i>
           </div>
           <h3>System Upgrade</h3>
           <p>Modernize your existing analog systems to high-definition IP solutions with minimal disruption.</p>
         </div>
-
-        <!-- Service 8 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+        <!-- Service 9 -->
+        <div class="service-card" data-aos="fade-up" data-aos-delay="500">
           <div class="service-icon-wrapper">
             <i class="fa-solid fa-headset"></i>
           </div>

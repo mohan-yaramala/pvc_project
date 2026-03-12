@@ -28,6 +28,7 @@
             --pvc-off-white: #F8F8F8;
             --pvc-text-dark: #1a1a1a;
             --pvc-text-gray: #444444;
+            --pvc-gold-dark: #b8860b;
             --transition-smooth: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -114,17 +115,18 @@
        WHO WE ARE
        ========================================= */
         .who-we-are {
-            padding: 100px 0;
+            padding: 40px 0 20px;
             background: var(--pvc-white);
         }
 
         .text-content h2 {
-            font-size: 42px;
+            font-size: 43px;
             font-weight: 700;
-            color: var(--pvc-text-dark);
+            color: var(--pvc-gold-dark);
             margin-bottom: 30px;
             letter-spacing: -0.5px;
             line-height: 1.25;
+            text-transform: uppercase;
         }
 
         .text-content p {
@@ -143,7 +145,7 @@
        WORKSPACE SECTION (IMAGES)
        ========================================= */
         .workspace-section {
-            padding: 80px 0 100px;
+            padding: 60px 0 60px;
             background: var(--pvc-off-white);
         }
 
@@ -153,11 +155,12 @@
         }
 
         .section-header h2 {
-            font-size: 42px;
+            font-size: 43px;
             font-weight: 700;
-            color: var(--pvc-black);
+            color: var(--pvc-gold-dark);
             margin-bottom: 15px;
             letter-spacing: -0.5px;
+            text-transform: uppercase;
         }
 
         .section-header p {
@@ -169,6 +172,21 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+        }
+
+        @media (max-width: 767px) {
+            .shop-images-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 5px;
+            }
+
+            .shop-img-card {
+                aspect-ratio: 1 / 1;
+            }
+
+            .shop-img-card img {
+                height: 100%;
+            }
         }
 
         .shop-img-card {
@@ -227,7 +245,7 @@
        MISSION & VISION
        ========================================= */
         .mission-vision-section {
-            padding: 100px 0;
+            padding: 20px 0 100px;
             background: var(--pvc-white);
         }
 
@@ -237,6 +255,50 @@
             gap: 50px;
         }
 
+        @media (max-width: 767px) {
+            .mv-grid {
+                grid-template-columns: 1fr 1fr;
+                /* Explicitly keep 2-grid */
+                gap: 15px;
+            }
+
+            .mv-card {
+                padding: 15px 10px;
+                aspect-ratio: 1 / 1;
+                /* Force square proportions on mobile */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .mv-card h3 {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+                text-align: center;
+            }
+
+            .mv-card>p {
+                font-size: 0.75rem;
+                line-height: 1.2;
+                text-align: center;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                /* Standard property */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .mv-icon {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+        }
+
+
         .mv-card {
             text-align: center;
             padding: 40px;
@@ -244,12 +306,66 @@
             border: 1px solid #f0f0f0;
             border-radius: 20px;
             transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
         }
 
         .mv-card:hover {
+            z-index: 10;
+            transform: translateY(-5px);
             border-color: var(--pvc-gold);
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
         }
+
+        /* Hover Matter Popup style */
+        .matter-popup {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #BF953F, #B38728, #AA771C);
+            color: #fff !important;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: scale(0.8) translateY(10px);
+            z-index: 5;
+            box-shadow: 0 15px 35px rgba(184, 134, 11, 0.4);
+        }
+
+        @media (max-width: 767px) {
+            .mv-card:hover .matter-popup {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1.05) translateY(0);
+            }
+        }
+
+        .matter-popup p {
+            color: #fff !important;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        @media (max-width: 767px) {
+            .matter-popup {
+                padding: 15px;
+            }
+
+            .matter-popup p {
+                font-size: 0.75rem;
+                line-height: 1.3;
+            }
+        }
+
 
         .mv-icon {
             width: 80px;
@@ -275,26 +391,59 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 20px;
+            color: var(--pvc-gold-dark);
+            text-transform: uppercase;
         }
 
         /* =========================================
        WHY CHOOSE US GRID
        ========================================= */
         .why-us-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            /* Changed to 3 columns as requested */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
             margin-top: 60px;
         }
 
         .reason-card {
+            flex: 0 0 calc(33.333% - 20px);
             text-align: center;
             padding: 20px;
             background: var(--pvc-off-white);
             border-radius: 12px;
             transition: var(--transition-smooth);
         }
+
+        @media (max-width: 991px) {
+            .reason-card {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .reason-card {
+                flex: 0 0 calc(33.333% - 10px);
+                aspect-ratio: 1 / 1;
+                /* Square proportions */
+                padding: 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .reason-card h4 {
+                font-size: 0.65rem;
+                line-height: 1.1;
+            }
+
+            .reason-icon {
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+        }
+
 
         .reason-card:hover {
             background: #fff;
@@ -349,10 +498,11 @@
         }
 
         .final-cta h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            color: #fff;
+            font-size: 43px;
+            font-weight: 700;
+            color: var(--pvc-gold-dark);
             margin-bottom: 40px;
+            text-transform: uppercase;
         }
 
         .gold-grad-text {
@@ -412,97 +562,22 @@
         /* =========================================
        RESPONSIVE
        ========================================= */
+        /* Responsive Headings */
         @media (max-width: 991px) {
-            .shop-images-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
 
-            .shop-img-card:last-child {
-                grid-column: span 2;
-                /* Center 3rd image on tablet */
-            }
-
-            .why-us-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .mv-grid {
-                grid-template-columns: 1fr 1fr;
-                /* Force 2 columns */
-                gap: 20px;
+            .text-content h2,
+            .section-header h2,
+            .final-cta h2 {
+                font-size: 36px;
             }
         }
 
         @media (max-width: 767px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
 
-            .shop-images-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .shop-img-card:last-child {
-                grid-column: span 1;
-            }
-
-            .why-us-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
+            .text-content h2,
+            .section-header h2,
             .final-cta h2 {
-                font-size: 2rem;
-            }
-
-            .btn-group-custom {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .btn-gold,
-            .btn-outline-gold {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .service-area-strip span {
-                font-size: 1.5rem;
-            }
-
-            /* Optimizing Mission/Vision for 2-col mobile */
-            .mv-card {
-                padding: 15px;
-            }
-
-            .mv-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 22px;
-                margin-bottom: 15px;
-            }
-
-            .mv-card h3 {
-                font-size: 1.1rem;
-                margin-bottom: 10px;
-            }
-
-            .mv-card p {
-                font-size: 0.8rem;
-                line-height: 1.4;
-            }
-
-            /* Optimizing Why Choose Us for 2-col mobile */
-            .reason-card {
-                padding: 15px;
-            }
-
-            .reason-card h4 {
-                font-size: 0.8rem;
-            }
-
-            .reason-icon {
-                font-size: 24px;
-                margin-bottom: 10px;
+                font-size: 28px;
             }
         }
     </style>
@@ -516,7 +591,7 @@
     <script src="assets/js/global_header.js"></script>
     <!--===== END GLOBAL HEADER =======-->
 
-  
+
 
     <!-- WORKSPACE SECTION -->
     <section class="workspace-section">
@@ -548,7 +623,7 @@
             </div>
         </div>
     </section>
- <!-- WHO WE ARE -->
+    <!-- WHO WE ARE -->
     <section class="who-we-are">
         <div class="container">
             <div class="row justify-content-center">
@@ -583,8 +658,12 @@
                                 <i class="fa-solid fa-bullseye"></i>
                             </div>
                             <h3>Our Mission</h3>
-                            <p>To deliver reliable, high-quality, and affordable security solutions that protect people,
-                                property, and assets effectively.</p>
+                            <p>To deliver reliable, high-quality, and affordable securit...</p>
+                            <!-- MATTER POPUP -->
+                            <div class="matter-popup">
+                                <p>To deliver reliable, high-quality, and affordable security solutions that protect
+                                    people, property, and assets effectively.</p>
+                            </div>
                         </div>
                         <!-- Vision -->
                         <div class="mv-card" data-aos="fade-up" data-aos-delay="100">
@@ -592,8 +671,12 @@
                                 <i class="fa-solid fa-eye"></i>
                             </div>
                             <h3>Our Vision</h3>
-                            <p>To become the most trusted and preferred security partner across Andhra Pradesh and
-                                Telangana for all safety needs.</p>
+                            <p>To become the most trusted and preferred security...</p>
+                            <!-- MATTER POPUP -->
+                            <div class="matter-popup">
+                                <p>To become the most trusted and preferred security partner across Andhra Pradesh and
+                                    Telangana for all safety needs.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

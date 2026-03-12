@@ -6,13 +6,13 @@
 const PVC_FOOTER_DATA = {
     logoPath: 'assets/img/logo/logo1.png',
     description: 'PVC Security provides professional CCTV and surveillance solutions for homes, shops, offices, and industries.',
-    phone1: '+91 91445 55566',
-    phone1Clean: '+919144555566',
-    phone2: '+91 81124 56789',
-    phone2Clean: '+918112456789',
+    phone1: '+91 91144 56666',
+    phone1Clean: '+919114456666',
+    phone2: '+91 91144 67777',
+    phone2Clean: '+919114467777',
     email: 'pvcsecurity@gmail.com',
     serviceArea: 'Andhra Pradesh & Telangana',
-    whatsapp: '+919144555566',
+    whatsapp: '+919114456666',
     workingHours: 'Mon - Sat: 10:00 AM - 8:00 PM'
 };
 
@@ -42,8 +42,9 @@ function initPvcFooter() {
                     <ul class="pvc-footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="all-products.html">New Products</a></li>
+                        <li><a href="all-products.html">Shop by Brand</a></li>
                         <li><a href="all-products.html?category=ACCESSORIES">Shop by Categories</a></li>
+                        <li><a href="all-products.html">New Products</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>
                     </ul>
@@ -92,15 +93,19 @@ function initPvcFooter() {
                             <i class="fa-brands fa-whatsapp"></i> WhatsApp Chat
                         </a>
                     </div>
-                    <div class="pvc-trust-icons" style="margin-bottom: 20px;">
+                    <div class="pvc-trust-icons" style="margin-bottom: 0px;">
                         <span style="font-size: 13px; color: rgba(255,255,255,0.5);"><i class="fa-regular fa-clock"></i> ${PVC_FOOTER_DATA.workingHours}</span>
                     </div>
                 </div>
             </div>
 
-            <div class="pvc-footer-bottom">
-                <p class="pvc-copyright">© ${new Date().getFullYear()} PVC Security - Leading the Future of AIoT. All Rights Reserved.</p>
-            </div>
+        </div>
+
+        <div class="pvc-footer-bottom-bar" style="background-color: #000000; text-align: center; padding: 20px 0; width: 100%; position: relative; z-index: 10;">
+            <p style="background: var(--pvc-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; font-size: 15px; letter-spacing: 1.5px; margin-bottom: 5px; text-transform: uppercase; font-family: 'Outfit', sans-serif;">WEB DEVELOPMENT TEAM</p>
+            <p style="color: #ffffff; font-size: 14px; margin: 0; font-family: 'Inter', sans-serif;">
+                © ${new Date().getFullYear()} | All Rights Reserved | <a href="https://bhimavaramdigitals.com/" target="_blank" style="color: #2196F3; text-decoration: none; font-weight: 600; transition: color 0.3s;" onmouseover="this.style.color='#64B5F6'" onmouseout="this.style.color='#2196F3'">Bhimavaram Digitals.</a>
+            </p>
         </div>
 
         <!-- Global Floating Call Button (Mobile Only) -->

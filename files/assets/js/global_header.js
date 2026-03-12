@@ -5,7 +5,7 @@
 
 const PVC_HEADER_CONFIG = {
     logoPath: 'assets/img/logo/logo1.png',
-    phone: '+919144555566',
+    phone: '+919114456666',
     searchUrl: 'all-products.html', // Point to all-products which has the list
     brands: [
         { name: 'Anwiz', url: 'all-products.html?category=ANWIZ' },
@@ -85,9 +85,9 @@ function initPvcHeader() {
             <div class="pvc-header-utils">
                 <!-- Inline Expandable Search -->
                 <div class="pvc-search-container">
-                    <form class="pvc-search-form-inline" action="#" method="GET">
-                        <input type="text" class="pvc-search-input-inline" placeholder="Search..." autocomplete="off">
-                        <button type="submit" class="pvc-search-submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <form class="pvc-search-form-inline" action="all-products.html" method="GET" style="display:flex; width:100%;">
+                        <input type="text" id="liveSearchInput" name="search" class="pvc-search-input-inline" placeholder="Search products..." style="width:100%; outline:none;" autocomplete="off">
+                        <button type="submit" class="pvc-search-submit" style="background:none; border:none; color:var(--pvc-gold-mid);"><i class="fa-solid fa-magnifying-glass"></i></button>
                     </form>
                     <div class="pvc-search-results" id="pvc-search-results" role="listbox" aria-label="Search suggestions"></div>
                     <button class="pvc-util-btn pvc-search-btn-toggle" aria-label="Search">
@@ -147,12 +147,12 @@ function initPvcHeader() {
         <div class="pvc-mobile-contact">
             <h4 class="pvc-mobile-contact-title">Quick Connect</h4>
             <div class="pvc-mobile-btns">
-                <a href="tel:+919144555566" class="pvc-mobile-btn btn-call"><i class="fa-solid fa-phone"></i> Call Now</a>
-                <a href="https://wa.me/919144555566" class="pvc-mobile-btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a href="tel:+919114456666" class="pvc-mobile-btn btn-call"><i class="fa-solid fa-phone"></i> Call Now</a>
+                <a href="https://wa.me/919114456666" class="pvc-mobile-btn btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
             </div>
             <div class="pvc-mobile-numbers">
-                <a href="tel:+919144555566" class="pvc-mobile-num">+91 91445 55566</a>
-                <a href="tel:+918112456789" class="pvc-mobile-num">+91 81124 56789</a>
+                <a href="tel:+919114456666" class="pvc-mobile-num">+91 91144 56666</a>
+                <a href="tel:+919114467777" class="pvc-mobile-num">+91 91144 67777</a>
             </div>
         </div>
     </div>

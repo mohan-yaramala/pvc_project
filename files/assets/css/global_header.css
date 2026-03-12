@@ -63,6 +63,7 @@
     .pvc-global-header {
         width: 100%;
         top: 0;
+        height: 56px !important;
     }
 }
 
@@ -90,6 +91,9 @@
 
 /* Navigation Menu - THE GOLD RING */
 .pvc-main-nav {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     height: 100%;
@@ -130,6 +134,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    white-space: nowrap;
     padding: 0;
     transition: var(--transition-smooth);
     display: flex;
@@ -540,15 +545,15 @@
         width: 38px;
         height: 38px;
     }
-    
+
     .pvc-search-main {
         font-size: 12px;
     }
-    
+
     .pvc-search-sub {
         font-size: 11px;
     }
-    
+
     .pvc-search-type {
         font-size: 9px;
         padding: 3px 6px;
@@ -561,13 +566,13 @@
         max-width: 360px;
         max-height: calc(100vh - 85px);
     }
-    
+
     .pvc-search-item {
         grid-template-columns: 36px 52px 1fr;
         padding: 7px 6px;
         gap: 2px 8px;
     }
-    
+
     .pvc-search-thumb-wrap {
         width: 36px;
         height: 36px;
@@ -582,40 +587,40 @@
         border-radius: 8px;
         top: 75px;
     }
-    
+
     .pvc-search-item {
         grid-template-columns: 32px 48px 1fr;
         padding: 6px 5px;
         gap: 2px 6px;
     }
-    
+
     .pvc-search-thumb-wrap {
         width: 32px;
         height: 32px;
         border-radius: 6px;
     }
-    
+
     .pvc-search-main {
         font-size: 11px;
     }
-    
+
     .pvc-search-sub {
         font-size: 10px;
     }
-    
+
     .pvc-search-type {
         font-size: 8px;
         padding: 2px 5px;
     }
-    
+
     .pvc-search-empty {
         padding: 10px 8px;
     }
-    
+
     .pvc-search-empty-title {
         font-size: 12px;
     }
-    
+
     .pvc-search-empty-sub {
         font-size: 11px;
     }
@@ -639,11 +644,15 @@
 /* Responsive */
 @media (max-width: 1100px) {
     .pvc-global-header {
-        height: 70px !important;
+        height: 56px !important;
     }
 
     .pvc-header-container {
-        padding: 0 20px;
+        padding: 0 12px;
+    }
+
+    .pvc-header-logo img {
+        height: 36px;
     }
 
     .pvc-main-nav {
@@ -652,10 +661,29 @@
 
     .pvc-mobile-toggle {
         display: flex;
+        gap: 5px;
+    }
+
+    .pvc-mobile-toggle span {
+        width: 24px;
     }
 
     .pvc-header-utils {
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .pvc-util-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+    }
+
+    .pvc-cart-badge {
+        width: 16px;
+        height: 16px;
+        font-size: 9px;
+        top: -6px;
+        right: -8px;
     }
 
     .pvc-util-btn.pvc-phone-btn {
@@ -668,13 +696,13 @@
     position: fixed;
     top: 0;
     right: -100%;
-    width: 85%;
-    max-width: 380px;
+    width: 50%;
+    max-width: 250px;
     height: 100vh;
     background: #000000;
     z-index: var(--z-mobile-menu);
     transition: right 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    padding: 80px 30px 40px;
+    padding: 60px 20px 20px;
     box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
@@ -732,13 +760,12 @@
     display: block;
 }
 
-/* Mobile Close Button */
 .pvc-mobile-close {
     position: absolute;
     top: 25px;
     right: 25px;
-    color: var(--pvc-white);
     font-size: 24px;
+    color: var(--pvc-white);
     cursor: pointer;
     width: 40px;
     height: 40px;
