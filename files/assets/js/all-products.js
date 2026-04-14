@@ -29,150 +29,166 @@ const accessorySubcategories = [
 
 // ANWIZ Subcategories for category card display
 const anwizSubcategories = [
-    { name: "CAMERAS", image: "assets/img/sub-cat images/ANWIZ.svg" },
-    { name: "NVR", image: "assets/img/sub-cat images/ANWIZ.svg" },
-    { name: "POE", image: "assets/img/sub-cat images/ANWIZ.svg" },
-    { name: "CABLES", image: "assets/img/sub-cat images/ANWIZ.svg" },
-    { name: "RACKS", image: "assets/img/sub-cat images/ANWIZ.svg" },
-    { name: "SMPS", image: "assets/img/sub-cat images/ANWIZ.svg" },
-    { name: "ADAPTERS", image: "assets/img/sub-cat images/ANWIZ.svg" }
+    { name: "CAMERAS", image: "assets/img/anvizcat.ban/ChatGPT Image Apr 12, 2026, 02_32_17 PM.png" },
+    { name: "NVR", image: "assets/img/anvizcat.ban/ChatGPT Image Apr 12, 2026, 02_32_26 PM.png" },
+    { name: "POE", image: "assets/img/anvizcat.ban/ChatGPT Image Apr 12, 2026, 02_32_30 PM.png" },
+    { name: "CABLES", image: "assets/img/anvizcat.ban/ChatGPT Image Apr 12, 2026, 02_32_37 PM.png" },
+    { name: "RACKS", image: "assets/img/anvizcat.ban/ChatGPT Image Apr 12, 2026, 02_32_42 PM.png" },
+    { name: "SMPS", image: "assets/img/anvizcat.ban/ChatGPT Image Apr 12, 2026, 02_32_48 PM.png" },
+    { name: "ADAPTERS", image: "assets/img/anvizcat.ban/ChatGPT Image Apr 12, 2026, 02_32_53 PM.png" }
 ];
 
 // CP PLUS Subcategories for category card display
 const cpPlusSubcategories = [
-    { name: "DVR", image: "assets/img/sub-cat images/CP PLUS.svg" },
-    { name: "NVR", image: "assets/img/sub-cat images/CP PLUS.svg" },
-    { name: "HD CAMERAS", image: "assets/img/sub-cat images/CP PLUS.svg" },
-    { name: "IP CAMERAS", image: "assets/img/sub-cat images/CP PLUS.svg" },
-    { name: "4G &  WIFI", image: "assets/img/sub-cat images/CP PLUS.svg" },
-    { name: "POE", image: "assets/img/sub-cat images/CP PLUS.svg" },
-    { name: "CABLES", image: "assets/img/sub-cat images/CP PLUS.svg" }
+    { name: "DVR", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_21_36 PM.png" },
+    { name: "NVR", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_21_36 PM.png" },
+    { name: "HD CAMERAS", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_21_47 PM.png" },
+    { name: "IP CAMERAS", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_21_54 PM.png" },
+    { name: "4G &  WIFI", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_21_54 PM.png" },
+    { name: "POE", image: "assets/img/new CP PLUS/image.png" },
+    { name: "CABLES", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_22_04 PM.png" }
 ];
 
 // COEF Subcategories for category card display
 const coefSubcategories = [
-    { name: "SOLAR CAMERAS", image: "assets/img/sub-cat images/COFE.svg" },
-    { name: "4G - WIFI CAMERAS", image: "assets/img/sub-cat images/COFE.svg" }
+    { name: "SOLAR CAMERAS", image: "assets/img/coef.catbanner/ChatGPT Image Apr 12, 2026, 01_30_36 PM.png" },
+    { name: "4G - WIFI CAMERAS", image: "assets/img/coef.catbanner/ChatGPT Image Apr 12, 2026, 01_30_47 PM.png" }
 ];
 
 // VGUARD Subcategories for category card display
 const vguardSubcategories = [
-    { name: "STABILIZER", image: "assets/img/VGUARD/VGUARD%20STABILIZER%20(VG50%20SB).jpeg" },
-    { name: "UPS", image: "assets/img/VGUARD/VGUARD%20UPS.jpeg" }
+    { name: "STABILIZER", image: "assets/img/vguard.catbanners/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2002_18_59%20AM.png" },
+    { name: "UPS", image: "assets/img/vguard.catbanners/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2002_19_02%20AM.png" }
 ];
 
 // VOLTAIC Subcategories for category card display
 const voltaicSubcategories = [
-    { name: "CABLES", image: "assets/img/CATEGORY BANNERS/ACCESSORIES.svg" },
-    { name: "RACK", image: "assets/img/CATEGORY BANNERS/RACK.svg" },
-    { name: "BNC", image: "assets/img/CATEGORY BANNERS/ACCESSORIES.svg" }
+    { name: "CABLES", image: "assets/img/voltaic.catbanners%20/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2002_14_49%20AM.png" },
+    { name: "RACK", image: "assets/img/voltaic.catbanners%20/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2002_14_53%20AM.png" },
+    { name: "BNC", image: "assets/img/voltaic.catbanners%20/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2002_14_57%20AM.png" }
+];
+
+// INTERCOM SYSTEMS Subcategories for category card display
+const intercomSubcategories = [
+    { name: "INTERCOM CHANNELS", image: "assets/img/intercomsystems.catbanner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2002_01_50%20AM.png" }
 ];
 
 // DAHUA Subcategories for category card display
 const dahuaSubcategories = [
-    { name: "DVR", image: "assets/img/sub-cat images/DAHUA.svg" },
-    { name: "NVR", image: "assets/img/sub-cat images/DAHUA.svg" },
-    { name: "HD CAMERAS", image: "assets/img/sub-cat images/DAHUA.svg" }
+    { name: "DVR", image: "assets/img/dahua.catbanner/ChatGPT Image Apr 12, 2026, 01_25_19 PM.png" },
+    { name: "NVR", image: "assets/img/dahua.catbanner/ChatGPT Image Apr 12, 2026, 01_25_24 PM.png" },
+    { name: "HD CAMERAS", image: "assets/img/dahua.catbanner/ChatGPT Image Apr 12, 2026, 01_25_30 PM.png" }
 ];
 
 // TP LINK Subcategories for category card display
 const tpLinkSubcategories = [
-    { name: "NVR", image: "assets/img/sub-cat images/TP LINK.svg" },
-    { name: "POE", image: "assets/img/sub-cat images/TP LINK.svg" },
-    { name: "SWITCHES", image: "assets/img/sub-cat images/TP LINK.svg" },
-    { name: "ACCESS POINTS", image: "assets/img/sub-cat images/TP LINK.svg" },
-    { name: "ROUTERS", image: "assets/img/sub-cat images/TP LINK.svg" }
+    { name: "NVR", image: "assets/img/tplink.cstimages%20/ChatGPT Image Apr 12, 2026, 01_06_33 PM.png" },
+    { name: "POE", image: "assets/img/tplink.cstimages%20/ChatGPT Image Apr 12, 2026, 01_18_16 PM.png" },
+    { name: "SWITCHES", image: "assets/img/tplink.cstimages%20/ChatGPT Image Apr 12, 2026, 01_18_21 PM.png" },
+    { name: "ACCESS POINTS", image: "assets/img/tplink.cstimages%20/ChatGPT Image Apr 12, 2026, 01_18_27 PM.png" },
+    { name: "ROUTERS", image: "assets/img/tplink.cstimages%20/ChatGPT Image Apr 12, 2026, 01_18_32 PM.png" }
 ];
 
 // HIKVISION Subcategories for category card display
 const hikvisionSubcategories = [
-    { name: "DVR", image: "assets/img/sub-cat images/HIKVISION.svg" },
-    { name: "NVR", image: "assets/img/sub-cat images/HIKVISION.svg" },
-    { name: "HD CAMERAS", image: "assets/img/sub-cat images/HIKVISION.svg" },
-    { name: "CABLES", image: "assets/img/sub-cat images/HIKVISION.svg" }
+    { name: "DVR", image: "assets/img/hikvision.catbanner/ChatGPT Image Apr 12, 2026, 12_52_54 PM.png" },
+    { name: "NVR", image: "assets/img/hikvision.catbanner/ChatGPT Image Apr 12, 2026, 12_53_02 PM.png" },
+    { name: "HD CAMERAS", image: "assets/img/hikvision.catbanner/ChatGPT Image Apr 12, 2026, 12_53_09 PM.png" },
+    { name: "CABLES", image: "assets/img/hikvision.catbanner/ChatGPT Image Apr 12, 2026, 12_53_09 PM.png" }
 ];
 
 // ZEBRONICS Subcategories for category card display
 const zebronicsSubcategories = [
-    { name: "MONITORS", image: "assets/img/sub-cat images/ZEBRONICS.svg" },
-    { name: "SMPS", image: "assets/img/sub-cat images/ZEBRONICS.svg" },
-    { name: "CABLES", image: "assets/img/sub-cat images/ZEBRONICS.svg" },
-    { name: "UPS", image: "assets/img/sub-cat images/ZEBRONICS.svg" }
+    { name: "MONITORS", image: "assets/img/zebriniix.catimage/ChatGPT Image Apr 12, 2026, 12_45_51 PM.png" },
+    { name: "SMPS", image: "assets/img/zebriniix.catimage/ChatGPT Image Apr 12, 2026, 12_45_56 PM.png" },
+    { name: "CABLES", image: "assets/img/zebriniix.catimage/ChatGPT Image Apr 12, 2026, 12_46_03 PM.png" },
+    { name: "UPS", image: "assets/img/zebriniix.catimage/ChatGPT Image Apr 12, 2026, 12_46_12 PM.png" }
 ];
 
 // TRUE VIEW Subcategories for category card display
 const trueViewSubcategories = [
-    { name: "4G & WIFI", image: "assets/img/sub-cat images/TRUE VIEW.svg" },
-    { name: "MEMORY CARDS", image: "assets/img/sub-cat images/TRUE VIEW.svg" },
-    { name: "ROUTER", image: "assets/img/sub-cat images/TRUE VIEW.svg" }
+    { name: "4G & WIFI", image: "assets/img/true view.catbanner/ChatGPT Image Apr 12, 2026, 12_38_57 PM.png" },
+    { name: "MEMORY CARDS", image: "assets/img/CATEGORY BANNERS/SD CARDS.svg" },
+    { name: "ROUTER", image: "assets/img/true view.catbanner/ChatGPT Image Apr 12, 2026, 12_39_04 PM.png" }
 ];
 
 // SECUREYE Subcategories for category card display
 const secureyeSubcategories = [
-    { name: "4G & WIFI", image: "assets/img/sub-cat images/SECUREYE.svg" },
-    { name: "POE", image: "assets/img/sub-cat images/SECUREYE.svg" },
-    { name: "MEDIA CONVERTERS", image: "assets/img/sub-cat images/SECUREYE.svg" },
-    { name: "MEMORY CARDS", image: "assets/img/sub-cat images/SECUREYE.svg" },
-    { name: "CONVERTER", image: "assets/img/sub-cat images/SECUREYE.svg" }
+    { name: "4G & WIFI", image: "assets/img/secureye.catban/ChatGPT Image Apr 12, 2026, 12_32_53 PM.png" },
+    { name: "POE", image: "assets/img/secureye.catban/ChatGPT Image Apr 12, 2026, 12_32_59 PM.png" },
+    { name: "MEDIA CONVERTERS", image: "assets/img/secureye.catban/ChatGPT Image Apr 12, 2026, 12_33_04 PM.png" },
+    { name: "MEMORY CARDS", image: "assets/img/secureye.catban/ChatGPT Image Apr 12, 2026, 12_33_08 PM.png" },
+    { name: "CONVERTER", image: "assets/img/secureye.catban/ChatGPT Image Apr 12, 2026, 12_33_13 PM.png" }
 ];
 
 // SECURUS Subcategories for category card display
 const securusSubcategories = [
-    { name: "NVR", image: "assets/img/sub-cat images/SECURUS.svg" },
-    { name: "DVR", image: "assets/img/sub-cat images/SECURUS.svg" },
-    { name: "IP CAMERAS", image: "assets/img/sub-cat images/SECURUS.svg" },
-    { name: "HD CAMERA", image: "assets/img/sub-cat images/SECURUS.svg" },
-    { name: "PTZ", image: "assets/img/sub-cat images/SECURUS.svg" }
+    { name: "NVR", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_21_36 PM.png" },
+    { name: "DVR", image: "assets/img/cp plus.catbanner/ChatGPT Image Apr 12, 2026, 02_21_36 PM.png" },
+    { name: "IP CAMERAS", image: "assets/img/secures.catimages/b7d1c8cb-7e98-40b3-9215-aa8996f1f494.png" },
+    { name: "HD CAMERA", image: "assets/img/secures.catimages/b7d1c8cb-7e98-40b3-9215-aa8996f1f494.png" },
+    { name: "PTZ", image: "assets/img/secures.catimages/b4ad78cd-0d3d-4cce-bb5f-aee79f188bdf.png" }
 ];
 
 // YADON Subcategories for category card display
 const yadonSubcategories = [
-    { name: "POE", image: "assets/img/sub-cat images/YADON.svg" },
+    { name: "POE", image: "assets/img/yadon.catimage/ChatGPT Image Apr 12, 2026, 11_46_46 AM.png" },
     { name: "UPS", image: "assets/img/sub-cat images/YADON.svg" }
 ];
 
 // D-LINK Subcategories for category card display
 const dLinkSubcategories = [
-    { name: "RACKS", image: "assets/img/sub-cat images/DLINK.svg" },
-    { name: "CABLES", image: "assets/img/sub-cat images/DLINK.svg" },
-    { name: "ACCESSORIES", image: "assets/img/sub-cat images/DLINK.svg" },
-    { name: "POE", image: "assets/img/sub-cat images/DLINK.svg" },
-    { name: "ROUTER", image: "assets/img/sub-cat images/DLINK.svg" },
-    { name: "SWITCHES", image: "assets/img/sub-cat images/DLINK.svg" },
-    { name: "SMPS/POWER SUPPLY", image: "assets/img/sub-cat images/DLINK.svg" }
+    { name: "RACKS", image: "assets/img/dlink.catbnaners/WhatsApp%20Image%202026-03-14%20at%205.34.31%20AM.jpeg" },
+    { name: "CABLES", image: "assets/img/dlink.catbnaners/WhatsApp%20Image%202026-03-14%20at%205.34.31%20AM%20%281%29.jpeg" },
+    { name: "ACCESSORIES", image: "assets/img/dlink.catbnaners/WhatsApp%20Image%202026-03-14%20at%205.34.32%20AM.jpeg" },
+    { name: "POE", image: "assets/img/dlink.catbnaners/WhatsApp%20Image%202026-03-14%20at%205.34.33%20AM.jpeg" },
+    { name: "ROUTER", image: "assets/img/dlink.catbnaners/WhatsApp%20Image%202026-03-14%20at%205.34.32%20AM%20%281%29.jpeg" },
+    { name: "SWITCHES", image: "assets/img/dlink.catbnaners/WhatsApp%20Image%202026-03-14%20at%205.34.33%20AM%20%281%29.jpeg" },
+    { name: "SMPS/POWER SUPPLY", image: "assets/img/dlink.catbnaners/WhatsApp%20Image%202026-03-14%20at%205.34.33%20AM%20%281%29.jpeg" }
 ];
 
 // IMOU Subcategories for category card display
 const imouSubcategories = [
-    { name: "4G - WIFI", image: "assets/img/sub-cat images/IMOU.svg" }
+    { name: "4G - WIFI", image: "assets/img/imou.catbanner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2002_04_58%20AM.png" }
 ];
 
 // MAXXION Subcategories for category card display
 const maxxionSubcategories = [
-    { name: "POE EXTENDERS OUTDOOR", image: "assets/img/sub-cat images/MAXXION.svg" },
-    { name: "STANDS", image: "assets/img/sub-cat images/MAXXION.svg" },
-    { name: "HDMI CABLES", image: "assets/img/sub-cat images/MAXXION.svg" },
-    { name: "SPIKE/POWER SOCKETS", image: "assets/img/sub-cat images/MAXXION.svg" },
-    { name: "ACCESSORIES", image: "assets/img/sub-cat images/MAXXION.svg" }
+    { name: "POE EXTENDERS OUTDOOR", image: "assets/img/maxxion.catbanners/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_58_36%20AM.png" },
+    { name: "STANDS", image: "assets/img/maxxion.catbanners/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_58_40%20AM.png" },
+    { name: "HDMI CABLES", image: "assets/img/maxxion.catbanners/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_58_45%20AM.png" },
+    { name: "SPIKE/POWER SOCKETS", image: "assets/img/maxxion.catbanners/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_58_47%20AM.png" },
+    { name: "ACCESSORIES", image: "assets/img/maxxion.catbanners/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_59_37%20AM.png" }
+];
+
+// PRAMA Subcategories for category card display
+const pramaSubcategories = [
+    { name: "PTZ CAMERAS", image: "assets/img/parma.catbanner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_54_01%20AM.png" }
+];
+
+// LAPCARE Subcategories for category card display
+const lapcareSubcategories = [
+    { name: "MONITOR", image: "assets/img/lapcare.cattbanner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_45_45%20AM.png" },
+    { name: "MOUSES", image: "assets/img/lapcare.cattbanner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_45_48%20AM.png" }
 ];
 
 // ERD Subcategories for category card display
 const erdSubcategories = [
-    { name: "ADAPTERS", image: "assets/img/sub-cat images/ERD.svg" }
+    { name: "ADAPTERS", image: "assets/img/edr.catbannner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_52_27%20AM.png" }
 ];
 
 // SMART PRO Subcategories for category card display
 const smartProSubcategories = [
-    { name: "HDMI CABLE", image: "assets/img/sub-cat images/SMART PRO.svg" },
-    { name: "HDMI EXTENDERS", image: "assets/img/sub-cat images/SMART PRO.svg" },
-    { name: "CONVERTERS", image: "assets/img/sub-cat images/SMART PRO.svg" },
-    { name: "LAN TESTER", image: "assets/img/sub-cat images/SMART PRO.svg" }
+    { name: "HDMI CABLE", image: "assets/img/smartpro.bcat/ChatGPT Image Mar 13, 2026, 01_35_02 AM.png" },
+    { name: "HDMI EXTENDERS", image: "assets/img/smartpro.bcat/HDMI and KVM extenders lineup.png" },
+    { name: "CONVERTERS", image: "assets/img/smartpro.bcat/ChatGPT Image Mar 13, 2026, 01_35_39 AM.png" },
+    { name: "LAN TESTER", image: "assets/img/smartpro.bcat/ChatGPT Image Mar 13, 2026, 01_39_15 AM.png" }
 ];
 
 // HDD Subcategories for category card display
 const hddSubcategories = [
-    { name: "NORMAL", image: "assets/img/sub-cat images/HDD.svg" },
-    { name: "3 YEAR COMPANY WARRANTY", image: "assets/img/sub-cat images/HDD.svg" }
+    { name: "NORMAL", image: "assets/img/hdd.catbanner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_42_01%20AM.png" },
+    { name: "3 YEAR COMPANY WARRANTY", image: "assets/img/hdd.catbanner/ChatGPT%20Image%20Mar%2013%2C%202026%2C%2001_42_05%20AM.png" }
 ];
 
 const monitorNames = [
@@ -2314,7 +2330,8 @@ const _numericTokenOverlap = (a, b) => {
         [_normalize("METAL RING 10CM (SRB-PR10C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
         [_normalize("METAL RING 20CM (SRB-PR20C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
         [_normalize("METAL RING 30CM (SRB-PR30C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
-        [_normalize("METAL RING 40CM (SRB-PR40C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg"
+        [_normalize("METAL RING 40CM (SRB-PR40C)")]: "assets/img/ACCESORIESbanners/RING%20STAND.svg",
+        [_normalize("ZEBRONICS CAT6 INDOOR")]: "assets/img/ZEBRONICES/image.png"
     };
 
     const findProductImage = (productName, category) => {
@@ -3608,6 +3625,7 @@ const _numericTokenOverlap = (a, b) => {
         selectedCoefSubcategory: null,
         selectedVguardSubcategory: null,
         selectedVoltaicSubcategory: null,
+        selectedIntercomSubcategory: null,
         selectedDahuaSubcategory: null,
         selectedTpLinkSubcategory: null,
         selectedHikvisionSubcategory: null,
@@ -3619,6 +3637,8 @@ const _numericTokenOverlap = (a, b) => {
         selectedDLinkSubcategory: null,
         selectedImouSubcategory: null,
         selectedMaxxionSubcategory: null,
+        selectedPramaSubcategory: null,
+        selectedLapcareSubcategory: null,
         selectedErdSubcategory: null,
         selectedSmartProSubcategory: null,
         selectedHddSubcategory: null,
@@ -3791,6 +3811,16 @@ const _numericTokenOverlap = (a, b) => {
         ]),
         "BNC": new Set([
             _normalize("WIRELESS BNC")
+        ])
+    };
+
+    const intercomSubcategoryExactNames = {
+        "INTERCOM CHANNELS": new Set([
+            _normalize("4CH"),
+            _normalize("8CH"),
+            _normalize("16CH"),
+            _normalize("32CH"),
+            _normalize("64CH")
         ])
     };
 
@@ -4127,6 +4157,12 @@ const _numericTokenOverlap = (a, b) => {
             _normalize("MAXXION PUNCH DOWN TOOL"),
             _normalize("MAXXION WIRE BNC ELIGHT"),
             _normalize("RACK FAN")
+        ])
+    };
+
+    const pramaSubcategoryExactNames = {
+        "PTZ CAMERAS": new Set([
+            _normalize("4MP PTZ 30X ZOOM 250MTRS")
         ])
     };
 
@@ -4573,6 +4609,17 @@ const _numericTokenOverlap = (a, b) => {
         });
     };
 
+    const filterIntercomProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = intercomSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'INTERCOM SYSTEMS') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
     const filterDahuaProductsBySubcategory = (subcategoryName, inputProducts) => {
         const exactNames = dahuaSubcategoryExactNames[subcategoryName];
         if (!(exactNames instanceof Set)) return [];
@@ -4690,6 +4737,28 @@ const _numericTokenOverlap = (a, b) => {
 
         return inputProducts.filter((item) => {
             if (item.category !== 'MAXXION') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterPramaProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = pramaSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'PRAMA') return false;
+            return exactNames.has(_normalize(item.name || ""));
+        });
+    };
+
+    const filterLapcareProductsBySubcategory = (subcategoryName, inputProducts) => {
+        const exactNames = lapcareSubcategoryExactNames[subcategoryName];
+        if (!(exactNames instanceof Set)) return [];
+        if (exactNames.size === 0) return [];
+
+        return inputProducts.filter((item) => {
+            if (item.category !== 'LAPCARE') return false;
             return exactNames.has(_normalize(item.name || ""));
         });
     };
@@ -4814,6 +4883,18 @@ const _numericTokenOverlap = (a, b) => {
             }
 
             filtered = filterVoltaicProductsBySubcategory(state.selectedVoltaicSubcategory, filtered);
+        }
+
+        // If only INTERCOM SYSTEMS is selected and no subcategory selected, return empty array
+        // (we'll show INTERCOM SYSTEMS subcategory cards instead).
+        const isOnlyIntercomSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('INTERCOM SYSTEMS');
+        if (isOnlyIntercomSelected) {
+            if (!state.selectedIntercomSubcategory) {
+                return [];
+            }
+
+            filtered = filterIntercomProductsBySubcategory(state.selectedIntercomSubcategory, filtered);
         }
 
         // If only DAHUA is selected and no subcategory selected, return empty array
@@ -4948,6 +5029,30 @@ const _numericTokenOverlap = (a, b) => {
             filtered = filterMaxxionProductsBySubcategory(state.selectedMaxxionSubcategory, filtered);
         }
 
+        // If only PRAMA is selected and no subcategory selected, return empty array
+        // (we'll show PRAMA subcategory cards instead).
+        const isOnlyPramaSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('PRAMA');
+        if (isOnlyPramaSelected) {
+            if (!state.selectedPramaSubcategory) {
+                return [];
+            }
+
+            filtered = filterPramaProductsBySubcategory(state.selectedPramaSubcategory, filtered);
+        }
+
+        // If only LAPCARE is selected and no subcategory selected, return empty array
+        // (we'll show LAPCARE subcategory cards instead).
+        const isOnlyLapcareSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('LAPCARE');
+        if (isOnlyLapcareSelected) {
+            if (!state.selectedLapcareSubcategory) {
+                return [];
+            }
+
+            filtered = filterLapcareProductsBySubcategory(state.selectedLapcareSubcategory, filtered);
+        }
+
         // If only ERD is selected and no subcategory selected, return empty array
         // (we'll show ERD subcategory cards instead).
         const isOnlyErdSelected = state.selectedCategories.size === 1 &&
@@ -4972,11 +5077,15 @@ const _numericTokenOverlap = (a, b) => {
             filtered = filterSmartProProductsBySubcategory(state.selectedSmartProSubcategory, filtered);
         }
 
-        // If only HDD is selected, show all HDD products by default.
-        // Apply HDD subcategory filter only when explicitly selected.
+        // If only HDD is selected and no subcategory selected, return empty array
+        // (we'll show HDD subcategory cards instead).
         const isOnlyHddSelected = state.selectedCategories.size === 1 &&
             state.selectedCategories.has('HDD');
-        if (isOnlyHddSelected && state.selectedHddSubcategory) {
+        if (isOnlyHddSelected) {
+            if (!state.selectedHddSubcategory) {
+                return [];
+            }
+
             filtered = filterHddProductsBySubcategory(state.selectedHddSubcategory, filtered);
         }
 
@@ -5112,6 +5221,8 @@ const _numericTokenOverlap = (a, b) => {
             state.selectedCategories.has('VGUARD');
         const isOnlyVoltaicSelected = state.selectedCategories.size === 1 &&
             state.selectedCategories.has('VOLTAIC');
+        const isOnlyIntercomSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('INTERCOM SYSTEMS');
         const isOnlyDahuaSelected = state.selectedCategories.size === 1 &&
             state.selectedCategories.has('DAHUA');
         const isOnlyTpLinkSelected = state.selectedCategories.size === 1 &&
@@ -5134,6 +5245,10 @@ const _numericTokenOverlap = (a, b) => {
             state.selectedCategories.has('IMOU');
         const isOnlyMaxxionSelected = state.selectedCategories.size === 1 &&
             state.selectedCategories.has('MAXXION');
+        const isOnlyPramaSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('PRAMA');
+        const isOnlyLapcareSelected = state.selectedCategories.size === 1 &&
+            state.selectedCategories.has('LAPCARE');
         const isOnlyErdSelected = state.selectedCategories.size === 1 &&
             state.selectedCategories.has('ERD');
         const isOnlySmartProSelected = state.selectedCategories.size === 1 &&
@@ -5395,6 +5510,51 @@ const _numericTokenOverlap = (a, b) => {
                     if (!subcategory) return;
 
                     state.selectedVoltaicSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only INTERCOM SYSTEMS is selected and no subcategory is picked, show INTERCOM SYSTEMS subcategory cards
+        if (isOnlyIntercomSelected && !state.selectedIntercomSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = intercomSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedIntercomSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-intercom-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.intercomSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedIntercomSubcategory = subcategory;
                     state.currentPage = 1;
                     render();
 
@@ -5909,6 +6069,96 @@ const _numericTokenOverlap = (a, b) => {
             return;
         }
 
+        // If only PRAMA is selected and no subcategory is picked, show PRAMA subcategory cards
+        if (isOnlyPramaSelected && !state.selectedPramaSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = pramaSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedPramaSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-prama-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.pramaSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedPramaSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
+        // If only LAPCARE is selected and no subcategory is picked, show LAPCARE subcategory cards
+        if (isOnlyLapcareSelected && !state.selectedLapcareSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = lapcareSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedLapcareSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-lapcare-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.lapcareSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedLapcareSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
+
         // If only ERD is selected and no subcategory is picked, show ERD subcategory cards
         if (isOnlyErdSelected && !state.selectedErdSubcategory) {
             if (elements.pagination) {
@@ -5999,7 +6249,50 @@ const _numericTokenOverlap = (a, b) => {
             return;
         }
 
-        // HDD now follows normal product rendering (no mandatory subcategory step)
+        // If only HDD is selected and no subcategory is picked, show HDD subcategory cards
+        if (isOnlyHddSelected && !state.selectedHddSubcategory) {
+            if (elements.pagination) {
+                elements.pagination.innerHTML = '';
+            }
+
+            elements.productsGrid.innerHTML = hddSubcategories
+                .map((subcat) => {
+                    const isActive = state.selectedHddSubcategory === subcat.name;
+                    return `
+                        <div class="accessory-category-card${isActive ? ' is-active' : ''}" data-hdd-subcategory="${subcat.name}">
+                            <div class="accessory-cat-img">
+                                <img src="${subcat.image}" alt="${subcat.name}" />
+                            </div>
+                            <h3 class="accessory-cat-name">${subcat.name}</h3>
+                        </div>
+                    `;
+                })
+                .join("");
+
+            elements.productsGrid.querySelectorAll('.accessory-category-card').forEach((card) => {
+                card.addEventListener('click', () => {
+                    const subcategory = card.dataset.hddSubcategory;
+                    if (!subcategory) return;
+
+                    state.selectedHddSubcategory = subcategory;
+                    state.currentPage = 1;
+                    render();
+
+                    setTimeout(() => {
+                        const productsSection = elements.productsGrid || document.querySelector('.products-grid-area');
+                        if (productsSection) {
+                            const headerHeight = 100;
+                            const top = productsSection.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                            window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+                        } else {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    }, 0);
+                });
+            });
+
+            return;
+        }
 
         // Normal product rendering for other categories
         const start = (state.currentPage - 1) * state.perPage;
@@ -6012,6 +6305,7 @@ const _numericTokenOverlap = (a, b) => {
             (isOnlyCoefSelected && !!state.selectedCoefSubcategory) ||
             (isOnlyVguardSelected && !!state.selectedVguardSubcategory) ||
             (isOnlyVoltaicSelected && !!state.selectedVoltaicSubcategory) ||
+            (isOnlyIntercomSelected && !!state.selectedIntercomSubcategory) ||
             (isOnlyDahuaSelected && !!state.selectedDahuaSubcategory) ||
             (isOnlyTpLinkSelected && !!state.selectedTpLinkSubcategory) ||
             (isOnlyHikvisionSelected && !!state.selectedHikvisionSubcategory) ||
@@ -6023,6 +6317,8 @@ const _numericTokenOverlap = (a, b) => {
             (isOnlyDLinkSelected && !!state.selectedDLinkSubcategory) ||
             (isOnlyImouSelected && !!state.selectedImouSubcategory) ||
             (isOnlyMaxxionSelected && !!state.selectedMaxxionSubcategory) ||
+            (isOnlyPramaSelected && !!state.selectedPramaSubcategory) ||
+            (isOnlyLapcareSelected && !!state.selectedLapcareSubcategory) ||
             (isOnlyErdSelected && !!state.selectedErdSubcategory) ||
             (isOnlySmartProSelected && !!state.selectedSmartProSubcategory) ||
             (isOnlyHddSelected && !!state.selectedHddSubcategory);
@@ -6056,6 +6352,7 @@ const _numericTokenOverlap = (a, b) => {
                     if (isOnlyCoefSelected) state.selectedCoefSubcategory = null;
                     if (isOnlyVguardSelected) state.selectedVguardSubcategory = null;
                     if (isOnlyVoltaicSelected) state.selectedVoltaicSubcategory = null;
+                    if (isOnlyIntercomSelected) state.selectedIntercomSubcategory = null;
                     if (isOnlyDahuaSelected) state.selectedDahuaSubcategory = null;
                     if (isOnlyTpLinkSelected) state.selectedTpLinkSubcategory = null;
                     if (isOnlyHikvisionSelected) state.selectedHikvisionSubcategory = null;
@@ -6067,6 +6364,8 @@ const _numericTokenOverlap = (a, b) => {
                     if (isOnlyDLinkSelected) state.selectedDLinkSubcategory = null;
                     if (isOnlyImouSelected) state.selectedImouSubcategory = null;
                     if (isOnlyMaxxionSelected) state.selectedMaxxionSubcategory = null;
+                    if (isOnlyPramaSelected) state.selectedPramaSubcategory = null;
+                    if (isOnlyLapcareSelected) state.selectedLapcareSubcategory = null;
                     if (isOnlyErdSelected) state.selectedErdSubcategory = null;
                     if (isOnlySmartProSelected) state.selectedSmartProSubcategory = null;
                     if (isOnlyHddSelected) state.selectedHddSubcategory = null;
@@ -6116,6 +6415,7 @@ const _numericTokenOverlap = (a, b) => {
                 if (isOnlyCoefSelected) state.selectedCoefSubcategory = null;
                 if (isOnlyVguardSelected) state.selectedVguardSubcategory = null;
                 if (isOnlyVoltaicSelected) state.selectedVoltaicSubcategory = null;
+                if (isOnlyIntercomSelected) state.selectedIntercomSubcategory = null;
                 if (isOnlyDahuaSelected) state.selectedDahuaSubcategory = null;
                 if (isOnlyTpLinkSelected) state.selectedTpLinkSubcategory = null;
                 if (isOnlyHikvisionSelected) state.selectedHikvisionSubcategory = null;
@@ -6127,6 +6427,8 @@ const _numericTokenOverlap = (a, b) => {
                 if (isOnlyDLinkSelected) state.selectedDLinkSubcategory = null;
                 if (isOnlyImouSelected) state.selectedImouSubcategory = null;
                 if (isOnlyMaxxionSelected) state.selectedMaxxionSubcategory = null;
+                if (isOnlyPramaSelected) state.selectedPramaSubcategory = null;
+                if (isOnlyLapcareSelected) state.selectedLapcareSubcategory = null;
                 if (isOnlyErdSelected) state.selectedErdSubcategory = null;
                 if (isOnlySmartProSelected) state.selectedSmartProSubcategory = null;
                 if (isOnlyHddSelected) state.selectedHddSubcategory = null;
@@ -6328,6 +6630,10 @@ const _numericTokenOverlap = (a, b) => {
                 html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedVoltaicSubcategory}</li>`;
             }
 
+            if (state.selectedIntercomSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedIntercomSubcategory}</li>`;
+            }
+
             if (state.selectedDahuaSubcategory) {
                 html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedDahuaSubcategory}</li>`;
             }
@@ -6370,6 +6676,14 @@ const _numericTokenOverlap = (a, b) => {
 
             if (state.selectedMaxxionSubcategory) {
                 html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedMaxxionSubcategory}</li>`;
+            }
+
+            if (state.selectedPramaSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedPramaSubcategory}</li>`;
+            }
+
+            if (state.selectedLapcareSubcategory) {
+                html += `<li class="breadcrumb-item active" aria-current="page">${state.selectedLapcareSubcategory}</li>`;
             }
 
             if (state.selectedErdSubcategory) {
@@ -6522,6 +6836,11 @@ const _numericTokenOverlap = (a, b) => {
                     state.selectedVoltaicSubcategory = null;
                 }
 
+                const intercomOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('INTERCOM SYSTEMS');
+                if (!intercomOnlyAfterChange) {
+                    state.selectedIntercomSubcategory = null;
+                }
+
                 const dahuaOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('DAHUA');
                 if (!dahuaOnlyAfterChange) {
                     state.selectedDahuaSubcategory = null;
@@ -6575,6 +6894,16 @@ const _numericTokenOverlap = (a, b) => {
                 const maxxionOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('MAXXION');
                 if (!maxxionOnlyAfterChange) {
                     state.selectedMaxxionSubcategory = null;
+                }
+
+                const pramaOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('PRAMA');
+                if (!pramaOnlyAfterChange) {
+                    state.selectedPramaSubcategory = null;
+                }
+
+                const lapcareOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('LAPCARE');
+                if (!lapcareOnlyAfterChange) {
+                    state.selectedLapcareSubcategory = null;
                 }
 
                 const erdOnlyAfterChange = state.selectedCategories.size === 1 && state.selectedCategories.has('ERD');
@@ -6654,6 +6983,7 @@ const _numericTokenOverlap = (a, b) => {
                 state.selectedCoefSubcategory = null;
                 state.selectedVguardSubcategory = null;
                 state.selectedVoltaicSubcategory = null;
+                state.selectedIntercomSubcategory = null;
                 state.selectedDahuaSubcategory = null;
                 state.selectedTpLinkSubcategory = null;
                 state.selectedHikvisionSubcategory = null;
@@ -6665,6 +6995,8 @@ const _numericTokenOverlap = (a, b) => {
                 state.selectedDLinkSubcategory = null;
                 state.selectedImouSubcategory = null;
                 state.selectedMaxxionSubcategory = null;
+                state.selectedPramaSubcategory = null;
+                state.selectedLapcareSubcategory = null;
                 state.selectedErdSubcategory = null;
                 state.selectedSmartProSubcategory = null;
                 state.selectedHddSubcategory = null;
@@ -6846,6 +7178,7 @@ const _numericTokenOverlap = (a, b) => {
                 const isOnlyCoefSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('COEF');
                 const isOnlyVguardSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('VGUARD');
                 const isOnlyVoltaicSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('VOLTAIC');
+                const isOnlyIntercomSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('INTERCOM SYSTEMS');
                 const isOnlyDahuaSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('DAHUA');
                 const isOnlyTpLinkSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('TP LINK');
                 const isOnlyHikvisionSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('HIKVISION');
@@ -6857,6 +7190,8 @@ const _numericTokenOverlap = (a, b) => {
                 const isOnlyDLinkSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('D-LINK');
                 const isOnlyImouSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('IMOU');
                 const isOnlyMaxxionSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('MAXXION');
+                const isOnlyPramaSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('PRAMA');
+                const isOnlyLapcareSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('LAPCARE');
                 const isOnlyErdSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('ERD');
                 const isOnlySmartProSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('SMART PRO');
                 const isOnlyHddSelected = state.selectedCategories.size === 1 && state.selectedCategories.has('HDD');
@@ -6870,6 +7205,8 @@ const _numericTokenOverlap = (a, b) => {
                     state.selectedVguardSubcategory = normalizedSubcat;
                 } else if (isOnlyVoltaicSelected) {
                     state.selectedVoltaicSubcategory = normalizedSubcat;
+                } else if (isOnlyIntercomSelected) {
+                    state.selectedIntercomSubcategory = normalizedSubcat;
                 } else if (isOnlyDahuaSelected) {
                     state.selectedDahuaSubcategory = normalizedSubcat;
                 } else if (isOnlyTpLinkSelected) {
@@ -6892,6 +7229,10 @@ const _numericTokenOverlap = (a, b) => {
                     state.selectedImouSubcategory = normalizedSubcat;
                 } else if (isOnlyMaxxionSelected) {
                     state.selectedMaxxionSubcategory = normalizedSubcat;
+                } else if (isOnlyPramaSelected) {
+                    state.selectedPramaSubcategory = normalizedSubcat;
+                } else if (isOnlyLapcareSelected) {
+                    state.selectedLapcareSubcategory = normalizedSubcat;
                 } else if (isOnlyErdSelected) {
                     state.selectedErdSubcategory = normalizedSubcat;
                 } else if (isOnlySmartProSelected) {
