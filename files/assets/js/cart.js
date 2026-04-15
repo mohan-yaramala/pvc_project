@@ -377,9 +377,11 @@ function placeRFQOnWhatsApp() {
         productList += `• ${item.quantity} × ${item.name}\n`;
     });
 
+    const sectionDivider = '───────────';
+
     // Generate professional WhatsApp RFQ message using the specified template
     let message = `🧾 *REQUEST FOR QUOTATION (RFQ)*\n`;
-    message += `${'─'.repeat(30)}\n\n`;
+    message += `${sectionDivider}\n`;
 
     message += `📌 *RFQ Details*\n`;
     message += `• RFQ Number: ${rfqNumber}\n`;
@@ -387,27 +389,12 @@ function placeRFQOnWhatsApp() {
     message += `• 👤 Name: ${customerName}\n`;
     message += `• 📍 City/Village: ${cityName}\n`;
     // deliveryPincode removed as it is not in the current form
-    message += `• 📱 Registered Mobile Number: ${mobileNumber}\n\n`;
-
-    message += `${'─'.repeat(30)}\n\n`;
+    message += `• 📱 Registered Mobile Number: ${mobileNumber}\n`;
+    message += `${sectionDivider}\n`;
 
     message += `📦 *Products Requested*\n`;
-    message += `${productList}\n`;
-
-    message += `${'─'.repeat(30)}\n\n`;
-
-    if (shippingMethod && shippingMethod !== 'Not Selected') {
-        message += `🚚 *Shipping Method*\n`;
-        message += `${shippingMethod}\n\n`;
-    }
-
-    message += `${'─'.repeat(30)}\n\n`;
-
-    message += `📝 _Note: Final pricing, availability, and delivery timeline\n`;
-    message += `will be confirmed after review._\n\n`;
-
-    message += `🙏 Kindly share the quotation at your earliest convenience.\n`;
-    message += `Thank you.`;
+    message += `${productList}`;
+    message += `${sectionDivider}`;
 
     // Encode message for URL
     const encodedMessage = encodeURIComponent(message);
